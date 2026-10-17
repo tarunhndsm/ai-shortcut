@@ -5,5 +5,45 @@
   "status": "failed",
   "title": "",
   "keys": []
+ },
+ {
+  "id": "as-20261018-0037",
+  "made_at": "2026-10-17T19:14:50Z",
+  "status": "ready",
+  "story": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "title": "DeepSeek-V4.1-Flash Just Hit #1 on DeepSWE",
+  "description": "DeepSeek released an updated V4.1 Flash model with notable gains across agentic coding benchmarks. It offers faster completions and a 1M token context window under an MIT license.",
+  "tags": [
+   "deepseek",
+   "deepseek v4",
+   "open source ai",
+   "llm benchmark",
+   "coding ai",
+   "ai agents",
+   "hugging face"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#ArtificialIntelligence"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "keys": [
+   "hf:deepseek-ai/deepseek-v4.1-flash-1017"
+  ],
+  "entity": "hf:deepseek-ai/deepseek-v4.1-flash-1017",
+  "duration": 34.894,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation with well-aligned graphics, readable text, and accurate script synchronization."
+  },
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-0037.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-0037-sheet.jpg"
  }
 ]
