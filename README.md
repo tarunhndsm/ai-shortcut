@@ -20,8 +20,11 @@ animated Short. Everything runs on GitHub Actions; nothing is rendered on a lapt
 
 ## Schedule
 
-`desk.yml` runs every 30 minutes. A light plan step posts a ready Short when a slot is due and decides whether to make
-the next one (about three hours before its slot). Slots, India time: 06:00 (the US evening and India's best morning
+`desk.yml` runs every 30 minutes, dispatched by `clock.yml`. GitHub's cron fires this account's schedules only every
+few hours, so each clock tick waits out the 30-minute wait timer of the `clock` environment (no runner is held), then
+dispatches the desk and the next tick; both workflows keep a cron that restarts the chain if it ever stops. A light
+plan step posts a ready Short when a slot is due and decides whether to make the next one (about three hours before
+its slot). Slots, India time: 06:00 (the US evening and India's best morning
 window) and 20:00 (India's evening, the US morning). A story that is hot, under 8 hours old and carried by at least
 three kinds of sources is made and posted at once instead, at most once a day and at least 90 minutes after the last
 post. At most three Shorts a day.

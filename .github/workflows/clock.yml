@@ -1,0 +1,41 @@
+name: clock
+
+# GitHub's cron fires this account's schedules only every few hours, so the desk keeps time with a chain of ticks:
+# each run waits out the "clock" environment's 30-minute wait timer (no runner is held, nothing is billed), dispatches
+# the desk's plan cycle, then dispatches the next tick. The cron here only restarts the chain if it ever stops; a tick
+# that finds another tick already waiting ends, so two chains fold back into one.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "19 */3 * * *"
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  tick:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    environment:
+      name: clock
+      deployment: false
+    steps:
+      - name: Dispatch the desk's plan cycle, then the next tick
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -uo pipefail
+          for i in 1 2 3; do gh workflow run desk.yml -R "$REPO" --ref main -f command=plan && break; sleep 20; done
+          others=$(gh api "repos/$REPO/actions/workflows/clock.yml/runs?per_page=30" --jq \
+            "[.workflow_runs[] | select(.id != $RUN_ID and (.status | IN(\"waiting\", \"pending\", \"queued\", \"requested\")))] | length")
+          if [ "${others:-0}" -gt 0 ]; then
+            echo "another tick is already waiting; this chain ends here"
+            exit 0
+          fi
+          for i in 1 2 3; do gh workflow run clock.yml -R "$REPO" --ref main && exit 0; sleep 20; done
+          echo "could not dispatch the next tick; the cron restarts the chain"
+          exit 1
