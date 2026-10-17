@@ -1,14 +1,14 @@
 # AI Shortcut desk
 
 An automated newsroom for the [AI Shortcut](https://www.youtube.com/@AIShortcut-p4k) YouTube channel. It finds what is
-trending in AI right now (repos, models, papers, launches, posts) and turns the best story into a 25-40 second
+trending in AI right now (repos, models, papers, launches, posts) and turns the best story into a 40-45 second
 animated Short. Everything runs on GitHub Actions; nothing is rendered on a laptop.
 
 ## The desk
 
 | Stage | Agents | What they do |
 |---|---|---|
-| Scouts | about 40 | GitHub trending (6 languages) and new rising repos, Hugging Face models, Spaces and daily papers, Hacker News, 7 lab blogs (OpenAI, Google, DeepMind, NVIDIA, Hugging Face, AWS, GitHub), Anthropic and Mistral news pages, 9 tech news feeds, Product Hunt, Lobsters, 6 subreddits, OpenRouter's new models. Each item gets a heat score from its own signal (stars today, points, likes) and freshness, plus a boost when several independent sources carry the same thing. |
+| Scouts | 39 | GitHub trending (6 languages) and new rising repos, Hugging Face models, Spaces and daily papers, Hacker News, 11 lab blogs (OpenAI, Google, Google Research, DeepMind, Microsoft Research, Meta, Mistral, NVIDIA, Hugging Face, AWS, GitHub), Anthropic's news page, 12 tech news feeds and newsletters (including Techmeme, TLDR AI and Latent Space), Product Hunt, Lobsters, one subreddit per scan in turn, OpenRouter's new models. Each item gets a heat score from its own signal (stars today, points, likes) and freshness, plus a boost when several independent sources carry the same thing. |
 | Editor | 1 | Groups items that are the same story and picks the three best for a broad tech audience, skipping anything covered in the last 10 days, rumors, drama and NSFW. |
 | Researcher | 1 per source | Reads the primary sources: repo API, README, releases, model cards, papers, articles, the top Hacker News comments, OpenRouter pricing. |
 | Picture desk | 1 | Screenshots of the real pages (Playwright), the README's own images, the maker's avatar. |
@@ -21,8 +21,10 @@ animated Short. Everything runs on GitHub Actions; nothing is rendered on a lapt
 ## Schedule
 
 `desk.yml` runs every 30 minutes. A light plan step posts a ready Short when a slot is due and decides whether to make
-the next one (about three hours before its slot). Slots, India time: 08:00, 13:00, 19:30 (US morning), 23:30 (US
-afternoon).
+the next one (about three hours before its slot). Slots, India time: 06:00 (the US evening and India's best morning
+window) and 20:00 (India's evening, the US morning). A story that is hot, under 8 hours old and carried by at least
+three kinds of sources is made and posted at once instead, at most once a day and at least 90 minutes after the last
+post. At most three Shorts a day.
 
 ## Secrets
 

@@ -87,9 +87,13 @@ jobs:
       - name: Make a Short
         if: steps.plan.outputs.make == 'true'
         env:
-          DESK_URL: ${{ inputs.url }}
+          DESK_URL: ${{ inputs.url || steps.plan.outputs.url }}
+          DESK_BREAKING: ${{ steps.plan.outputs.breaking }}
         run: |
-          if [ -n "$DESK_URL" ]; then python -m desk.run make --url "$DESK_URL"; else python -m desk.run make; fi
+          args=()
+          if [ -n "$DESK_URL" ]; then args+=(--url "$DESK_URL"); fi
+          if [ "$DESK_BREAKING" = "true" ]; then args+=(--breaking); fi
+          python -m desk.run make "${args[@]}"
 
       - name: Keep the state
         if: always()

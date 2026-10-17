@@ -20,8 +20,16 @@ motion graphics and a confident, upbeat narrator. Viewers: developers, students,
 Write ONE Short about the story in the dossier. Hard rules:
 - Every claim and every number must come from the dossier. Never invent features, numbers, dates, prices,
   comparisons or quotes. If the dossier doesn't say it, don't say it. Say "claims" or "says" for a maker's own claims.
-- 75 to 105 words of narration in total, in 6 to 8 scenes. Each scene's "say" is ONE short spoken sentence (6-20 words).
-- Scene 1 is the hook: the most surprising true thing, in the first 2 seconds. No greetings, no "in this video".
+- 110 to 130 words of narration in total (about 40-45 seconds), in 7 to 9 scenes. Each scene's "say" is ONE short
+  spoken sentence (6-20 words).
+- Scene 1 is the hook: the payoff first, the most surprising concrete true thing (a number, a result, what it lets you
+  do), in the first 2 seconds. No greetings, no "in this video". Scene 2 shows the proof on screen (shot, card, stat,
+  bars, code or versus).
+- Add what the sources don't spell out: why it matters, who it's for, how it compares with what people use today
+  (only from the dossier), or the catch. At least two scenes are your analysis, not a summary. Never copy a sentence
+  from the sources; explain it in your own words.
+- No fixed formula: pick the scene types that prove this story (code for a tool you can install, bars or versus for
+  benchmarks, shot for a product, quote when someone said something telling) and vary their order.
 - Talk to the viewer ("you"), use contractions, short punchy words. Vary rhythm. Be specific, not hypey.
 - A comparison names its measure in the same line ("on the DeepSWE coding benchmark"); never turn one win into
   "beats X" in general, and don't hide where it loses if the dossier shows it. No hype words: shocking, secretly,
@@ -101,11 +109,11 @@ def _numbers_ok(script: dict, dossier: dict) -> list[str]:
 def _valid(script: dict, visuals: list[dict]) -> list[str]:
     problems = []
     scenes = script.get("scenes")
-    if not isinstance(scenes, list) or not 5 <= len(scenes) <= 9:
-        return ["needs 6-8 scenes"]
+    if not isinstance(scenes, list) or not 6 <= len(scenes) <= 10:
+        return ["needs 7-9 scenes"]
     words = sum(len(str(s.get("say", "")).split()) for s in scenes)
-    if not 65 <= words <= 120:
-        problems.append(f"narration is {words} words; it must be 75-105")
+    if not 98 <= words <= 140:
+        problems.append(f"narration is {words} words; it must be 110-130")
     if scenes[0].get("type") != "hook" or scenes[-1].get("type") != "cta":
         problems.append("first scene must be hook and last must be cta")
     for i, s in enumerate(scenes):
@@ -128,8 +136,8 @@ def _valid(script: dict, visuals: list[dict]) -> list[str]:
             problems.append(f"scene {i}: list needs 3-4 items")
         if kind == "code" and not str(s.get("code", "")).strip():
             problems.append(f"scene {i}: code is empty")
-    if len(str(script.get("title", ""))) > 95 or not script.get("title"):
-        problems.append("title must be under 70 characters")
+    if len(str(script.get("title", ""))) > 80 or not script.get("title"):
+        problems.append("title must be under 70 characters (80 at most)")
     return problems
 
 

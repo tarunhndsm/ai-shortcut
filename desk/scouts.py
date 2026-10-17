@@ -43,10 +43,15 @@ LAB_FEEDS = {
     "huggingface": ("Hugging Face", "https://huggingface.co/blog/feed.xml"),
     "aws-ml": ("AWS Machine Learning", "https://aws.amazon.com/blogs/machine-learning/feed/"),
     "github-blog": ("GitHub", "https://github.blog/feed/"),
+    "mistral": ("Mistral AI", "https://mistral.ai/rss.xml"),
+    "google-research": ("Google Research", "https://research.google/blog/rss/"),
+    "microsoft-research": ("Microsoft Research", "https://www.microsoft.com/en-us/research/feed/"),
+    "meta-engineering": ("Meta Engineering", "https://engineering.fb.com/feed/"),
 }
+# Feeds of labs whose posts aren't all about AI: only their AI posts count.
+MIXED_LABS = ("nvidia", "aws-ml", "github-blog", "google-research", "microsoft-research", "meta-engineering")
 LAB_PAGES = {
     "anthropic": ("Anthropic", "https://www.anthropic.com/news", r"^/news/[\w-]+$"),
-    "mistral": ("Mistral AI", "https://mistral.ai/news", r"^/news/[\w-]+/?$"),
 }
 NEWS_FEEDS = {
     "techcrunch": ("TechCrunch", "https://techcrunch.com/category/artificial-intelligence/feed/"),
@@ -58,7 +63,12 @@ NEWS_FEEDS = {
     "marktechpost": ("MarkTechPost", "https://www.marktechpost.com/feed/"),
     "simonw": ("Simon Willison", "https://simonwillison.net/atom/everything/"),
     "google-news": ("Google News", "https://news.google.com/rss/search?q=artificial+intelligence+when:1d&hl=en-US&gl=US&ceid=US:en"),
+    "tldr-ai": ("TLDR AI", "https://tldr.tech/api/rss/ai"),
+    "latent-space": ("Latent Space", "https://www.latent.space/feed"),
+    "techmeme": ("Techmeme", "https://www.techmeme.com/feed.xml"),
 }
+# General feeds: only their AI items count.
+MIXED_NEWS = ("simonw", "techmeme")
 COMMUNITY_FEEDS = {
     "producthunt": ("Product Hunt", "https://www.producthunt.com/feed?category=artificial-intelligence"),
     "lobsters": ("Lobsters", "https://lobste.rs/t/ai.rss"),
@@ -242,12 +252,12 @@ def _feed(source: str, label: str, url: str, kind: str, base: float, need_ai: bo
 
 def lab_feed(source: str) -> list[dict]:
     label, url = LAB_FEEDS[source]
-    return _feed(source, f"{label} blog", url, "announcement", 80, source in ("nvidia", "aws-ml", "github-blog"), 20)
+    return _feed(source, f"{label} blog", url, "announcement", 80, source in MIXED_LABS, 20)
 
 
 def news_feed(source: str) -> list[dict]:
     label, url = NEWS_FEEDS[source]
-    return _feed(source, label, url, "news", 58 if source != "simonw" else 66, source in ("simonw",), 16)
+    return _feed(source, label, url, "news", 58 if source != "simonw" else 66, source in MIXED_NEWS, 16)
 
 
 def community_feed(source: str) -> list[dict]:
@@ -281,24 +291,25 @@ def lab_page(source: str) -> list[dict]:
 
 
 def reddit() -> list[dict]:
+    """One subreddit a scan: from a cloud IP Reddit answers the first request and refuses the next ones (429).
+    r/LocalLLaMA every other hour, the others in turn in between."""
+    hour = int(time.time() // 3600)
+    sub = SUBREDDITS[0] if hour % 2 == 0 else SUBREDDITS[1 + (hour // 2) % (len(SUBREDDITS) - 1)]
+    try:
+        parsed = feedparser.parse(net.get(f"https://www.reddit.com/r/{sub}/top/.rss?t=day", timeout=20, tries=1,
+                                          headers={"User-Agent": "linux:ai-shortcut-desk:1.0 (by /u/aishortcut)"}).content)
+    except Exception as exc:
+        log.info("reddit r/%s: %s", sub, exc)
+        return []
     items = []
-    for sub in SUBREDDITS:
-        try:
-            parsed = feedparser.parse(net.get(f"https://www.reddit.com/r/{sub}/top/.rss?t=day", timeout=20,
-                                              headers={"User-Agent": "linux:ai-shortcut-desk:1.0 (by /u/aishortcut)"}).content)
-        except Exception as exc:  # Reddit often refuses cloud IPs; the other scouts carry on.
-            log.info("reddit r/%s: %s", sub, exc)
-            time.sleep(2)
+    for rank, entry in enumerate(parsed.entries[:12]):
+        title = _clean(entry.get("title", ""), 200)
+        published = _when(entry)
+        if not title or (published and state.now() - published > timedelta(hours=36)):
             continue
-        for rank, entry in enumerate(parsed.entries[:12]):
-            title = _clean(entry.get("title", ""), 200)
-            published = _when(entry)
-            if not title or (published and state.now() - published > timedelta(hours=36)):
-                continue
-            items.append(_item(f"reddit-{sub.lower()}", f"Reddit r/{sub}", "discussion", title, entry.get("link", ""),
-                               (62 - rank * 2.2) * (0.6 + 0.4 * _fresh(published, 18)), _clean(entry.get("summary", "")),
-                               published, rank=rank + 1))
-        time.sleep(7)
+        items.append(_item(f"reddit-{sub.lower()}", f"Reddit r/{sub}", "discussion", title, entry.get("link", ""),
+                           (62 - rank * 2.2) * (0.6 + 0.4 * _fresh(published, 18)), _clean(entry.get("summary", "")),
+                           published, rank=rank + 1))
     return items
 
 
