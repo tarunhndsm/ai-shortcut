@@ -77,7 +77,7 @@
         border: 2px solid rgba(255, 255, 255, 0.16); box-shadow: 0 40px 110px rgba(0, 0, 0, 0.62), 0 0 0 10px rgba(232, 255, 71, 0.06); }
       .hero img { width: 900px; height: auto; max-height: 470px; display: block; object-fit: cover; object-position: 50% 50%; }
       .hero.top img { object-position: 50% 0%; }
-      .sc-hook.has-hero .headline { font-size: 120px; }
+      .sc-hook.has-hero .headline { font-size: 120px; width: 880px; }
 
       .card { width: 940px; box-sizing: border-box; padding: 46px 48px 44px; border-radius: 40px;
         background: linear-gradient(180deg, #111822 0%, #0b1017 100%); border: 2px solid #243040;
@@ -282,7 +282,8 @@
 
         function fitAll() {
           each(qa(document, ".headline"), function (el) {
-            fit(el, el.closest(".sc-punch") ? 520 : el.closest(".has-hero") ? 370 : 560, 1000, 64);
+            var hero = el.closest(".has-hero");
+            fit(el, el.closest(".sc-punch") ? 520 : hero ? 370 : 560, hero ? 880 : 1000, 64);
           });
           each(qa(document, ".card-desc"), function (el) { fit(el, 230, 0, 30); });
           each(qa(document, ".card-name"), function (el) { fit(el, 112, 0, 28); });
