@@ -7,13 +7,14 @@ from __future__ import annotations
 import difflib
 import logging
 import os
+import subprocess
 import unicodedata
 from pathlib import Path
 
 import numpy as np
 import soundfile as sf
 
-from . import gemini
+from . import ff, gemini
 
 log = logging.getLogger(__name__)
 
@@ -81,11 +82,14 @@ _whisper = None
 def _heard(wav: Path, prompt: str | None = None) -> list[tuple[str, float, float]]:
     """The words Whisper hears in `wav`, with their times; long stretches it skipped are heard again on their own."""
     global _whisper
-    from faster_whisper import WhisperModel, decode_audio
+    from faster_whisper import WhisperModel
 
     if _whisper is None:
         _whisper = WhisperModel(ALIGN_MODEL, device="cpu", compute_type="int8")
-    audio = decode_audio(str(wav), sampling_rate=WHISPER_RATE)
+    # faster-whisper's own decode_audio passes PyAV an argument newer PyAV releases reject; ffmpeg decodes instead.
+    pcm = subprocess.run([ff.exe(), "-v", "error", "-i", str(wav), "-ac", "1", "-ar", str(WHISPER_RATE), "-f", "f32le", "-"],
+                         capture_output=True, check=True).stdout
+    audio = np.frombuffer(pcm, dtype=np.float32).copy()
 
     def hear(start: float, end: float) -> list[tuple[str, float, float]]:
         segments, _ = _whisper.transcribe(audio[int(start * WHISPER_RATE):int(end * WHISPER_RATE)], language="en",
