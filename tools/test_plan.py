@@ -77,6 +77,11 @@ posted.clear()
 run.post_due(at(18, "06:10"))
 check("slot Short posts in the 06:00 slot", posted, ["s1"])
 check("slot recorded", run.shorts()[0].get("slot"), "2026-10-18 06:00")
+buffer_status["p-s1"] = {"status": "sent", "sentAt": state.iso(at(18, "06:11")), "externalLink": "https://yt/s1"}
+run.post_due(at(18, "06:20"))
+got = run.shorts()[0]
+check("a shared post is read back as posted", (got["status"], got["posted_at"], got["posted"]["youtube"].get("link")),
+      ("posted", state.iso(at(18, "06:11")), "https://yt/s1"))
 
 run.save_shorts([short("old", at(17, "03:00"))])
 posted.clear()
@@ -129,7 +134,12 @@ booked.clear()
 run.post_due(at(18, "06:10"))
 got = run.shorts()[0]
 check("a failed booked post is shared once in its slot", (posted, booked, got["status"], got["slot"]),
-      (["s3"], [], "posted", "2026-10-18 06:00"))
+      (["s3"], [], "scheduled", "2026-10-18 06:00"))
+posted.clear()
+run.post_due(at(18, "06:20"))
+got = run.shorts()[0]
+check("failing again, it is post-failed and not shared a third time", (posted, booked, got["status"]),
+      ([], [], "post-failed"))
 
 run.save_shorts([short("s4", at(18, "03:30"), status="scheduled", slot="2026-10-18 06:00",
                        due_at=state.iso(at(18, "06:00")), posted={"youtube": {"id": "p-s4"}}),

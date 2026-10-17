@@ -123,6 +123,25 @@ jobs:
               -b "Run $RUN_URL failed. Later runs keep trying; this issue closes itself when one succeeds."
           fi
 
+      - name: Open a post alert when a Short doesn't go out, close it when one does
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          last=$(jq -r '[.[] | select(.status == "posted" or .status == "post-failed")] | last | select(.)
+            | [.status, .id, ([.posted // {} | to_entries[]
+                | "\(.key): \(.value.link // .value.error // .value.status // "no reply")"] | join("; "))] | join(" ")' \
+            state/shorts.json)
+          read -r status sid detail <<< "$last"
+          open=$(gh issue list -R "$REPO" --state open --search "Post alert in:title" --json number --jq '.[0].number // empty')
+          if [ "$status" = "post-failed" ] && [ -z "$open" ]; then
+            gh issue create -R "$REPO" -t "Post alert: $sid did not go out" \
+              -b "Buffer did not publish $sid (${detail:-no details}). Check the channel in Buffer. This issue closes itself when a Short goes out."
+          elif [ "$status" = "posted" ] && [ -n "$open" ]; then
+            gh issue close "$open" -R "$REPO" -c "$sid went out: ${detail:-no link yet}"
+          fi
+
       - name: Keep the Short and its review sheet
         if: always() && steps.plan.outputs.make == 'true'
         uses: actions/upload-artifact@v4

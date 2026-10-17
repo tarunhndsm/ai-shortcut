@@ -240,18 +240,19 @@ def settle(items: list[dict], now: datetime) -> None:
             if not s.get("retried") and now < due + SLOT_GRACE:
                 s.pop("slot", None)
                 s.update(status="ready", retried=True)
-                log.warning("booked post of %s failed (%s); sharing it now", s["id"], s["posted"])
+                log.warning("Buffer post of %s failed (%s); sharing it now", s["id"], s["posted"])
             else:
                 s["status"] = "post-failed"
-                log.warning("booked post of %s failed: %s", s["id"], s["posted"])
+                log.warning("Buffer post of %s failed: %s", s["id"], s["posted"])
         elif now > due + SETTLE_GIVE_UP:
             s["status"] = "post-failed"
             log.warning("Buffer still hasn't sent %s: %s", s["id"], s["posted"])
 
 
 def post_due(now: datetime) -> dict | None:
-    """Settle booked posts; share now a Short for a due slot nothing was booked for, or breaking news once POST_GAP
-    has passed since the last post and before the next booked one; book the rest into their slots."""
+    """Settle booked and shared posts; share now a Short for a due slot nothing was booked for, or breaking news once
+    POST_GAP has passed since the last post and before the next booked one; book the rest into their slots. Shared
+    posts are read back like booked ones."""
     if not publish.configured():
         return None
     items = shorts()
@@ -272,9 +273,9 @@ def post_due(now: datetime) -> dict | None:
             short, slot = urgent[0], "breaking " + now.astimezone(IST).strftime("%Y-%m-%d %H:%M")
     if short:
         short["posted"] = publish.post(short["video"], {**short, "disclosure": DISCLOSURE})
-        short["slot"], short["posted_at"] = slot, state.iso(now)
-        short["status"] = "posted" if any("id" in r for r in short["posted"].values()) else "post-failed"
-        log.info("posted %s in slot %s: %s", short["id"], slot, short["posted"])
+        short["slot"], short["due_at"] = slot, state.iso(now)
+        short["status"] = "scheduled" if any("id" in r for r in short["posted"].values()) else "post-failed"
+        log.info("shared %s in slot %s: %s", short["id"], slot, short["posted"])
     book(items, now)
     save_shorts(items)
     return short
