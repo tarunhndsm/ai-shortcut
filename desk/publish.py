@@ -22,6 +22,7 @@ CATEGORY = "28"  # Science & Technology
 CREATE = """mutation Create($input: CreatePostInput!) { createPost(input: $input) { __typename
   ... on PostActionSuccess { post { id status externalLink } } ... on MutationError { message } } }"""
 STATUS = "query Post($input: PostInput!) { post(input: $input) { id status sentAt externalLink error { message } } }"
+CHANNEL = "query Channel($input: ChannelInput!) { channel(input: $input) { name isDisconnected isLocked isQueuePaused } }"
 
 
 def _gh(method: str, url: str, **kw) -> requests.Response:
@@ -116,3 +117,18 @@ def post(video_url: str, meta: dict, due: datetime | None = None) -> dict:
 
 def status(post_id: str) -> dict:
     return _buffer(STATUS, {"input": {"id": post_id}})["post"]
+
+
+def channel_problems() -> list[str]:
+    """Connected channels Buffer can't post to (disconnected, locked or queue paused). A failed check counts as none."""
+    problems = []
+    for service, channel in channels().items():
+        try:
+            got = _buffer(CHANNEL, {"input": {"id": channel}})["channel"] or {}
+        except Exception as exc:
+            log.warning("buffer channel check for %s: %s", service, exc)
+            continue
+        flags = [k for k in ("isDisconnected", "isLocked", "isQueuePaused") if got.get(k)]
+        if flags:
+            problems.append(f"{service} ({got.get('name')}): {', '.join(flags)}")
+    return problems

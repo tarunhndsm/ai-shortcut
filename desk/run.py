@@ -328,7 +328,10 @@ def main(argv: list[str] | None = None) -> int:
         if out := os.environ.get("GITHUB_OUTPUT"):
             with open(out, "a") as fh:
                 fh.write(f"make={'true' if needed else 'false'}\nurl={url}\nbreaking={'true' if urgent else 'false'}\n")
-        return 0
+        problems = publish.channel_problems() if publish.configured() else []
+        for problem in problems:
+            log.error("Buffer can't post to %s: reconnect or unpause it in Buffer", problem)
+        return 1 if problems else 0
     if args.cmd == "board":
         for item in scouts.scan()[:50]:
             print(f"{item['heat']:5.1f}  {item['label'][:30]:30}  {item['title'][:80]}")

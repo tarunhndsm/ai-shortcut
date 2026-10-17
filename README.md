@@ -25,7 +25,9 @@ few hours, so each clock tick waits out the 30-minute wait timer of the `clock` 
 dispatches the desk and the next tick; both workflows keep a cron that restarts the chain if it ever stops. A light
 plan step decides whether to make the next Short (about three hours before its slot). A finished Short is booked into
 Buffer for its slot, so Buffer posts it on time whether or not a run happens then; later runs read the post back, and
-one whose booking failed is shared once within the slot's 75 minutes. Slots, India time: 06:00 (the US evening and India's best morning
+one whose booking failed is shared once within the slot's 75 minutes. A failed run opens a "Desk alert" issue (GitHub
+emails the owner) that the next successful run closes; a Buffer channel that is disconnected, locked or paused fails
+the plan step, so nothing is made until it is fixed. Slots, India time: 06:00 (the US evening and India's best morning
 window) and 20:00 (India's evening, the US morning). A story that is hot, under 8 hours old and carried by at least
 three kinds of sources is made and posted at once instead, at most once a day and at least 90 minutes after the last
 post. At most three Shorts a day.
