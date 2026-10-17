@@ -115,6 +115,8 @@
       .stat-value { position: relative; font-family: "Grotesk"; font-weight: 700; font-size: 250px; line-height: 1; color: var(--lime);
         text-shadow: 0 0 70px rgba(232, 255, 71, 0.35); white-space: nowrap; letter-spacing: -6px; display: flex;
         font-variant-numeric: tabular-nums; }
+      .stat-unit { position: relative; margin-top: 8px; font-family: "Grotesk"; font-weight: 700; font-size: 64px; line-height: 1;
+        letter-spacing: 4px; text-transform: uppercase; color: #fff; }
       .stat-label { position: relative; margin-top: 36px; width: 900px; text-align: center; font-family: "Inter"; font-weight: 800;
         font-size: 62px; line-height: 1.12; color: #fff; }
       .stat-sub { position: relative; margin-top: 18px; width: 860px; text-align: center; font-family: "Inter"; font-weight: 500;
@@ -277,7 +279,7 @@
           each(qa(document, ".headline"), function (el) { fit(el, el.closest(".sc-punch") ? 520 : 560, 1000, 64); });
           each(qa(document, ".card-desc"), function (el) { fit(el, 230, 0, 30); });
           each(qa(document, ".card-name"), function (el) { fit(el, 112, 0, 28); });
-          each(qa(document, ".stat-value"), function (el) { fit(el, 260, 980, 120); });
+          each(qa(document, ".stat-value"), function (el) { fit(el, 260, 660, 110); });
           each(qa(document, ".stat-label"), function (el) { fit(el, 150, 0, 40); });
           each(qa(document, ".panel-title"), function (el) { fit(el, 150, 0, 40); });
           each(qa(document, ".item-t"), function (el) { fit(el, 112, 0, 30); });

@@ -66,7 +66,7 @@ def odo(text: str) -> str:
             digits = "".join(f"<span>{d % 10}</span>" for d in range(20))
             out.append(f'<span class="odo"><span class="strip" data-d="{ch}">{digits}</span></span>')
         else:
-            out.append(f'<span class="odo-ch">{e(ch)}</span>')
+            out.append(f'<span class="odo-ch">{"&nbsp;" if ch == " " else e(ch)}</span>')
     return "".join(out)
 
 
@@ -256,7 +256,9 @@ def build(script: dict, narration: dict, visuals: list[dict], face: str | None, 
             meta["roll"] = round(t0 + 0.12, 3)
             events += [(t0 + 0.08, "hit", -7), (meta["roll"] + 1.15, "ding", -10)]
             sub_line = f'<div class="stat-sub rv">{e(scene.get("sub"))}</div>' if scene.get("sub") else ""
-            body = (f'{RING}<div class="stat-value">{odo(scene.get("value", ""))}</div>'
+            number, _, unit = str(scene.get("value", "")).strip().partition(" ")
+            unit_html = f'<div class="stat-unit rv">{e(unit)}</div>' if unit else ""
+            body = (f'{RING}<div class="stat-value">{odo(number)}</div>{unit_html}'
                     f'<div class="stat-label rv">{e(scene.get("label"))}</div>{sub_line}')
         elif kind == "bars":
             items = [it for it in scene.get("items", []) if isinstance(it.get("value"), (int, float))][:5]
