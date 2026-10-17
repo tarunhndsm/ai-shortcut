@@ -200,6 +200,16 @@ def _card(dossier: dict, face: str | None) -> str:
             + (f'<div class="stats">{"".join(boxes)}</div>' if boxes else "") + trend + "</div>")
 
 
+def _hero(visuals: list[dict]) -> str:
+    """The hook's picture: the platform's share card, else the first image, else the top of the first screenshot."""
+    pick = (next((v for v in visuals if v.get("social")), None) or next((v for v in visuals if v["kind"] == "image"), None)
+            or next((v for v in visuals if v["kind"] == "screenshot"), None))
+    if not pick:
+        return ""
+    cls = "hero top" if pick["kind"] == "screenshot" else "hero"
+    return f'<div class="{cls}"><img src="{e(pick["file"])}" alt="" /></div>'
+
+
 def _url_html(url: str) -> str:
     parts = urlparse(url)
     host = parts.netloc.removeprefix("www.")
@@ -239,10 +249,13 @@ def build(script: dict, narration: dict, visuals: list[dict], face: str | None, 
             meta["slam"] = round(t0 + 0.1 + 0.07 * n + 0.22, 3)
             events.append((meta["slam"], "hit", 0))
             label = sub.get("name") or primary.get("site") or ""
+            hero = _hero(visuals)
+            meta["hero"] = bool(hero)
             badge = (f'<div class="badge">{_face(face, sub.get("owner") or label)}<div class="badge-label">{e(label)}</div></div>'
-                     if label else "")
+                     if label and not hero else "")
             kicker = f'<div class="kicker">{e(scene.get("kicker"))}</div>' if scene.get("kicker") else ""
-            body = f'{badge}{kicker}<h1 class="headline">{_headline(scene.get("headline", ""), scene.get("highlight", []))}</h1>'
+            body = (f'{hero}{badge}{kicker}'
+                    f'<h1 class="headline">{_headline(scene.get("headline", ""), scene.get("highlight", []))}</h1>')
         elif kind == "punch":
             n = len(str(scene.get("headline", "")).split())
             meta["slam"] = round(t0 + 0.12 + 0.09 * n + 0.2, 3)
@@ -340,7 +353,8 @@ def build(script: dict, narration: dict, visuals: list[dict], face: str | None, 
             body = (f'{MARK}<div class="cta-title">One AI shortcut <em>a day.</em></div>'
                     f'<div class="cta-btn">{ICON["bell"]}<span>FOLLOW</span></div>'
                     f'<div class="cta-handle">AI tools · models · repos</div>')
-        html_scenes.append(f'<section class="scene sc-{meta["type"]}" id="s{i}"><div class="inner">{body}</div></section>')
+        extra = " has-hero" if meta.get("hero") else ""
+        html_scenes.append(f'<section class="scene sc-{meta["type"]}{extra}" id="s{i}"><div class="inner">{body}</div></section>')
         data_scenes.append(meta)
 
     chunks = _chunks(words, duration)

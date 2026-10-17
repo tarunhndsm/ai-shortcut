@@ -67,8 +67,26 @@ def avatar(url: str | None, dest: Path) -> str | None:
     return f"assets/{dest.name}"
 
 
+def social_card(src: dict) -> dict | None:
+    """The platform's own share card for a repo, model, Space or paper: large type that stays legible on a phone."""
+    sub, kind = src.get("subject") or {}, src.get("type")
+    owner, repo = sub.get("owner"), sub.get("repo")
+    if kind == "github" and owner and repo:
+        return {"url": f"https://opengraph.githubassets.com/1/{owner}/{repo}", "alt": "the repo's GitHub card"}
+    if kind in ("huggingface", "huggingface-space") and owner and repo:
+        section = "spaces" if kind == "huggingface-space" else "models"
+        return {"url": f"https://cdn-thumbnails.huggingface.co/social-thumbnails/{section}/{owner}/{repo}.png",
+                "alt": f"the {section[:-1]}'s Hugging Face card"}
+    if kind == "paper" and "arxiv.org" in src.get("url", ""):
+        paper = src["url"].rstrip("/").rsplit("/", 1)[-1].removesuffix(".pdf")
+        return {"url": f"https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/{paper}.png",
+                "alt": "the paper's Hugging Face card"}
+    return None
+
+
 def screenshots(targets: list[dict], folder: Path) -> list[dict]:
-    """Screenshots of each target page (dark mode, 960 px wide at 2x), cookie and sign-up banners hidden."""
+    """Screenshots of each target page at phone width (480 px at 3x, so sites use their larger mobile type), dark mode,
+    cookie and sign-up banners hidden."""
     if not targets:
         return []
     try:
@@ -79,7 +97,7 @@ def screenshots(targets: list[dict], folder: Path) -> list[dict]:
     shots = []
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--disable-gpu", "--use-mock-keychain", "--password-store=basic"])
-        ctx = browser.new_context(viewport={"width": 960, "height": 1300}, device_scale_factor=2, color_scheme="dark",
+        ctx = browser.new_context(viewport={"width": 480, "height": 860}, device_scale_factor=3, color_scheme="dark",
                                   user_agent=net.UA, locale="en-US")
         for n, target in enumerate(targets[:3]):
             page = ctx.new_page()
@@ -121,13 +139,14 @@ def gather(dossier: dict, folder: Path) -> tuple[list[dict], str | None]:
     visuals = screenshots(targets, folder)
     n = 0
     for src in dossier["sources"]:
-        for img in src.get("images", [])[:5]:
+        card = social_card(src)
+        for img in ([card] if card else []) + src.get("images", [])[:5]:
             got = image(img["url"], folder / f"img{n}.jpg")
             n += 1
             if got:
                 visuals.append({**got, "kind": "image", "what": f"{img.get('alt') or 'image'} (from {src.get('site')})",
-                                "url": img["url"]})
-            if sum(v["kind"] == "image" for v in visuals) >= 5:
+                                "url": img["url"], "social": img is card})
+            if sum(v["kind"] == "image" for v in visuals) >= 6:
                 break
     subject = dossier.get("subject") or {}
     face = avatar(subject.get("avatar"), folder / "avatar.png")

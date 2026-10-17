@@ -16,12 +16,18 @@ dossier = json.loads((work / "dossier.json").read_text())
 assets = work / "assets"
 assets.mkdir(exist_ok=True)
 visuals = []
-for i, (name, size) in enumerate([("shot0.jpg", (1920, 2600)), ("img0.jpg", (1600, 900))]):
+for i, (name, size) in enumerate([("shot0.jpg", (1440, 2580)), ("img0.jpg", (1600, 900))]):
     img = Image.new("RGB", size, (30 + 40 * i, 60, 90))
     ImageDraw.Draw(img).text((40, 40), name, fill=(255, 255, 255))
     img.save(assets / name)
     visuals.append({"i": i, "kind": "screenshot" if i == 0 else "image", "what": name, "url": "https://example.com",
                     "file": f"assets/{name}", "w": size[0], "h": size[1]})
+card = Path(sys.argv[1]) if len(sys.argv) > 1 else None
+if card and card.exists():
+    img = Image.open(card).convert("RGB")
+    img.save(assets / "card.jpg", quality=90)
+    visuals.append({"i": len(visuals), "kind": "image", "what": "share card", "url": "https://example.com",
+                    "file": "assets/card.jpg", "w": img.width, "h": img.height, "social": True})
 words, t = [], 0.0
 for beat, scene in enumerate(script["scenes"]):
     for w in scene["say"].split():

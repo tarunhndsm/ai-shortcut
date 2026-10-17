@@ -73,6 +73,11 @@
       .punch-rule { width: 160px; height: 10px; border-radius: 5px; background: var(--lime); display: block; margin-bottom: 44px;
         transform-origin: 50% 50%; }
       .sc-punch .headline { font-size: 116px; }
+      .hero { width: 900px; border-radius: 30px; overflow: hidden; flex: none; margin-bottom: 38px; background: #0d1117;
+        border: 2px solid rgba(255, 255, 255, 0.16); box-shadow: 0 40px 110px rgba(0, 0, 0, 0.62), 0 0 0 10px rgba(232, 255, 71, 0.06); }
+      .hero img { width: 900px; height: auto; max-height: 470px; display: block; object-fit: cover; object-position: 50% 50%; }
+      .hero.top img { object-position: 50% 0%; }
+      .sc-hook.has-hero .headline { font-size: 120px; }
 
       .card { width: 940px; box-sizing: border-box; padding: 46px 48px 44px; border-radius: 40px;
         background: linear-gradient(180deg, #111822 0%, #0b1017 100%); border: 2px solid #243040;
@@ -220,7 +225,7 @@
         rgba(232, 255, 71, 0.55) 55%, rgba(232, 255, 71, 0) 100%); }
       #flash { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: var(--lime); opacity: 0; display: block; }
       /* Everything that animates in after its scene starts begins hidden; its tween reveals it. */
-      #brand, #chip, #source, .badge, .kicker, .hw, .hl-bar, .punch-rule, .card, .rv, .tag, .odo-ch, .ring, .stat-value,
+      #brand, #chip, #source, .hero, .badge, .kicker, .hw, .hl-bar, .punch-rule, .card, .rv, .tag, .odo-ch, .ring, .stat-value,
       .panel-title, .bar, .bar-fill, .v, .item, .item-n, .term, .cl, .cursor, .code-cap, .browser, .label, .frame, .vs-side,
       .vs-badge, .vs-row, .qmark, .qw, .qwho, .cta-mark, .cta-title, .cta-btn, .cta-handle { opacity: 0; }
     </style>
@@ -276,7 +281,9 @@
         }
 
         function fitAll() {
-          each(qa(document, ".headline"), function (el) { fit(el, el.closest(".sc-punch") ? 520 : 560, 1000, 64); });
+          each(qa(document, ".headline"), function (el) {
+            fit(el, el.closest(".sc-punch") ? 520 : el.closest(".has-hero") ? 370 : 560, 1000, 64);
+          });
           each(qa(document, ".card-desc"), function (el) { fit(el, 230, 0, 30); });
           each(qa(document, ".card-name"), function (el) { fit(el, 112, 0, 28); });
           each(qa(document, ".stat-value"), function (el) { fit(el, 260, 660, 110); });
@@ -318,6 +325,11 @@
         var BUILD = {
           hook: function (tl, el, s) {
             var t = s.t0;
+            var hero = q(el, ".hero");
+            if (hero) {
+              tl.fromTo(hero, { y: -60, scale: 0.9, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.5, ease: "power3.out", immediateRender: false }, t);
+              tl.fromTo(q(hero, "img"), { scale: 1.14 }, { scale: 1, duration: s.t1 - t, ease: "none", immediateRender: false }, t);
+            }
             var badge = q(el, ".badge");
             if (badge) tl.fromTo(badge, { scale: 0, rotation: -10, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.5, ease: "back.out(2.2)", immediateRender: false }, t + 0.04);
             var kicker = q(el, ".kicker");

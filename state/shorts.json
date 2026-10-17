@@ -9,7 +9,8 @@
  {
   "id": "as-20261018-0037",
   "made_at": "2026-10-17T19:14:50Z",
-  "status": "ready",
+  "status": "superseded",
+  "note": "Rendered before the stat-scene fix (the number overflowed its ring); not posted.",
   "story": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
   "title": "DeepSeek-V4.1-Flash Just Hit #1 on DeepSWE",
   "description": "DeepSeek released an updated V4.1 Flash model with notable gains across agentic coding benchmarks. It offers faster completions and a 1M token context window under an MIT license.",
