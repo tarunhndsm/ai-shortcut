@@ -81,8 +81,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends ffmpeg espeak-ng > /dev/null
-          grep -v '^kokoro' requirements-studio.txt > /tmp/req.txt
-          pip install -q -r /tmp/req.txt
+          pip install -q -r requirements-studio.txt
           python -m playwright install --with-deps chromium > /dev/null
 
       - name: Make a Short
