@@ -36,6 +36,10 @@ BREAKING_FAMILIES = 3
 BREAKING_AGE = timedelta(hours=8)
 POST_GAP = timedelta(minutes=90)
 SCAN_EVERY = timedelta(minutes=55)
+BOOK_LEAD = timedelta(minutes=15)
+BOOK_TRIES = 3
+SETTLE_AFTER = timedelta(minutes=5)
+SETTLE_GIVE_UP = timedelta(hours=3)
 SHORTS = env.STATE / "shorts.json"
 PLAN = env.STATE / "plan.json"
 DISCLOSURE = "Researched, written and narrated with AI tools (Gemini), checked against the sources above."
@@ -151,6 +155,11 @@ def make(url: str | None = None, dry: bool = False, is_breaking: bool = False) -
             items.append(entry)
             save_shorts(items)
             log.info("made %s: %s (%s)", sid, entry["title"], entry["status"])
+            if entry.get("video") and ok:
+                try:
+                    post_due(state.now())
+                except Exception as exc:
+                    log.error("booking %s failed; the next plan run tries again: %s", sid, exc)
             return entry
         except Exception as exc:
             log.error("pick %d failed: %s\n%s", n + 1, exc, traceback.format_exc()[-2500:])
@@ -160,56 +169,114 @@ def make(url: str | None = None, dry: bool = False, is_breaking: bool = False) -
     return None
 
 
-def _slot_due(now: datetime) -> str | None:
+def _key(at: datetime) -> str:
+    return at.astimezone(IST).strftime("%Y-%m-%d %H:%M")
+
+
+def _slots(around: datetime):
+    local = around.astimezone(IST)
+    for day in range(-1, 3):
+        for hm in SLOTS:
+            yield datetime.combine(local.date() + timedelta(days=day), datetime.strptime(hm, "%H:%M").time(), IST)
+
+
+def _slot_due(now: datetime, items: list[dict]) -> str | None:
     """The slot (as "YYYY-MM-DD HH:MM" IST) that is due now and not yet used."""
-    local = now.astimezone(IST)
-    used = {s.get("slot") for s in shorts()}
-    for day in (local.date(), local.date() - timedelta(days=1)):
-        for hm in SLOTS:
-            at = datetime.combine(day, datetime.strptime(hm, "%H:%M").time(), IST)
-            key = at.strftime("%Y-%m-%d %H:%M")
-            if at <= local < at + SLOT_GRACE and key not in used:
-                return key
-    return None
+    used = {s.get("slot") for s in items}
+    return next((_key(at) for at in _slots(now) if at <= now < at + SLOT_GRACE and _key(at) not in used), None)
 
 
-def _next_slot(now: datetime) -> datetime:
-    local = now.astimezone(IST)
-    for day in (local.date(), local.date() + timedelta(days=1)):
-        for hm in SLOTS:
-            at = datetime.combine(day, datetime.strptime(hm, "%H:%M").time(), IST)
-            if at > local:
-                return at
-    raise RuntimeError("no slot")
+def _next_slot(now: datetime, held: set | frozenset = frozenset()) -> datetime:
+    """The first slot after `now` that no Short holds."""
+    return next(at for at in _slots(now) if at > now and _key(at) not in held)
+
+
+def book(items: list[dict], now: datetime) -> None:
+    """Hand each fresh Short to Buffer's own scheduler for the next open slot, so it goes out on time whether or not
+    a run happens then. One that can't be booked stays ready and is shared in its slot."""
+    for s in items:
+        if (s.get("status") != "ready" or not s.get("video") or s.get("breaking") or s.get("retried")
+                or s.get("book_tries", 0) >= BOOK_TRIES):
+            continue
+        at = _next_slot(now + BOOK_LEAD, {i.get("slot") for i in items if i.get("slot")})
+        if at - (state.parse(s.get("made_at")) or now) > READY_MAX_AGE:
+            continue
+        s["book_tries"] = s.get("book_tries", 0) + 1
+        got = publish.post(s["video"], {**s, "disclosure": DISCLOSURE}, due=at)
+        if any("id" in r for r in got.values()):
+            s.update(status="scheduled", slot=_key(at), due_at=state.iso(at), posted=got)
+            log.info("booked %s for %s IST: %s", s["id"], _key(at), got)
+        else:
+            log.warning("could not book %s: %s", s["id"], got)
+
+
+def settle(items: list[dict], now: datetime) -> None:
+    """Read back booked posts once due. Sent: posted. All failed: back to ready once, to be shared within the slot's
+    grace, else post-failed; also post-failed if Buffer still hasn't sent it SETTLE_GIVE_UP after its time."""
+    for s in items:
+        due = state.parse(s.get("due_at"))
+        if s.get("status") != "scheduled" or not due or now < due + SETTLE_AFTER:
+            continue
+        seen = {}
+        for service, r in (s.get("posted") or {}).items():
+            if "id" not in r:
+                continue
+            try:
+                got = publish.status(r["id"]) or {}
+            except Exception as exc:
+                log.warning("buffer status of %s: %s", r["id"], exc)
+                continue
+            r["status"] = got.get("status")
+            if got.get("externalLink"):
+                r["link"] = got["externalLink"]
+            if (got.get("error") or {}).get("message"):
+                r["error"] = got["error"]["message"]
+            seen[service] = (r["status"], state.parse(got.get("sentAt")))
+        sent = [at or due for status, at in seen.values() if status == "sent"]
+        if sent:
+            s["status"], s["posted_at"] = "posted", state.iso(min(sent))
+            log.info("%s went out: %s", s["id"], s["posted"])
+        elif seen and all(status == "error" for status, _ in seen.values()):
+            if not s.get("retried") and now < due + SLOT_GRACE:
+                s.pop("slot", None)
+                s.update(status="ready", retried=True)
+                log.warning("booked post of %s failed (%s); sharing it now", s["id"], s["posted"])
+            else:
+                s["status"] = "post-failed"
+                log.warning("booked post of %s failed: %s", s["id"], s["posted"])
+        elif now > due + SETTLE_GIVE_UP:
+            s["status"] = "post-failed"
+            log.warning("Buffer still hasn't sent %s: %s", s["id"], s["posted"])
 
 
 def post_due(now: datetime) -> dict | None:
-    """Post the next Short: in a due slot, or a breaking one as soon as POST_GAP has passed since the last post."""
+    """Settle booked posts; share now a Short for a due slot nothing was booked for, or breaking news once POST_GAP
+    has passed since the last post and before the next booked one; book the rest into their slots."""
     if not publish.configured():
         return None
     items = shorts()
+    settle(items, now)
     ready = [s for s in items if s.get("status") == "ready" and s.get("video")]
     fresh = [s for s in ready if now - (state.parse(s["made_at"]) or now) <= READY_MAX_AGE]
     for s in ready:
         if s not in fresh:
             s["status"] = "stale"
-    save_shorts(items)
     urgent = [s for s in fresh if s.get("breaking")]
-    slot = _slot_due(now)
-    if not slot:
+    slot, short = _slot_due(now, items), None
+    if slot and fresh:
+        short = (urgent or fresh)[0]
+    elif urgent:
         last = max((p for s in items if (p := state.parse(s.get("posted_at")))), default=None)
-        if not urgent or (last and now - last < POST_GAP):
-            return None
-        slot = "breaking " + now.astimezone(IST).strftime("%Y-%m-%d %H:%M")
-    if not fresh:
-        return None
-    short = (urgent or fresh)[0]
-    meta = {**short, "disclosure": DISCLOSURE}
-    short["posted"] = publish.post(short["video"], meta)
-    short["slot"], short["posted_at"] = slot, state.iso()
-    short["status"] = "posted" if any("id" in r for r in short["posted"].values()) else "post-failed"
+        booked = [d for s in items if s.get("status") == "scheduled" and (d := state.parse(s.get("due_at")))]
+        if not (last and now - last < POST_GAP) and not any(abs(d - now) < POST_GAP for d in booked):
+            short, slot = urgent[0], "breaking " + now.astimezone(IST).strftime("%Y-%m-%d %H:%M")
+    if short:
+        short["posted"] = publish.post(short["video"], {**short, "disclosure": DISCLOSURE})
+        short["slot"], short["posted_at"] = slot, state.iso(now)
+        short["status"] = "posted" if any("id" in r for r in short["posted"].values()) else "post-failed"
+        log.info("posted %s in slot %s: %s", short["id"], slot, short["posted"])
+    book(items, now)
     save_shorts(items)
-    log.info("posted %s in slot %s: %s", short["id"], slot, short["posted"])
     return short
 
 
@@ -228,7 +295,7 @@ def plan() -> tuple[bool, str, bool]:
         if re.fullmatch(r"https?://\S+", url):
             return True, url, True
     ready = [s for s in items if s.get("status") == "ready" and now - (state.parse(s["made_at"]) or now) <= READY_MAX_AGE]
-    nxt = _next_slot(now)
+    nxt = _next_slot(now, {s.get("slot") for s in items if s.get("slot")})
     if ready:
         log.info("%d Short(s) ready; next slot %s IST%s", len(ready), nxt.strftime("%d %b %H:%M"),
                  "" if publish.configured() else " (Buffer not connected yet)")

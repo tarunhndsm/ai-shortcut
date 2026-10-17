@@ -7,6 +7,7 @@ from __future__ import annotations
 import logging
 import os
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -84,12 +85,15 @@ def _caption(meta: dict, service: str) -> str:
     return f"{meta['title']}\n\n{meta['description']}\n\nSource: {meta['source']}\n{meta['disclosure']}\n\n{tags}"[:2100]
 
 
-def post(video_url: str, meta: dict) -> dict:
-    """Share now on every connected channel: {service: {"id", "status", "error"}}."""
+def post(video_url: str, meta: dict, due: datetime | None = None) -> dict:
+    """Share now on every connected channel, or have Buffer post it at `due`: {service: {"id", "status", "error"}}."""
     results = {}
     for service, channel in channels().items():
         payload = {"channelId": channel, "text": _caption(meta, service), "schedulingType": "automatic",
                    "mode": "shareNow", "assets": [{"video": {"url": video_url}}]}
+        if due:
+            payload["mode"] = "customScheduled"
+            payload["dueAt"] = due.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
         if service == "youtube":
             payload["metadata"] = {"youtube": {"title": meta["title"][:100].replace("<", "").replace(">", ""),
                                                "categoryId": CATEGORY, "privacy": "public", "madeForKids": False,
