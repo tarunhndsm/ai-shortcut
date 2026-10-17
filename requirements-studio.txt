@@ -1,0 +1,4 @@
+-r requirements.txt
+faster-whisper==1.2.1
+kokoro==0.9.4
+playwright==1.55.0
