@@ -46,5 +46,56 @@
   },
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-0037.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-0037-sheet.jpg"
+ },
+ {
+  "id": "as-20261018-0322",
+  "made_at": "2026-10-17T21:56:39Z",
+  "status": "scheduled",
+  "story": "Open-source VoiceStudio brings fully local ElevenLabs voice cloning and dubbing to your machine.",
+  "title": "VoiceStudio: The Open-Source Local ElevenLabs",
+  "description": "VoiceStudio brings voice cloning, dubbing, and audiobook creation to your machine across 646 languages. Everything runs locally with hardware acceleration and agent MCP support.",
+  "tags": [
+   "VoiceStudio",
+   "voice cloning",
+   "ElevenLabs alternative",
+   "text to speech",
+   "open source AI",
+   "local AI",
+   "AI dubbing",
+   "audiobook AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#VoiceAI",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/debpalash/VoiceStudio",
+  "keys": [
+   "gh:debpalash/voicestudio"
+  ],
+  "entity": "gh:debpalash/voicestudio",
+  "duration": 44.955,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly professional visual design with crisp layout and accurate captions."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-0322.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-0322-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-18 06:00",
+  "due_at": "2026-10-18T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad3ef1a0a208cb3233b6484",
+    "status": "scheduled"
+   }
+  }
  }
 ]
