@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: desk
@@ -104,6 +105,22 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -q -m "desk: state $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull -q --rebase && git push -q
+          fi
+
+      - name: Open an alert issue when a run fails, close it when one succeeds
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          OUTCOME: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          open=$(gh issue list -R "$REPO" --state open --search "Desk alert in:title" --json number --jq '.[0].number // empty')
+          if [ "$OUTCOME" = "success" ] && [ -n "$open" ]; then
+            gh issue close "$open" -R "$REPO" -c "Recovered: $RUN_URL"
+          elif [ "$OUTCOME" = "failure" ] && [ -z "$open" ]; then
+            gh issue create -R "$REPO" -t "Desk alert: a run failed" \
+              -b "Run $RUN_URL failed. Later runs keep trying; this issue closes itself when one succeeds."
           fi
 
       - name: Keep the Short and its review sheet
