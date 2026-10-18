@@ -252,5 +252,48 @@
    }
   },
   "posted_at": "2026-10-18T14:30:13Z"
+ },
+ {
+  "id": "as-20261019-0320",
+  "made_at": "2026-10-18T21:54:01Z",
+  "status": "rejected",
+  "story": "Anthropic launched the official directory for Claude Code Plugins",
+  "title": "Claude Code just launched an official plugin directory",
+  "description": "Anthropic released the official claude-plugins-official directory for Claude Code. Here is how plugin installs work and what safety precautions you need to take.",
+  "tags": [
+   "Claude Code",
+   "Anthropic",
+   "Claude Plugins",
+   "MCP",
+   "Model Context Protocol",
+   "AI Coding",
+   "Developer Tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#ClaudeCode",
+   "#Coding"
+  ],
+  "chip": "LAUNCH",
+  "source": "https://github.com/anthropics/claude-plugins-official",
+  "keys": [
+   "gh:anthropics/claude-plugins-official"
+  ],
+  "entity": "gh:anthropics/claude-plugins-official",
+  "duration": 42.3,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Overlapping text visual glitch on stats card in frame 3 (star and fork counts rendered on top of each other)"
+   ],
+   "notes": "Frame 3 contains overlapping/glitched stat numbers on the GitHub card."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0320.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0320-sheet.jpg"
  }
 ]
