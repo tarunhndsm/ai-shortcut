@@ -203,7 +203,7 @@
  {
   "id": "as-20261018-1815",
   "made_at": "2026-10-18T12:49:14Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "OpenCode surges as the top trending open-source autonomous coding agent",
   "title": "OpenCode: The Open-Source AI Coding Agent Taking Over GitHub",
   "description": "OpenCode has surged past 215,000 stars on GitHub as a trending open-source coding agent. It offers a local desktop app, CLI, and dual build and plan modes.",
@@ -247,8 +247,10 @@
   "posted": {
    "youtube": {
     "id": "6ad4c04d769b457934c1ccb9",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/0HPKP_yY8FA"
    }
-  }
+  },
+  "posted_at": "2026-10-18T14:30:13Z"
  }
 ]
