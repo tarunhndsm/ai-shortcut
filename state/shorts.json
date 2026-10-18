@@ -103,7 +103,7 @@
  {
   "id": "as-20261018-1712",
   "made_at": "2026-10-18T11:47:00Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
   "title": "DeepSeek Launches Search and Fetch APIs at $0.75",
   "description": "DeepSeek introduced dedicated Search and Fetch APIs for AI agents at 75 cents per 1,000 requests. The tool undercuts existing scraping and search competitors for live web retrieval. Here is what it offers and how it compares.",
@@ -148,10 +148,56 @@
   "posted": {
    "youtube": {
     "id": "6ad4b1b70b0d72757a1de12e",
-    "status": "sent"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/JZo_IOr6Xa8"
    }
   },
   "slot": "breaking 2026-10-18 17:17",
-  "due_at": "2026-10-18T11:47:02Z"
+  "due_at": "2026-10-18T11:47:02Z",
+  "posted_at": "2026-10-18T11:47:05Z"
+ },
+ {
+  "id": "as-20261018-1744",
+  "made_at": "2026-10-18T12:18:44Z",
+  "status": "rejected",
+  "story": "MadsLorentzen released ai-job-search, an open-source job application framework built on Claude Code that runs entirely on your local machine.",
+  "title": "This Local AI Framework Landed 20 Job Interviews",
+  "description": "ai-job-search is an open-source framework built on Claude Code that runs entirely on your local machine. It evaluates postings, tailors LaTeX resumes, writes cover letters, and runs interview prep. Here is how it works and what you need to run it.",
+  "tags": [
+   "ai job search",
+   "claude code",
+   "open source ai",
+   "job hunting ai",
+   "resume builder",
+   "ai agents",
+   "career automation",
+   "github trending"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIJobSearch",
+   "#ClaudeCode"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/MadsLorentzen/ai-job-search",
+  "keys": [
+   "gh:madslorentzen/ai-job-search"
+  ],
+  "entity": "gh:madslorentzen/ai-job-search",
+  "duration": 40.005,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Text rendering overlap glitch in the GitHub stats card on frame 5"
+   ],
+   "notes": "Fix graphic glitch on frame 5 card before publishing."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1744.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1744-sheet.jpg"
  }
 ]
