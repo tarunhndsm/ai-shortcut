@@ -384,5 +384,56 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0420.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0420-sheet.jpg"
+ },
+ {
+  "id": "as-20261019-0450",
+  "made_at": "2026-10-18T23:24:34Z",
+  "status": "scheduled",
+  "story": "XERJ released an agent-native search tool designed to replace grep without wasting context tokens.",
+  "title": "Why AI Coding Agents Are Replacing Grep with XERJ",
+  "description": "Standard grep forces AI coding agents to read full files and burn context tokens. XERJ indexes your codebase locally to pull exact code snippets at a fraction of the cost. Here is how it works and where it makes the biggest difference.",
+  "tags": [
+   "XERJ",
+   "AI coding agent",
+   "AI search",
+   "developer tools",
+   "open source AI",
+   "code search",
+   "Rust tool",
+   "agentic AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Coding",
+   "#ArtificialIntelligence"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/xerj-org/xerj",
+  "keys": [
+   "gh:xerj-org/xerj"
+  ],
+  "entity": "gh:xerj-org/xerj",
+  "duration": 43.839,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean developer-focused aesthetic with legible typography and properly aligned visual elements."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0450.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0450-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-19 06:00",
+  "due_at": "2026-10-19T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad55535ae173d6e0020d637",
+    "status": "scheduled"
+   }
+  }
  }
 ]
