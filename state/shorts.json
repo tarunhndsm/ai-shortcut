@@ -99,5 +99,59 @@
    }
   },
   "posted_at": "2026-10-18T00:30:26Z"
+ },
+ {
+  "id": "as-20261018-1712",
+  "made_at": "2026-10-18T11:47:00Z",
+  "status": "scheduled",
+  "story": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+  "title": "DeepSeek Launches Search and Fetch APIs at $0.75",
+  "description": "DeepSeek introduced dedicated Search and Fetch APIs for AI agents at 75 cents per 1,000 requests. The tool undercuts existing scraping and search competitors for live web retrieval. Here is what it offers and how it compares.",
+  "tags": [
+   "deepseek",
+   "deepseek api",
+   "web search api",
+   "ai agents",
+   "rag",
+   "brave search",
+   "kagi api",
+   "ai tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#AIAgents"
+  ],
+  "chip": "LAUNCH",
+  "source": "https://github.com/diegosouzapw/OmniRoute",
+  "keys": [
+   "https://api-docs.deepseek.com/guides/search",
+   "gh:diegosouzapw/omniroute",
+   "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+   "gh:ollama/ollama",
+   "gh:librechat-ai/librechat"
+  ],
+  "entity": "",
+  "duration": 44.015,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual execution with well-aligned graphics, readable code blocks, and clear text overlays."
+  },
+  "breaking": true,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1712.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1712-sheet.jpg",
+  "posted": {
+   "youtube": {
+    "id": "6ad4b1b70b0d72757a1de12e",
+    "status": "sent"
+   }
+  },
+  "slot": "breaking 2026-10-18 17:17",
+  "due_at": "2026-10-18T11:47:02Z"
  }
 ]
