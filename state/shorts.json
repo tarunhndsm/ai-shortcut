@@ -50,7 +50,7 @@
  {
   "id": "as-20261018-0322",
   "made_at": "2026-10-17T21:56:39Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Open-source VoiceStudio brings fully local ElevenLabs voice cloning and dubbing to your machine.",
   "title": "VoiceStudio: The Open-Source Local ElevenLabs",
   "description": "VoiceStudio brings voice cloning, dubbing, and audiobook creation to your machine across 646 languages. Everything runs locally with hardware acceleration and agent MCP support.",
@@ -94,8 +94,10 @@
   "posted": {
    "youtube": {
     "id": "6ad3ef1a0a208cb3233b6484",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/fKKlpRdIZJg"
    }
-  }
+  },
+  "posted_at": "2026-10-18T00:30:26Z"
  }
 ]
