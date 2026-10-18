@@ -199,5 +199,56 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1744.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1744-sheet.jpg"
+ },
+ {
+  "id": "as-20261018-1815",
+  "made_at": "2026-10-18T12:49:14Z",
+  "status": "scheduled",
+  "story": "OpenCode surges as the top trending open-source autonomous coding agent",
+  "title": "OpenCode: The Open-Source AI Coding Agent Taking Over GitHub",
+  "description": "OpenCode has surged past 215,000 stars on GitHub as a trending open-source coding agent. It offers a local desktop app, CLI, and dual build and plan modes.",
+  "tags": [
+   "OpenCode",
+   "AI coding agent",
+   "open source AI",
+   "coding assistant",
+   "GitHub trending",
+   "developer tools",
+   "programming",
+   "software engineering"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Coding",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/anomalyco/opencode",
+  "keys": [
+   "gh:anomalyco/opencode"
+  ],
+  "entity": "gh:anomalyco/opencode",
+  "duration": 44.625,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design with readable layout, proper formatting, and accurate script alignment."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1815.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261018-1815-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-18 20:00",
+  "due_at": "2026-10-18T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad4c04d769b457934c1ccb9",
+    "status": "scheduled"
+   }
+  }
  }
 ]
