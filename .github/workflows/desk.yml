@@ -38,7 +38,11 @@ jobs:
       PYTHONUNBUFFERED: "1"
       DESK_WORK: /home/runner/work-desk
     steps:
+      # A run that waited in the desk queue would otherwise check out the commit it was triggered on, without the
+      # state the run before it saved, and make and post that run's Short a second time (18 Oct, DeepSeek).
       - uses: actions/checkout@v5
+        with:
+          ref: main
 
       - uses: actions/setup-python@v6
         with:
