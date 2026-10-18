@@ -295,5 +295,49 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0320.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0320-sheet.jpg"
+ },
+ {
+  "id": "as-20261019-0350",
+  "made_at": "2026-10-18T22:25:20Z",
+  "status": "rejected",
+  "story": "TV-Vibehack uses ADB to strip ads from Android TV and replace its launcher with a clean tvOS-inspired interface.",
+  "title": "Strip All Ads from Your Android TV with AI",
+  "description": "TV-Vibehack uses Wi-Fi ADB commands to strip bloatware and ads from your Android TV. The entire setup was built in an afternoon with Claude Code and replaces your home screen with a clean tvOS style launcher. It deletes nothing and is completely reversible.",
+  "tags": [
+   "Android TV",
+   "Google TV",
+   "Claude Code",
+   "tv-vibehack",
+   "debloat",
+   "open source",
+   "ADB",
+   "AI coding"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AndroidTV",
+   "#ClaudeCode"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/Gathin23/tv-vibehack",
+  "keys": [
+   "gh:gathin23/tv-vibehack"
+  ],
+  "entity": "gh:gathin23/tv-vibehack",
+  "duration": 45.249,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Frame 5 contains overlapping, unreadable text on the GitHub star count badge."
+   ],
+   "notes": "Text overlay glitch in frame 5 makes the star count unreadable, requiring visual cleanup before publishing."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0350.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0350-sheet.jpg"
  }
 ]
