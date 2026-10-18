@@ -339,5 +339,50 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0350.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0350-sheet.jpg"
+ },
+ {
+  "id": "as-20261019-0420",
+  "made_at": "2026-10-18T22:54:52Z",
+  "status": "rejected",
+  "story": "Orca released an open-source hub to run and orchestrate fleets of AI coding agents across desktop, mobile, and remote environments.",
+  "title": "Orca: Orchestrate Fleets of AI Coding Agents",
+  "description": "Orca is an open-source orchestrator that lets you run and steer fleets of terminal AI coding agents like Claude Code and Grok across git worktrees, desktop, and mobile.",
+  "tags": [
+   "orca",
+   "ai agents",
+   "claude code",
+   "coding agents",
+   "open source ai",
+   "developer tools",
+   "git worktrees",
+   "programming"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Coding",
+   "#AIAgents"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/stablyai/orca",
+  "keys": [
+   "gh:stablyai/orca"
+  ],
+  "entity": "gh:stablyai/orca",
+  "duration": 40.617,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Overlapping corrupted text in GitHub stats in frame 3",
+    "UI screenshots in scene 2 are too dark and illegible"
+   ],
+   "notes": "Fix text collision in the GitHub repository card and improve media legibility."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0420.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261019-0420-sheet.jpg"
  }
 ]
