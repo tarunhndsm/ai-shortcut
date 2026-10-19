@@ -490,5 +490,59 @@
    }
   },
   "posted_at": "2026-10-19T14:30:09Z"
+ },
+ {
+  "id": "as-20261020-0058",
+  "made_at": "2026-10-19T19:37:55Z",
+  "status": "scheduled",
+  "story": "MiniMax M3.1 Flash",
+  "title": "OmniRoute: Free AI Gateway Routing 375 Providers",
+  "description": "OmniRoute is an open-source MIT gateway that connects over 375 AI providers into a single unified endpoint. It aggregates free provider quotas and includes built-in token compression for popular coding agents.",
+  "tags": [
+   "OmniRoute",
+   "AI gateway",
+   "Claude Code",
+   "Cursor",
+   "developer tools",
+   "open source",
+   "LLM proxy",
+   "token saver"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OmniRoute",
+   "#CodingTools"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/diegosouzapw/OmniRoute",
+  "keys": [
+   "https://minimax.io/blog/minimax-m31f",
+   "gh:diegosouzapw/omniroute",
+   "https://the-decoder.com/minimax-m3-1-flash-shows-chinas-ai-price-race-has-no-floor-in-sight",
+   "gh:ollama/ollama",
+   "https://techmeme.com/261019/p30"
+  ],
+  "entity": "",
+  "duration": 42.698,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design, excellent readability, and precise graphic representation matching the script throughout."
+  },
+  "breaking": true,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-0058.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-0058-sheet.jpg",
+  "posted": {
+   "youtube": {
+    "id": "6ad67198cded3e5c06c45af4",
+    "status": "sent"
+   }
+  },
+  "slot": "breaking 2026-10-20 01:07",
+  "due_at": "2026-10-19T19:37:59Z"
  }
 ]
