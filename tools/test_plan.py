@@ -167,3 +167,22 @@ run.save_shorts([short("s8", at(18, "03:30"), status="posted", slot="2026-10-18 
 booked.clear()
 run.post_due(at(18, "10:25"))
 check("and books it for 13:00", booked, [("s9", "18 13:00")])
+
+from desk import writer  # noqa: E402
+
+def script(say: str, headline: str, title: str) -> dict:
+    return {"title": title, "scenes": [{"type": "hook", "say": say, "headline": headline}]}
+
+repo = {"platform": "github", "repo": "VoiceStudio", "name": "debpalash/VoiceStudio"}
+check("a hook and title naming the repo pass", writer._name_missing(
+    script("Voice Studio clones any voice from ten seconds of audio.", "VOICESTUDIO CLONES VOICES", "VoiceStudio: free voice cloning"),
+    repo), [])
+check("a hook that only says 'voice' is sent back", writer._name_missing(
+    script("This free tool clones your voice in ten seconds.", "CLONE ANY VOICE", "VoiceStudio: free voice cloning"), repo),
+    ["name VoiceStudio in scene 1's say", "name VoiceStudio in scene 1's headline"])
+check("a model's name as spoken passes", writer._name_missing(
+    script("Qwen three point eight now runs on a laptop.", "QWEN 3.8 ON A LAPTOP", "Qwen3.8 runs on a laptop"),
+    {"platform": "huggingface", "repo": "Qwen3.8-Instruct"}), [])
+check("papers and web pages are not checked", writer._name_missing(
+    script("A new paper halves training cost.", "HALF THE COST", "Training at half the cost"),
+    {"platform": "paper", "name": "Some long paper title"}), [])

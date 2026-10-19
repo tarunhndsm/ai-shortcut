@@ -25,6 +25,8 @@ Write ONE Short about the story in the dossier. Hard rules:
 - Scene 1 is the hook: the payoff first, the most surprising concrete true thing (a number, a result, what it lets you
   do), in the first 2 seconds. No greetings, no "in this video". Scene 2 shows the proof on screen (shot, card, stat,
   bars, code or versus).
+- Name the tool, model or repo (the dossier's subject) in scene 1's "say", in its "headline" and in the "title":
+  YouTube decides who a Short is shown to from what its first words and title name.
 - Add what the sources don't spell out: why it matters, who it's for, how it compares with what people use today
   (only from the dossier), or the catch. At least two scenes are your analysis, not a summary. Never copy a sentence
   from the sources; explain it in your own words.
@@ -106,11 +108,32 @@ def _numbers_ok(script: dict, dossier: dict) -> list[str]:
     return problems
 
 
-def _valid(script: dict, visuals: list[dict]) -> list[str]:
+def _squash(text: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", str(text).lower())
+
+
+def _name_missing(script: dict, subject: dict | None) -> list[str]:
+    """Where the hook or the title leaves out a repo's or model's name. The letters that start its first part are
+    enough ("qwen" for Qwen3.8-Instruct, said "Qwen three point eight"; "voicestudio" for VoiceStudio, said "Voice
+    Studio"); papers and web pages have no short name."""
+    if not subject or subject.get("platform") not in ("github", "huggingface") or not subject.get("repo"):
+        return []
+    start = re.match(r"[A-Za-z]+", re.split(r"[-_. ]", subject["repo"])[0])
+    if not start or len(start[0]) < 3:
+        return []
+    word, hook = start[0].lower(), script["scenes"][0]
+    places = [("scene 1's say", hook.get("say", "")), ("scene 1's headline", hook.get("headline", "")),
+              ("the title", script.get("title", ""))]
+    return [f"name {subject['repo']} in {where}" for where, text in places if word not in _squash(text)]
+
+
+def _valid(script: dict, visuals: list[dict], subject: dict | None = None) -> list[str]:
     problems = []
     scenes = script.get("scenes")
     if not isinstance(scenes, list) or not 6 <= len(scenes) <= 10:
         return ["needs 7-9 scenes"]
+    if scenes[0].get("type") == "hook":
+        problems += _name_missing(script, subject)
     words = sum(len(str(s.get("say", "")).split()) for s in scenes)
     if not 98 <= words <= 140:
         problems.append(f"narration is {words} words; it must be 110-130")
@@ -148,7 +171,7 @@ def write(dossier: dict, visuals: list[dict], rounds: int = 3) -> dict:
     for attempt in range(rounds):
         prompt = f"Dossier:\n{brief}" + (f"\n\nYour last draft had these problems; fix them all:\n{feedback}" if feedback else "")
         script, model = gemini.text_json(SYSTEM, prompt, models=gemini.SMART, temperature=0.8, timeout=200)
-        problems = _valid(script, visuals)
+        problems = _valid(script, visuals, dossier.get("subject"))
         if not problems:
             problems = _numbers_ok(script, dossier)
         if not problems:
