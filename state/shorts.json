@@ -388,7 +388,7 @@
  {
   "id": "as-20261019-0450",
   "made_at": "2026-10-18T23:24:34Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "XERJ released an agent-native search tool designed to replace grep without wasting context tokens.",
   "title": "Why AI Coding Agents Are Replacing Grep with XERJ",
   "description": "Standard grep forces AI coding agents to read full files and burn context tokens. XERJ indexes your codebase locally to pull exact code snippets at a fraction of the cost. Here is how it works and where it makes the biggest difference.",
@@ -432,8 +432,10 @@
   "posted": {
    "youtube": {
     "id": "6ad55535ae173d6e0020d637",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/DBr4SgA6oJ8"
    }
-  }
+  },
+  "posted_at": "2026-10-19T00:30:15Z"
  }
 ]
