@@ -546,5 +546,56 @@
   "slot": "breaking 2026-10-20 01:07",
   "due_at": "2026-10-19T19:37:59Z",
   "posted_at": "2026-10-19T19:38:02Z"
+ },
+ {
+  "id": "as-20261020-0308",
+  "made_at": "2026-10-19T21:46:15Z",
+  "status": "scheduled",
+  "story": "An open-source MCP server adds a full AI co-pilot directly inside Blender to control 3D scenes and Python scripting.",
+  "title": "Blender AI MCP Addon: Control 3D with Natural Language",
+  "description": "Blender AI MCP Addon connects Blender directly to LLMs like Claude and local Ollama models via MCP. It gives AI models 21 scene tools to inspect objects, adjust materials, and run multi-agent workflows.",
+  "tags": [
+   "Blender AI",
+   "Blender MCP",
+   "Blender addon",
+   "Model Context Protocol",
+   "AI 3D modeling",
+   "Ollama Blender",
+   "Claude Blender",
+   "open source AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Blender3D",
+   "#AItools"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/LiCinCan/blender-ai-mcp-addon",
+  "keys": [
+   "gh:licincan/blender-ai-mcp-addon"
+  ],
+  "entity": "gh:licincan/blender-ai-mcp-addon",
+  "duration": 42.763,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean graphics, strong typography, and accurate visual representations for each script beat."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-0308.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-0308-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-20 06:00",
+  "due_at": "2026-10-20T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad68faafc0ba3e89a94948a",
+    "status": "scheduled"
+   }
+  }
  }
 ]
