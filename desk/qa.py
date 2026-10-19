@@ -11,6 +11,10 @@ from . import gemini, render
 
 log = logging.getLogger(__name__)
 
+# The template's counters roll for up to about 1.8 s from a scene's "roll" time; a still taken mid-roll shows two
+# half digits, which the judge reads as overlapping text.
+ROLL_SETTLE = 1.9
+
 JUDGE = """You are the final quality judge of a YouTube Shorts channel about AI. You get a contact sheet of frames from
 one Short (left to right, top to bottom, in time order) and its script. Check what a viewer would see:
 - text cut off, overlapping, unreadable, or spilling out of its box; empty or broken areas; missing images;
@@ -40,7 +44,10 @@ def judge(video: Path, data: dict, script: dict, folder: Path) -> dict:
     times = []
     for s in data["scenes"]:
         span = s["t1"] - s["t0"]
-        times += [s["t0"] + min(1.2, span * 0.45), s["t0"] + span * 0.85]
+        first = s["t0"] + min(1.2, span * 0.45)
+        if s.get("roll"):
+            first = min(max(first, s["roll"] + ROLL_SETTLE), s["t0"] + span * 0.7)
+        times += [first, s["t0"] + span * 0.85]
     paths = render.frames(video, times[:16], folder)
     board = render.sheet(paths, folder / "sheet.jpg")
     lines = [{"scene": i, "type": s["type"], "say": s.get("say")} for i, s in enumerate(script["scenes"])]
