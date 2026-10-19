@@ -494,7 +494,7 @@
  {
   "id": "as-20261020-0058",
   "made_at": "2026-10-19T19:37:55Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "MiniMax M3.1 Flash",
   "title": "OmniRoute: Free AI Gateway Routing 375 Providers",
   "description": "OmniRoute is an open-source MIT gateway that connects over 375 AI providers into a single unified endpoint. It aggregates free provider quotas and includes built-in token compression for popular coding agents.",
@@ -539,10 +539,12 @@
   "posted": {
    "youtube": {
     "id": "6ad67198cded3e5c06c45af4",
-    "status": "sent"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/ZsSREsYgGg4"
    }
   },
   "slot": "breaking 2026-10-20 01:07",
-  "due_at": "2026-10-19T19:37:59Z"
+  "due_at": "2026-10-19T19:37:59Z",
+  "posted_at": "2026-10-19T19:38:02Z"
  }
 ]
