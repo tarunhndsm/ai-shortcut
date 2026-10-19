@@ -441,7 +441,7 @@
  {
   "id": "as-20261019-1720",
   "made_at": "2026-10-19T11:55:05Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Google released ARTEMIS to give AI coding agents direct UI automation over Android apps",
   "title": "Google Artemis: AI Agents Can Now Drive Real Android Phones",
   "description": "Google released ARTEMIS, an open-source tool connecting AI coding assistants directly to Android devices via MCP. It allows agents like Claude Code and Windsurf to test, navigate, and debug apps autonomously.",
@@ -485,8 +485,10 @@
   "posted": {
    "youtube": {
     "id": "6ad6051da073718b17c41746",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/bfu31OoDju4"
    }
-  }
+  },
+  "posted_at": "2026-10-19T14:30:09Z"
  }
 ]
