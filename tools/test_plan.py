@@ -150,9 +150,20 @@ check("breaking news keeps 90 minutes from a booked post", posted, [])
 run.post_due(at(18, "07:40"))
 check("and goes once the gap has passed", posted, ["b3"])
 
-run.save_shorts([short("s5", at(18, "05:00"), status="scheduled", slot="2026-10-18 20:00"),
+run.save_shorts([short("s5", at(18, "05:00"), status="scheduled", slot="2026-10-18 13:00"),
+                 short("s7", at(18, "05:10"), status="scheduled", slot="2026-10-18 20:00"),
                  short("s6", at(18, "06:30"))])
 booked.clear()
 posted.clear()
 run.post_due(at(18, "07:30"))
-check("no booking past 16 h after it was made", (booked, posted, run.shorts()[1]["status"]), ([], [], "ready"))
+check("no booking past 16 h after it was made", (booked, posted, run.shorts()[2]["status"]), ([], [], "ready"))
+
+run.save_shorts([short("s8", at(18, "03:30"), status="posted", slot="2026-10-18 06:00")])
+state.now = lambda: at(18, "09:30")
+check("3.5 h before the 13:00 slot: not yet", run.plan(), (False, "", False))
+state.now = lambda: at(18, "10:05")
+check("makes for the 13:00 slot", run.plan(), (True, "", False))
+run.save_shorts([short("s8", at(18, "03:30"), status="posted", slot="2026-10-18 06:00"), short("s9", at(18, "10:20"))])
+booked.clear()
+run.post_due(at(18, "10:25"))
+check("and books it for 13:00", booked, [("s9", "18 13:00")])

@@ -24,10 +24,11 @@ from . import assets, compose, editor, env, publish, qa, render, research, scout
 log = logging.getLogger("desk")
 
 IST = timezone(timedelta(hours=5, minutes=30))
-# Posting slots in India time: 06:00 is the US evening (20:30 EDT) and India's best morning window; 20:00 is India's
-# evening and the US morning. Shorts ranking doesn't favour a time of day, but freshness matters for news, so a story
-# that breaks in between can go out at once (BREAKING_*), at most one a day.
-SLOTS = ("06:00", "20:00")
+# Posting slots in India time: 06:00 is the US evening (20:30 EDT) and India's best morning window; 13:00 is India's
+# lunch break and Europe's morning; 20:00 is India's evening and the US morning. Shorts ranking doesn't favour a time
+# of day, but freshness matters for news, so a story that breaks in between can go out at once (BREAKING_*), at most
+# one a day.
+SLOTS = ("06:00", "13:00", "20:00")
 SLOT_GRACE = timedelta(minutes=75)
 MAKE_AHEAD = timedelta(hours=3)
 READY_MAX_AGE = timedelta(hours=16)

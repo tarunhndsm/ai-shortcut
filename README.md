@@ -29,9 +29,9 @@ one Buffer failed to send is shared once more within the slot's 75 minutes, and 
 "Post alert" issue that closes itself when a Short goes out. A failed run opens a "Desk alert" issue (GitHub emails the
 owner) that the next successful run closes; a Buffer channel that is disconnected, locked or paused fails
 the plan step, so nothing is made until it is fixed. Slots, India time: 06:00 (the US evening and India's best morning
-window) and 20:00 (India's evening, the US morning). A story that is hot, under 8 hours old and carried by at least
-three kinds of sources is made and posted at once instead, at most once a day and at least 90 minutes after the last
-post. At most three Shorts a day.
+window), 13:00 (India's lunch break, Europe's morning) and 20:00 (India's evening, the US morning). A story that is
+hot, under 8 hours old and carried by at least three kinds of sources is made and posted at once instead, at most once
+a day and at least 90 minutes after the last post. At most four Shorts a day.
 
 ## Secrets
 
