@@ -550,7 +550,7 @@
  {
   "id": "as-20261020-0308",
   "made_at": "2026-10-19T21:46:15Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "An open-source MCP server adds a full AI co-pilot directly inside Blender to control 3D scenes and Python scripting.",
   "title": "Blender AI MCP Addon: Control 3D with Natural Language",
   "description": "Blender AI MCP Addon connects Blender directly to LLMs like Claude and local Ollama models via MCP. It gives AI models 21 scene tools to inspect objects, adjust materials, and run multi-agent workflows.",
@@ -594,8 +594,10 @@
   "posted": {
    "youtube": {
     "id": "6ad68faafc0ba3e89a94948a",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/cWEyp6KxAoM"
    }
-  }
+  },
+  "posted_at": "2026-10-20T00:30:07Z"
  }
 ]
