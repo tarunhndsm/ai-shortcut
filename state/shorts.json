@@ -599,5 +599,49 @@
    }
   },
   "posted_at": "2026-10-20T00:30:07Z"
+ },
+ {
+  "id": "as-20261020-1011",
+  "made_at": "2026-10-20T04:57:35Z",
+  "status": "rejected",
+  "story": "Mistral released Timestral, a dedicated foundation model family for time-series forecasting and analysis.",
+  "title": "Timestral: Mistral's Open Time-Series Foundation Model",
+  "description": "Mistral has launched Timestral, a family of open time-series foundation models ranging from 5M to 209M parameters. Built for multivariate probabilistic forecasting, it runs efficiently on CPUs and achieves top zero-shot benchmark scores.",
+  "tags": [
+   "Timestral",
+   "Mistral AI",
+   "time series forecasting",
+   "machine learning",
+   "open source AI",
+   "PyTorch",
+   "data science"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Mistral",
+   "#DataScience"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://github.com/mistralai/timestral",
+  "keys": [
+   "https://mistral.ai/news/timestral"
+  ],
+  "entity": "",
+  "duration": 50.246,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Frame 7 subtitle has low contrast and is barely readable",
+    "Frame 9 terminal command is visibly incomplete before finishing in frame 10"
+   ],
+   "notes": "Solid overall structure and design, but minor text visibility and animation timing defects need polish."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1011.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1011-sheet.jpg"
  }
 ]
