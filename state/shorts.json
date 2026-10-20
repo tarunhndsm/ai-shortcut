@@ -696,5 +696,57 @@
    }
   },
   "posted_at": "2026-10-20T07:30:20Z"
+ },
+ {
+  "id": "as-20261020-1709",
+  "made_at": "2026-10-20T11:46:09Z",
+  "status": "scheduled",
+  "story": "DeepSeek officially open-sourced DeepInfer, its custom high-performance inference engine.",
+  "title": "DeepInfer: DeepSeek Open-Sources Its Inference Engine",
+  "description": "DeepSeek has officially open-sourced DeepInfer, the high-throughput inference framework behind its production scale models. It features custom kernels like FlashMLA and supports DeepSeek-V4.1-Flash on NVIDIA SM100 and Ascend NPUs.",
+  "tags": [
+   "DeepInfer",
+   "DeepSeek",
+   "DeepSeek V4.1 Flash",
+   "LLM inference",
+   "open source AI",
+   "vLLM",
+   "SM100",
+   "AI shortcuts"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#OpenSourceAI"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/deepseek-ai/DeepInfer",
+  "keys": [
+   "gh:deepseek-ai/deepinfer",
+   "https://github.com/deepseek-ai/DeepInfer"
+  ],
+  "entity": "gh:deepseek-ai/deepinfer",
+  "duration": 43.256,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "The video features clean visuals, great typography, and accurate code/metrics matching the script perfectly."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1709.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1709-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-20 20:00",
+  "due_at": "2026-10-20T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad7548431ed850c40dfbd03",
+    "status": "scheduled"
+   }
+  }
  }
 ]
