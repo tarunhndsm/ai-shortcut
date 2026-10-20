@@ -750,5 +750,51 @@
    }
   },
   "posted_at": "2026-10-20T14:30:09Z"
+ },
+ {
+  "id": "as-20261021-0120",
+  "made_at": "2026-10-20T19:57:14Z",
+  "status": "rejected",
+  "story": "Access OpenAI GPT models on Amazon Bedrock from Canada with cross-Region inference",
+  "title": "AWS Bedrock Token Generator: Secure Bedrock APIs",
+  "description": "The AWS Bedrock Token Generator for Python creates temporary bearer tokens for Amazon Bedrock authentication. It eliminates the need to expose long-term AWS credentials in client code. Here is how it works and the major catch you need to handle.",
+  "tags": [
+   "AWS Bedrock Token Generator",
+   "Amazon Bedrock",
+   "AWS Python",
+   "AI authentication",
+   "Bedrock API",
+   "boto3",
+   "cloud security"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AmazonBedrock",
+   "#Python"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/aws/aws-bedrock-token-generator-python",
+  "keys": [
+   "https://aws.amazon.com/blogs/machine-learning/access-openai-gpt-models-on-amazon-bedrock-from-canada-with-cross-region-inference",
+   "https://the-decoder.com/openai-says-gpt-6-is-much-better-with-legacy-programming-languages-such-as-cobol-and-fortran",
+   "https://reddit.com/r/OpenAI/comments/1xak9ks/asked_gpt6_to_illustrate_the_difference_in_size",
+   "https://marktechpost.com/2026/10/19/inception-mercury-3-diffusion-llm"
+  ],
+  "entity": "",
+  "duration": 44.363,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Mismatched graphic in frames 1 and 2 showing an OpenAI repo instead of the AWS Bedrock tool."
+   ],
+   "notes": "Initial frames display an incorrect GitHub card graphic."
+  },
+  "breaking": true,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-0120.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-0120-sheet.jpg"
  }
 ]
