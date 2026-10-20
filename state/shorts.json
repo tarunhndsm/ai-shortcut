@@ -700,7 +700,7 @@
  {
   "id": "as-20261020-1709",
   "made_at": "2026-10-20T11:46:09Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "DeepSeek officially open-sourced DeepInfer, its custom high-performance inference engine.",
   "title": "DeepInfer: DeepSeek Open-Sources Its Inference Engine",
   "description": "DeepSeek has officially open-sourced DeepInfer, the high-throughput inference framework behind its production scale models. It features custom kernels like FlashMLA and supports DeepSeek-V4.1-Flash on NVIDIA SM100 and Ascend NPUs.",
@@ -745,8 +745,10 @@
   "posted": {
    "youtube": {
     "id": "6ad7548431ed850c40dfbd03",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/OQtzCbclmiA"
    }
-  }
+  },
+  "posted_at": "2026-10-20T14:30:09Z"
  }
 ]
