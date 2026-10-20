@@ -647,7 +647,7 @@
  {
   "id": "as-20261020-1029",
   "made_at": "2026-10-20T05:02:33Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Graphify turns any codebase and its docs into a queryable knowledge graph for AI coding tools",
   "title": "Map your codebase with Graphify",
   "description": "Turn your entire codebase and documentation into a queryable knowledge graph for AI assistants. Graphify uses local AST parsing to reduce token spend and improve fact coverage without relying on vector embeddings.",
@@ -691,8 +691,10 @@
   "posted": {
    "youtube": {
     "id": "6ad6f5edcba41b0140602798",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/4d4CGDHEsA4"
    }
-  }
+  },
+  "posted_at": "2026-10-20T07:30:20Z"
  }
 ]
