@@ -796,5 +796,56 @@
   "breaking": true,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-0120.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-0120-sheet.jpg"
+ },
+ {
+  "id": "as-20261021-0321",
+  "made_at": "2026-10-20T21:57:04Z",
+  "status": "scheduled",
+  "story": "Cloudflare open-sourced security-audit-skill, a coding-agent plugin for multi-phase automated codebase security audits.",
+  "title": "Cloudflare security-audit-skill Turns Agents into Pen Testers",
+  "description": "Cloudflare open-sourced security-audit-skill, a coding-agent plugin for multi-phase codebase security audits. It orchestrates isolated agents through six phases with adversarial validation and structured reports. Run additive audits that track coverage across your entire repository.",
+  "tags": [
+   "security-audit-skill",
+   "cloudflare",
+   "ai security",
+   "coding agents",
+   "claude code",
+   "appsec",
+   "vulnerability scanner",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Cloudflare",
+   "#AISecurity"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/cloudflare/security-audit-skill",
+  "keys": [
+   "gh:cloudflare/security-audit-skill"
+  ],
+  "entity": "gh:cloudflare/security-audit-skill",
+  "duration": 44.029,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Polished developer-focused aesthetic with crisp UI cards, smooth terminal animations, and clear typography."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-0321.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-0321-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-21 06:00",
+  "due_at": "2026-10-21T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad7e3b48e50122a680adb3d",
+    "status": "scheduled"
+   }
+  }
  }
 ]
