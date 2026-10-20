@@ -643,5 +643,56 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1011.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1011-sheet.jpg"
+ },
+ {
+  "id": "as-20261020-1029",
+  "made_at": "2026-10-20T05:02:33Z",
+  "status": "scheduled",
+  "story": "Graphify turns any codebase and its docs into a queryable knowledge graph for AI coding tools",
+  "title": "Map your codebase with Graphify",
+  "description": "Turn your entire codebase and documentation into a queryable knowledge graph for AI assistants. Graphify uses local AST parsing to reduce token spend and improve fact coverage without relying on vector embeddings.",
+  "tags": [
+   "AI coding",
+   "Graphify",
+   "developer tools",
+   "LLM agents",
+   "knowledge graph",
+   "Claude Code",
+   "Cursor AI",
+   "software engineering"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Graphify",
+   "#AICoding"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/Graphify-Labs/graphify",
+  "keys": [
+   "gh:graphify-labs/graphify"
+  ],
+  "entity": "gh:graphify-labs/graphify",
+  "duration": 42.944,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Visually clean and professional AI short with strong formatting and accurate visuals matching the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1029.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261020-1029-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-20 13:00",
+  "due_at": "2026-10-20T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad6f5edcba41b0140602798",
+    "status": "scheduled"
+   }
+  }
  }
 ]
