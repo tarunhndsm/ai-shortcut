@@ -800,7 +800,7 @@
  {
   "id": "as-20261021-0321",
   "made_at": "2026-10-20T21:57:04Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Cloudflare open-sourced security-audit-skill, a coding-agent plugin for multi-phase automated codebase security audits.",
   "title": "Cloudflare security-audit-skill Turns Agents into Pen Testers",
   "description": "Cloudflare open-sourced security-audit-skill, a coding-agent plugin for multi-phase codebase security audits. It orchestrates isolated agents through six phases with adversarial validation and structured reports. Run additive audits that track coverage across your entire repository.",
@@ -844,8 +844,10 @@
   "posted": {
    "youtube": {
     "id": "6ad7e3b48e50122a680adb3d",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/eL2V6ed45ZQ"
    }
-  }
+  },
+  "posted_at": "2026-10-21T00:30:06Z"
  }
 ]
