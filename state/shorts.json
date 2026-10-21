@@ -853,7 +853,7 @@
  {
   "id": "as-20261021-1028",
   "made_at": "2026-10-21T05:03:31Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Headroom open-sourced an LLM context compressor for agent tools and RAG chunks",
   "title": "How Headroom cuts your AI agent token bills by up to 95%",
   "description": "Headroom is an open-source context compressor that shrinks tool outputs, logs, and RAG chunks before sending them to LLMs. It cuts token consumption by up to 95% on JSON while preserving full answer accuracy.",
@@ -897,8 +897,10 @@
   "posted": {
    "youtube": {
     "id": "6ad847a6aff466fe0900e8db",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/UE4H8mlNFYY"
    }
-  }
+  },
+  "posted_at": "2026-10-21T07:30:15Z"
  }
 ]
