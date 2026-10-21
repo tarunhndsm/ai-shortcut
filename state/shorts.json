@@ -957,5 +957,56 @@
    }
   },
   "posted_at": "2026-10-21T14:30:10Z"
+ },
+ {
+  "id": "as-20261022-0319",
+  "made_at": "2026-10-21T21:59:22Z",
+  "status": "scheduled",
+  "story": "Mistral officially launched Mistral Large 4, its next-generation flagship frontier model.",
+  "title": "Mistral Large 4 drops with 1T parameters",
+  "description": "Mistral unveiled Mistral Large 4, a one-trillion-parameter multimodal model with 52 billion active parameters. Trained in Europe on Grace Blackwell hardware, it targets enterprise workloads with upcoming open weights.",
+  "tags": [
+   "Mistral Large 4",
+   "Mistral AI",
+   "open weights",
+   "frontier models",
+   "AI models",
+   "multimodal AI",
+   "cybersecurity AI",
+   "open source AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Mistral",
+   "#OpenSourceAI"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://mistral.ai/news/mistral-large-4/",
+  "keys": [
+   "https://mistral.ai/news/mistral-large-4"
+  ],
+  "entity": "",
+  "duration": 41.826,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean formatting, professional visuals, and accurate pacing throughout the short."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-0319.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-0319-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-22 06:00",
+  "due_at": "2026-10-22T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad935bebcb71c33f31c6b2c",
+    "status": "scheduled"
+   }
+  }
  }
 ]
