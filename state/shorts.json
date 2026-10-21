@@ -849,5 +849,56 @@
    }
   },
   "posted_at": "2026-10-21T00:30:06Z"
+ },
+ {
+  "id": "as-20261021-1028",
+  "made_at": "2026-10-21T05:03:31Z",
+  "status": "scheduled",
+  "story": "Headroom open-sourced an LLM context compressor for agent tools and RAG chunks",
+  "title": "How Headroom cuts your AI agent token bills by up to 95%",
+  "description": "Headroom is an open-source context compressor that shrinks tool outputs, logs, and RAG chunks before sending them to LLMs. It cuts token consumption by up to 95% on JSON while preserving full answer accuracy.",
+  "tags": [
+   "headroom",
+   "llm context compression",
+   "ai agents",
+   "token optimization",
+   "mcp server",
+   "claude code",
+   "prompt compression",
+   "open source ai"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIAgents",
+   "#OpenSource"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/headroomlabs-ai/headroom",
+  "keys": [
+   "gh:headroomlabs-ai/headroom"
+  ],
+  "entity": "gh:headroomlabs-ai/headroom",
+  "duration": 41.598,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual execution with consistent branding and legible typographic hierarchy throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-1028.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261021-1028-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-21 13:00",
+  "due_at": "2026-10-21T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad847a6aff466fe0900e8db",
+    "status": "scheduled"
+   }
+  }
  }
 ]
