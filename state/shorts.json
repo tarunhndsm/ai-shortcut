@@ -906,7 +906,7 @@
  {
   "id": "as-20261021-1711",
   "made_at": "2026-10-21T11:50:55Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "OpenMOSS released MOSS-Image, a 5B open DiT foundation model built specifically for crisp text rendering and UI/graphic layouts.",
   "title": "MOSS-Image: The 5B Model That Finally Nails Text and UI",
   "description": "OpenMOSS released MOSS-Image, an Apache-licensed 5B DiT model designed for crisp in-image typography and UI layouts. It supports 4K-token prompts, structured JSON coordinates, and runs locally with day-zero ComfyUI support.",
@@ -952,8 +952,10 @@
   "posted": {
    "youtube": {
     "id": "6ad8a7220807acdda126779a",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/ZqHEk1Yg7Dk"
    }
-  }
+  },
+  "posted_at": "2026-10-21T14:30:10Z"
  }
 ]
