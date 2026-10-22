@@ -1151,5 +1151,58 @@
    }
   },
   "posted_at": "2026-10-22T07:30:13Z"
+ },
+ {
+  "id": "as-20261022-1728",
+  "made_at": "2026-10-22T12:09:42Z",
+  "status": "scheduled",
+  "story": "OpenAI used AI to discover PHP2Shell, a critical zero-day vulnerability in PHP affecting 70% of the web, and released an open-source checker tool.",
+  "title": "PHP2Shell Checker: OpenAI's Tool for the Massive PHP Zero-Day",
+  "description": "Frontier AI models helped uncover PHP2Shell, a critical remote code vulnerability in core PHP. OpenAI released an open-source scanner so teams can quickly check their servers. Here is how the checker works and what you must patch.",
+  "tags": [
+   "PHP2Shell",
+   "openai php2shell checker",
+   "PHP vulnerability",
+   "OpenAI security",
+   "cybersecurity AI",
+   "PHP remote code execution",
+   "open source security tools",
+   "developer security"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#CyberSecurity",
+   "#OpenAI"
+  ],
+  "chip": "FREE TOOL",
+  "source": "https://github.com/openai/php2shell-checker",
+  "keys": [
+   "https://wiz.io/blog/php2shell-php-rce",
+   "https://latent.space/p/ainews-openais-patch-the-planet-program",
+   "gh:openai/php2shell-checker"
+  ],
+  "entity": "",
+  "duration": 48.119,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean design, clear text rendering, and good script visual alignment throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1728.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1728-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-22 20:00",
+  "due_at": "2026-10-22T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad9fd0abf6d801ac6e7f69c",
+    "status": "scheduled"
+   }
+  }
  }
 ]
