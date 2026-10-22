@@ -1206,5 +1206,57 @@
    }
   },
   "posted_at": "2026-10-22T14:30:25Z"
+ },
+ {
+  "id": "as-20261023-0349",
+  "made_at": "2026-10-22T22:24:20Z",
+  "status": "scheduled",
+  "story": "NVIDIA open-sources OpenShell, a safe and private runtime for autonomous AI agent fleets.",
+  "title": "NVIDIA OpenShell: Safe AI Agent Sandbox",
+  "description": "NVIDIA open-sourced OpenShell, an isolated runtime for running autonomous AI agent fleets safely. It uses kernel-level enforcement and formal verification to sandbox file access, network traffic, and credentials.",
+  "tags": [
+   "OpenShell",
+   "NVIDIA",
+   "AI Agents",
+   "AI Security",
+   "Open Source",
+   "DevOps",
+   "Docker",
+   "LLM Agents"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIAgents",
+   "#NVIDIA"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/NVIDIA/OpenShell",
+  "keys": [
+   "https://github.com/NVIDIA/OpenShell",
+   "gh:nvidia/openshell"
+  ],
+  "entity": "",
+  "duration": 44.407,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design with readable text typography and well-structured graphics matching the script perfectly."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261023-0349.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261023-0349-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-23 06:00",
+  "due_at": "2026-10-23T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ada8d186a81a785af3e5e77",
+    "status": "scheduled"
+   }
+  }
  }
 ]
