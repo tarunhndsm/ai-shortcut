@@ -1054,5 +1054,49 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1005.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1005-sheet.jpg"
+ },
+ {
+  "id": "as-20261022-1019",
+  "made_at": "2026-10-22T04:56:54Z",
+  "status": "rejected",
+  "story": "FreeLLMAPI aggregates 34 free LLM providers into a single OpenAI-compatible endpoint",
+  "title": "FreeLLMAPI: 34 Free AI Providers in One Endpoint",
+  "description": "FreeLLMAPI aggregates 34 free LLM providers into a single OpenAI-compatible endpoint with automatic failover. Here is how it gives developers billions of free inference tokens.",
+  "tags": [
+   "FreeLLMAPI",
+   "OpenAI API",
+   "LLM router",
+   "free LLM",
+   "developer tools",
+   "open source AI",
+   "Cursor AI",
+   "coding agents"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#FreeLLMAPI",
+   "#OpenSourceAI"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/tashfeenahmed/freellmapi",
+  "keys": [
+   "gh:tashfeenahmed/freellmapi"
+  ],
+  "entity": "gh:tashfeenahmed/freellmapi",
+  "duration": 39.9,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Scene 6 (frames 13-14): The repository title in the GitHub card has an awkward orphan word-wrap ('tashfeenahmed/freellmap' with 'i' wrapping alone onto the next line)."
+   ],
+   "notes": "Strong visuals and typography throughout, but the broken repo name in Scene 6 looks unpolished."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1019.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1019-sheet.jpg"
  }
 ]
