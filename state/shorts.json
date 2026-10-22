@@ -1010,5 +1010,49 @@
    }
   },
   "posted_at": "2026-10-22T00:30:14Z"
+ },
+ {
+  "id": "as-20261022-1005",
+  "made_at": "2026-10-22T04:41:44Z",
+  "status": "rejected",
+  "story": "Ponytail is a new prompt harness that forces AI coding agents to think like lazy senior developers and avoid overengineering.",
+  "title": "Ponytail Makes AI Coding Agents Stop Writing Bloated Code",
+  "description": "Ponytail is an open-source prompt harness that forces AI coding agents to write minimal code. Benchmarks show it slashes code output by 53 percent while keeping your code secure.",
+  "tags": [
+   "Ponytail",
+   "Claude Code",
+   "AI coding",
+   "developer tools",
+   "prompt engineering",
+   "coding agents",
+   "software development",
+   "open source"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Coding",
+   "#AITools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/DietrichGebert/ponytail",
+  "keys": [
+   "gh:dietrichgebert/ponytail"
+  ],
+  "entity": "gh:dietrichgebert/ponytail",
+  "duration": 44.799,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Missing space in caption on frame 12 ('massivemaintenance')"
+   ],
+   "notes": "Very sharp and clean graphics throughout, but the caption in frame 12 is missing a space between 'massive' and 'maintenance'."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1005.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1005-sheet.jpg"
  }
 ]
