@@ -1155,7 +1155,7 @@
  {
   "id": "as-20261022-1728",
   "made_at": "2026-10-22T12:09:42Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "OpenAI used AI to discover PHP2Shell, a critical zero-day vulnerability in PHP affecting 70% of the web, and released an open-source checker tool.",
   "title": "PHP2Shell Checker: OpenAI's Tool for the Massive PHP Zero-Day",
   "description": "Frontier AI models helped uncover PHP2Shell, a critical remote code vulnerability in core PHP. OpenAI released an open-source scanner so teams can quickly check their servers. Here is how the checker works and what you must patch.",
@@ -1201,8 +1201,10 @@
   "posted": {
    "youtube": {
     "id": "6ad9fd0abf6d801ac6e7f69c",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/ZvlfmVAlV1I"
    }
-  }
+  },
+  "posted_at": "2026-10-22T14:30:25Z"
  }
 ]
