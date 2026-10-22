@@ -961,7 +961,7 @@
  {
   "id": "as-20261022-0319",
   "made_at": "2026-10-21T21:59:22Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Mistral officially launched Mistral Large 4, its next-generation flagship frontier model.",
   "title": "Mistral Large 4 drops with 1T parameters",
   "description": "Mistral unveiled Mistral Large 4, a one-trillion-parameter multimodal model with 52 billion active parameters. Trained in Europe on Grace Blackwell hardware, it targets enterprise workloads with upcoming open weights.",
@@ -1005,8 +1005,10 @@
   "posted": {
    "youtube": {
     "id": "6ad935bebcb71c33f31c6b2c",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/ob7FpUYDxoI"
    }
-  }
+  },
+  "posted_at": "2026-10-22T00:30:14Z"
  }
 ]
