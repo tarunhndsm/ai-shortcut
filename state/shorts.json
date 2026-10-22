@@ -1098,5 +1098,56 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1019.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1019-sheet.jpg"
+ },
+ {
+  "id": "as-20261022-1126",
+  "made_at": "2026-10-22T06:00:59Z",
+  "status": "scheduled",
+  "story": "Panniantong/Agent-Reach gives AI agents eyes to see the entire internet via one CLI with zero API fees.",
+  "title": "Give your AI agents eyes with Panniantong Agent Reach",
+  "description": "Give your local AI agents the ability to search and read the entire web for free. This tool bundles specialized scrapers into one CLI, bypassing expensive API fees for platforms like Twitter and Reddit.",
+  "tags": [
+   "AI agents",
+   "web scraping",
+   "open source",
+   "GitHub",
+   "Python",
+   "LLM tools",
+   "automation",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/Panniantong/Agent-Reach",
+  "keys": [
+   "gh:panniantong/agent-reach"
+  ],
+  "entity": "gh:panniantong/agent-reach",
+  "duration": 43.426,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean presentation with good visual progression and matching captions."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1126.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261022-1126-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-22 13:00",
+  "due_at": "2026-10-22T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ad9a6a0ecaa6cda042ca38e",
+    "status": "scheduled"
+   }
+  }
  }
 ]
