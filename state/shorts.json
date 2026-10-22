@@ -1102,7 +1102,7 @@
  {
   "id": "as-20261022-1126",
   "made_at": "2026-10-22T06:00:59Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Panniantong/Agent-Reach gives AI agents eyes to see the entire internet via one CLI with zero API fees.",
   "title": "Give your AI agents eyes with Panniantong Agent Reach",
   "description": "Give your local AI agents the ability to search and read the entire web for free. This tool bundles specialized scrapers into one CLI, bypassing expensive API fees for platforms like Twitter and Reddit.",
@@ -1146,8 +1146,10 @@
   "posted": {
    "youtube": {
     "id": "6ad9a6a0ecaa6cda042ca38e",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/ddsHMQYaSAY"
    }
-  }
+  },
+  "posted_at": "2026-10-22T07:30:13Z"
  }
 ]
