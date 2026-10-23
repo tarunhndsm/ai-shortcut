@@ -1514,5 +1514,57 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0349.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0349-sheet.jpg"
+ },
+ {
+  "id": "as-20261024-0402",
+  "made_at": "2026-10-23T22:47:49Z",
+  "status": "scheduled",
+  "story": "Developers release Video-Shotcraft, an AI video skill for Claude Code and Codex that automates Remotion video production.",
+  "title": "Video-Shotcraft Turns Claude Code into a Video Director",
+  "description": "Video-Shotcraft is an open-source skill that lets Claude Code and Codex direct and render product launch videos with Remotion. It turns live screenshots and copy into code-driven motion graphics right from your terminal.",
+  "tags": [
+   "Video-Shotcraft",
+   "Claude Code",
+   "Codex",
+   "Remotion",
+   "AI video",
+   "developer tools",
+   "motion design",
+   "TypeScript"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#ClaudeCode",
+   "#DevTools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/Vincentwei1021/video-shotcraft",
+  "keys": [
+   "gh:vincentwei1021/video-shotcraft",
+   "gh:alchaincyf/huashu-motion"
+  ],
+  "entity": "gh:vincentwei1021/video-shotcraft",
+  "duration": 42.485,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean presentation with good visual progression and legible UI mockups."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0402.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0402-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-24 06:00",
+  "due_at": "2026-10-24T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6adbe4188b3d437ddc8c3a9a",
+    "status": "scheduled"
+   }
+  }
  }
 ]
