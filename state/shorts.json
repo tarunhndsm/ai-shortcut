@@ -1210,7 +1210,7 @@
  {
   "id": "as-20261023-0349",
   "made_at": "2026-10-22T22:24:20Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "NVIDIA open-sources OpenShell, a safe and private runtime for autonomous AI agent fleets.",
   "title": "NVIDIA OpenShell: Safe AI Agent Sandbox",
   "description": "NVIDIA open-sourced OpenShell, an isolated runtime for running autonomous AI agent fleets safely. It uses kernel-level enforcement and formal verification to sandbox file access, network traffic, and credentials.",
@@ -1255,8 +1255,10 @@
   "posted": {
    "youtube": {
     "id": "6ada8d186a81a785af3e5e77",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/-VYI-zqFfrA"
    }
-  }
+  },
+  "posted_at": "2026-10-23T00:30:20Z"
  }
 ]
