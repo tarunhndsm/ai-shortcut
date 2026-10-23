@@ -1308,7 +1308,7 @@
  {
   "id": "as-20261023-1043",
   "made_at": "2026-10-23T05:18:14Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "NPCTalk lets players speak to in-game NPCs in real time with voice cloning and instant in-game actions",
   "title": "NPCTalk Gives Any Video Game Character a Real Voice",
   "description": "NPCTalk lets players talk to video game NPCs in real time using cloned voices and sub-second reactions. Built entirely on open-source models, it turns background characters into responsive agents.",
@@ -1352,8 +1352,10 @@
   "posted": {
    "youtube": {
     "id": "6adaee18535235087b8292fc",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/F_1rd4DvY94"
    }
-  }
+  },
+  "posted_at": "2026-10-23T07:30:08Z"
  }
 ]
