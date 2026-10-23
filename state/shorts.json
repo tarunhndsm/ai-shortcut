@@ -1465,5 +1465,54 @@
   "slot": "breaking 2026-10-24 00:31",
   "due_at": "2026-10-23T19:01:54Z",
   "posted_at": "2026-10-23T19:01:56Z"
+ },
+ {
+  "id": "as-20261024-0349",
+  "made_at": "2026-10-23T22:31:05Z",
+  "status": "rejected",
+  "story": "Moonshot AI released Kimi K3.1 Pro, taking 4th place on the Artificial Analysis Intelligence Index.",
+  "title": "Kimi K3.1 Pro Hits #4 on Intelligence Index",
+  "description": "Moonshot AI has released Kimi K3.1 Pro, reaching fourth place on the Artificial Analysis Intelligence Index. At half the price of Claude Opus 5.5, it brings near-frontier performance ahead of its open weights launch.",
+  "tags": [
+   "Kimi K3.1 Pro",
+   "Moonshot AI",
+   "Claude Opus 5.5",
+   "Artificial Analysis",
+   "AI benchmarks",
+   "LLM",
+   "open source AI",
+   "coding models"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#ArtificialIntelligence",
+   "#TechNews"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+  "keys": [
+   "https://simonwillison.net/2026/Oct/23/kimi-k31-pro",
+   "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+   "https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5",
+   "https://techmeme.com/261023/p19",
+   "https://techmeme.com/261023/p18"
+  ],
+  "entity": "",
+  "duration": 42.909,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Unreadable low-contrast subtitle text in frame 11 ('without paying Opus')",
+    "Missing subtitle text in frame 14"
+   ],
+   "notes": "Slick visual design overall, but ruined by subtitle glitches including missing text and illegible low-contrast text."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0349.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0349-sheet.jpg"
  }
 ]
