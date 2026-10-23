@@ -1410,5 +1410,58 @@
    }
   },
   "posted_at": "2026-10-23T14:30:28Z"
+ },
+ {
+  "id": "as-20261024-0023",
+  "made_at": "2026-10-23T19:01:50Z",
+  "status": "scheduled",
+  "story": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+  "title": "human-atlas: Open-Source 3D Anatomy Explorer",
+  "description": "human-atlas is an open-source 3D anatomy viewer built with React and Three.js. It lets you explore 2,234 selectable anatomical meshes across 15 body systems directly in your browser.",
+  "tags": [
+   "human atlas",
+   "3D anatomy",
+   "Three.js",
+   "React",
+   "open source",
+   "webgl",
+   "biology",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenSource",
+   "#WebDev"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/ashemag/human-atlas",
+  "keys": [
+   "https://kimi.ai/blog/kimi-k3-1-pro",
+   "or:moonshotai/kimi-k3.1-pro",
+   "https://reddit.com/r/LocalLLaMA/comments/1xdk6ow/introducing_kimi_k31_pro_advancing_open",
+   "https://techmeme.com/261023/p15"
+  ],
+  "entity": "",
+  "duration": 44.202,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design, excellent layout hierarchy, and clear typography throughout."
+  },
+  "breaking": true,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0023.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-0023-sheet.jpg",
+  "posted": {
+   "youtube": {
+    "id": "6adbaf22e4be8a4d86200f9e",
+    "status": "sent"
+   }
+  },
+  "slot": "breaking 2026-10-24 00:31",
+  "due_at": "2026-10-23T19:01:54Z"
  }
 ]
