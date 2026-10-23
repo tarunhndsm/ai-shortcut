@@ -1361,7 +1361,7 @@
  {
   "id": "as-20261023-1826",
   "made_at": "2026-10-23T13:03:59Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "ds-harness-remote enables secure P2P remote control for DeepSeek agent harnesses on mobile and web",
   "title": "DS Harness Remote: Control DeepSeek Agents from Your Phone",
   "description": "DS Harness Remote creates a secure peer-to-peer bridge to your DeepSeek coding workspace. Access terminal sessions, manage active tasks, and monitor agent runs directly from Android or web clients.",
@@ -1405,8 +1405,10 @@
   "posted": {
    "youtube": {
     "id": "6adb5b434553446d6b810d61",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/ikmeM5ec3I4"
    }
-  }
+  },
+  "posted_at": "2026-10-23T14:30:28Z"
  }
 ]
