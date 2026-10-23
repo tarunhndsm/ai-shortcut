@@ -1260,5 +1260,49 @@
    }
   },
   "posted_at": "2026-10-23T00:30:20Z"
+ },
+ {
+  "id": "as-20261023-1013",
+  "made_at": "2026-10-23T04:53:31Z",
+  "status": "rejected",
+  "story": "dsh-context brings a visual context dashboard and browser to DeepSeek Harness",
+  "title": "Audit Your DeepSeek Agents with dsh-context",
+  "description": "dsh-context is a context management and visualization plugin for DeepSeek Harness. It gives developers visual breakdowns of token usage, cache hits, and subagent fleet activity.",
+  "tags": [
+   "dsh-context",
+   "DeepSeek",
+   "DeepSeek Harness",
+   "AI agents",
+   "context window",
+   "developer tools",
+   "open source AI",
+   "token optimization"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#AITools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/bowenliang123/dsh-context",
+  "keys": [
+   "gh:bowenliang123/dsh-context"
+  ],
+  "entity": "gh:bowenliang123/dsh-context",
+  "duration": 39.792,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Subtitle text in scene 3 is dark gray against a dark background, making it unreadable"
+   ],
+   "notes": "Fix subtitle contrast on the context panel slide to ensure text remains legible."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261023-1013.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261023-1013-sheet.jpg"
  }
 ]
