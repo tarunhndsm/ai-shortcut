@@ -1414,7 +1414,7 @@
  {
   "id": "as-20261024-0023",
   "made_at": "2026-10-23T19:01:50Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
   "title": "human-atlas: Open-Source 3D Anatomy Explorer",
   "description": "human-atlas is an open-source 3D anatomy viewer built with React and Three.js. It lets you explore 2,234 selectable anatomical meshes across 15 body systems directly in your browser.",
@@ -1458,10 +1458,12 @@
   "posted": {
    "youtube": {
     "id": "6adbaf22e4be8a4d86200f9e",
-    "status": "sent"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/VClypIbeoT0"
    }
   },
   "slot": "breaking 2026-10-24 00:31",
-  "due_at": "2026-10-23T19:01:54Z"
+  "due_at": "2026-10-23T19:01:54Z",
+  "posted_at": "2026-10-23T19:01:56Z"
  }
 ]
