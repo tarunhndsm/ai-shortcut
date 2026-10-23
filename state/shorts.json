@@ -1357,5 +1357,56 @@
    }
   },
   "posted_at": "2026-10-23T07:30:08Z"
+ },
+ {
+  "id": "as-20261023-1826",
+  "made_at": "2026-10-23T13:03:59Z",
+  "status": "scheduled",
+  "story": "ds-harness-remote enables secure P2P remote control for DeepSeek agent harnesses on mobile and web",
+  "title": "DS Harness Remote: Control DeepSeek Agents from Your Phone",
+  "description": "DS Harness Remote creates a secure peer-to-peer bridge to your DeepSeek coding workspace. Access terminal sessions, manage active tasks, and monitor agent runs directly from Android or web clients.",
+  "tags": [
+   "DeepSeek",
+   "DS Harness Remote",
+   "AI Coding",
+   "Coding Agents",
+   "Open Source AI",
+   "Developer Tools",
+   "Remote Access",
+   "Software Development"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#DeveloperTools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/liguobao/ds-harness-remote",
+  "keys": [
+   "gh:liguobao/ds-harness-remote"
+  ],
+  "entity": "gh:liguobao/ds-harness-remote",
+  "duration": 41.307,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Exceptionally clean, professional layout with clear visual hierarchy and perfect script alignment."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261023-1826.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261023-1826-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-23 20:00",
+  "due_at": "2026-10-23T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6adb5b434553446d6b810d61",
+    "status": "scheduled"
+   }
+  }
  }
 ]
