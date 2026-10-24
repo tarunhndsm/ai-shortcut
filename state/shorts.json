@@ -1568,5 +1568,55 @@
    }
   },
   "posted_at": "2026-10-24T00:30:13Z"
+ },
+ {
+  "id": "as-20261024-1001",
+  "made_at": "2026-10-24T04:36:18Z",
+  "status": "scheduled",
+  "story": "Dessa launched an ultra-realistic full-duplex speech AI that listens and speaks simultaneously with zero awkward turn-taking lag.",
+  "title": "Dessa: The Full-Duplex Speech AI From Block",
+  "description": "Block introduced Dessa, a full-duplex voice AI trained directly on speech data. By listening and talking simultaneously, it eliminates the awkward lag common to standard voice bots.",
+  "tags": [
+   "Dessa",
+   "Block AI",
+   "voice AI",
+   "speech AI",
+   "full duplex AI",
+   "real time audio",
+   "AI voice agents"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#VoiceAI",
+   "#ArtificialIntelligence"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://block.xyz/dessa",
+  "keys": [
+   "https://block.xyz/dessa"
+  ],
+  "entity": "",
+  "duration": 45.117,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Visually clean, professional layout, excellent pacing and typography matching the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-1001.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261024-1001-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-24 13:00",
+  "due_at": "2026-10-24T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6adc35c5e4be8a4d863f008e",
+    "status": "scheduled"
+   }
+  }
  }
 ]
