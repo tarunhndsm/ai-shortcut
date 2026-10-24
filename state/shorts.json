@@ -1518,7 +1518,7 @@
  {
   "id": "as-20261024-0402",
   "made_at": "2026-10-23T22:47:49Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Developers release Video-Shotcraft, an AI video skill for Claude Code and Codex that automates Remotion video production.",
   "title": "Video-Shotcraft Turns Claude Code into a Video Director",
   "description": "Video-Shotcraft is an open-source skill that lets Claude Code and Codex direct and render product launch videos with Remotion. It turns live screenshots and copy into code-driven motion graphics right from your terminal.",
@@ -1563,8 +1563,10 @@
   "posted": {
    "youtube": {
     "id": "6adbe4188b3d437ddc8c3a9a",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/LYxRmum48T8"
    }
-  }
+  },
+  "posted_at": "2026-10-24T00:30:13Z"
  }
 ]
