@@ -1624,7 +1624,7 @@
  {
   "id": "as-20261024-1709",
   "made_at": "2026-10-24T11:47:00Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "HeyGen released Hyperframes, an open-source framework for AI agents to render video using raw HTML",
   "title": "HyperFrames Lets AI Agents Render Video Using Raw HTML",
   "description": "HeyGen just released HyperFrames, an open-source framework that turns HTML and CSS into deterministic MP4 videos. Coding agents like Claude Code and Cursor can now generate video assets purely through web code. It offers a programmable alternative to traditional rendering suites.",
@@ -1668,8 +1668,10 @@
   "posted": {
    "youtube": {
     "id": "6adc9ab80b5343d0707e953a",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/Kt9kOXqVgp0"
    }
-  }
+  },
+  "posted_at": "2026-10-24T14:30:14Z"
  }
 ]
