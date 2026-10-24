@@ -1572,7 +1572,7 @@
  {
   "id": "as-20261024-1001",
   "made_at": "2026-10-24T04:36:18Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Dessa launched an ultra-realistic full-duplex speech AI that listens and speaks simultaneously with zero awkward turn-taking lag.",
   "title": "Dessa: The Full-Duplex Speech AI From Block",
   "description": "Block introduced Dessa, a full-duplex voice AI trained directly on speech data. By listening and talking simultaneously, it eliminates the awkward lag common to standard voice bots.",
@@ -1615,8 +1615,10 @@
   "posted": {
    "youtube": {
     "id": "6adc35c5e4be8a4d863f008e",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/JI7jK6OPX2Q"
    }
-  }
+  },
+  "posted_at": "2026-10-24T07:30:29Z"
  }
 ]
