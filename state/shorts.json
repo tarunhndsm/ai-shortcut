@@ -1726,5 +1726,56 @@
    }
   },
   "posted_at": "2026-10-25T00:30:15Z"
+ },
+ {
+  "id": "as-20261025-1003",
+  "made_at": "2026-10-25T04:38:38Z",
+  "status": "scheduled",
+  "story": "Caveman proxy cuts AI agent token usage by 65% by forcing simplified speech",
+  "title": "How Caveman Cuts Your AI Agent Token Bills by 65%",
+  "description": "Caveman is an open-source proxy that trims conversational fluff and bloated inputs from your coding agents. By forcing simplified phrasing without touching the code, it dramatically reduces token usage across major models.",
+  "tags": [
+   "caveman",
+   "ai agents",
+   "claude code",
+   "token optimization",
+   "developer tools",
+   "open source",
+   "llm cost",
+   "coding agent"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Coding",
+   "#ArtificialIntelligence"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/JuliusBrussee/caveman",
+  "keys": [
+   "gh:juliusbrussee/caveman"
+  ],
+  "entity": "gh:juliusbrussee/caveman",
+  "duration": 43.357,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation with crisp typography, strong graphics, and clear pacing."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261025-1003.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261025-1003-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-25 13:00",
+  "due_at": "2026-10-25T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6add87d2bd33ce99c3563bd8",
+    "status": "scheduled"
+   }
+  }
  }
 ]
