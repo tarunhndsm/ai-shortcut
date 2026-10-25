@@ -1832,5 +1832,57 @@
    }
   },
   "posted_at": "2026-10-25T14:30:14Z"
+ },
+ {
+  "id": "as-20261026-0325",
+  "made_at": "2026-10-25T22:05:53Z",
+  "status": "scheduled",
+  "story": "Nutlope released Hallmark, an open-source design skill that strips AI-slop styling from Claude Code, Cursor, and Codex outputs.",
+  "title": "Hallmark Strips AI-Slop Styling from Claude Code",
+  "description": "Hallmark is an open-source skill that prevents coding agents from spitting out generic SaaS templates. It injects forty-eight bespoke materials and lints against dead AI giveaways.",
+  "tags": [
+   "Hallmark",
+   "Claude Code",
+   "Cursor",
+   "AI coding",
+   "web design",
+   "frontend dev",
+   "open source AI",
+   "Nutlope"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#WebDev",
+   "#Coding"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/Nutlope/hallmark",
+  "keys": [
+   "gh:nutlope/hallmark",
+   "gh:pbakaus/impeccable"
+  ],
+  "entity": "gh:nutlope/hallmark",
+  "duration": 44.663,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.8-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean typography, accurate UI mockups, and professional layout throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261026-0325.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261026-0325-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-26 06:00",
+  "due_at": "2026-10-26T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ade7d44bd33ce99c392ed91",
+    "status": "scheduled"
+   }
+  }
  }
 ]
