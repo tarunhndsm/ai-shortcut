@@ -1730,7 +1730,7 @@
  {
   "id": "as-20261025-1003",
   "made_at": "2026-10-25T04:38:38Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Caveman proxy cuts AI agent token usage by 65% by forcing simplified speech",
   "title": "How Caveman Cuts Your AI Agent Token Bills by 65%",
   "description": "Caveman is an open-source proxy that trims conversational fluff and bloated inputs from your coding agents. By forcing simplified phrasing without touching the code, it dramatically reduces token usage across major models.",
@@ -1774,8 +1774,10 @@
   "posted": {
    "youtube": {
     "id": "6add87d2bd33ce99c3563bd8",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/uWWlb2exLjc"
    }
-  }
+  },
+  "posted_at": "2026-10-25T07:30:12Z"
  }
 ]
