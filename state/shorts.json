@@ -1783,7 +1783,7 @@
  {
   "id": "as-20261025-1721",
   "made_at": "2026-10-25T12:12:45Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Anthropic launches a free AI-powered vulnerability scanner for open-source repositories",
   "title": "Google OSS-Fuzz Meets Free Claude Security Audits",
   "description": "Anthropic launched a free vulnerability scanner modeled after Google OSS-Fuzz. Powered by Claude models, it audits enrolled open-source repositories in isolated virtual machines. Maintainers receive automated reproducers and candidate patches directly.",
@@ -1827,8 +1827,10 @@
   "posted": {
    "youtube": {
     "id": "6addf2413d5b27036bcfbab7",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/69xM7ENfQ-g"
    }
-  }
+  },
+  "posted_at": "2026-10-25T14:30:14Z"
  }
 ]
