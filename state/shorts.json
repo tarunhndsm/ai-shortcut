@@ -1677,7 +1677,7 @@
  {
   "id": "as-20261025-0304",
   "made_at": "2026-10-24T21:39:00Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "GPU-unlock enables professional-tier FP16 and BF16 instruction issue rates on Nvidia RTX 3000 cards.",
   "title": "How gpu-unlock Supercharges RTX 3000 AI Compute",
   "description": "A new Linux kernel module called gpu-unlock removes artificial FP16 and BF16 execution limits on Nvidia RTX 3000 graphics cards. Community tests show up to an eighty percent jump in matrix math performance. Here is how it works and what workloads actually benefit.",
@@ -1721,8 +1721,10 @@
   "posted": {
    "youtube": {
     "id": "6add2577e4be8a4d867b0fd0",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/eAC-oHGmqGw"
    }
-  }
+  },
+  "posted_at": "2026-10-25T00:30:15Z"
  }
 ]
