@@ -1779,5 +1779,56 @@
    }
   },
   "posted_at": "2026-10-25T07:30:12Z"
+ },
+ {
+  "id": "as-20261025-1721",
+  "made_at": "2026-10-25T12:12:45Z",
+  "status": "scheduled",
+  "story": "Anthropic launches a free AI-powered vulnerability scanner for open-source repositories",
+  "title": "Google OSS-Fuzz Meets Free Claude Security Audits",
+  "description": "Anthropic launched a free vulnerability scanner modeled after Google OSS-Fuzz. Powered by Claude models, it audits enrolled open-source repositories in isolated virtual machines. Maintainers receive automated reproducers and candidate patches directly.",
+  "tags": [
+   "OSS-Fuzz",
+   "Google OSS-Fuzz",
+   "Anthropic",
+   "Claude AI",
+   "Open Source Security",
+   "Cybersecurity",
+   "AI Code Audit",
+   "Vulnerability Scanner"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenSource",
+   "#Cybersecurity"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/google/oss-fuzz",
+  "keys": [
+   "https://marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner"
+  ],
+  "entity": "",
+  "duration": 45.992,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation with professional layout, high contrast captions, and excellent visual alignment."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261025-1721.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261025-1721-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-25 20:00",
+  "due_at": "2026-10-25T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6addf2413d5b27036bcfbab7",
+    "status": "scheduled"
+   }
+  }
  }
 ]
