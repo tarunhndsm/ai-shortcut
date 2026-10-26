@@ -1890,7 +1890,7 @@
  {
   "id": "as-20261026-1021",
   "made_at": "2026-10-26T04:59:45Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "JustAResearcher released gpu-unlock-ada to unlock hidden tensor performance on RTX 4090 GPUs.",
   "title": "Double RTX 4090 performance with gpu-unlock-ada",
   "description": "Unlock hidden tensor performance on your RTX 4090 using a custom Linux kernel module. This tool bypasses hardware speed limits to double raw FP16 and BF16 throughput for AI workloads.",
@@ -1934,8 +1934,10 @@
   "posted": {
    "youtube": {
     "id": "6adede446887a2efc142d74d",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/_OejGKuG-us"
    }
-  }
+  },
+  "posted_at": "2026-10-26T07:30:13Z"
  }
 ]
