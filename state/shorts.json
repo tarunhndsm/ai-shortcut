@@ -2036,5 +2036,55 @@
   "breaking": true,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-0124.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-0124-sheet.jpg"
+ },
+ {
+  "id": "as-20261027-0322",
+  "made_at": "2026-10-26T21:59:04Z",
+  "status": "scheduled",
+  "story": "Andrej Karpathy's LLM coding guidelines packaged into a single CLAUDE.md file",
+  "title": "andrej-karpathy-skills: Fix Claude Code AI Mistakes",
+  "description": "Drop Andrej Karpathy's proven rules into your project using a single CLAUDE.md file. Eliminate overengineered code and unwanted edits in Claude Code.",
+  "tags": [
+   "andrej karpathy skills",
+   "claude code",
+   "claude md",
+   "ai coding",
+   "llm guidelines",
+   "github trend",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#ClaudeCode",
+   "#Coding"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/multica-ai/andrej-karpathy-skills",
+  "keys": [
+   "gh:multica-ai/andrej-karpathy-skills"
+  ],
+  "entity": "gh:multica-ai/andrej-karpathy-skills",
+  "duration": 43.622,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean formatting, accurate visual representations of the GitHub repo and instructions, no text cutoffs."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-0322.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-0322-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-27 06:00",
+  "due_at": "2026-10-27T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6adfcd2c9a87effac4274d66",
+    "status": "scheduled"
+   }
+  }
  }
 ]
