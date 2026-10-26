@@ -1943,7 +1943,7 @@
  {
   "id": "as-20261026-1729",
   "made_at": "2026-10-26T12:09:53Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Microsoft released Skill Recorder, a desktop tool that converts screen recordings into reusable AI agent skills",
   "title": "Microsoft Skill Recorder Turns Screen Video into AI Agent Skills",
   "description": "Microsoft Skill Recorder is a desktop app that converts screen recordings of your workflow into reusable SKILL.md files for AI agents. Learn how it analyzes clicks and terminal input to build smart automations.",
@@ -1986,8 +1986,10 @@
   "posted": {
    "youtube": {
     "id": "6adf431543e462eb4475b9bb",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/G6NyUfCVJEs"
    }
-  }
+  },
+  "posted_at": "2026-10-26T14:30:22Z"
  }
 ]
