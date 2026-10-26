@@ -1939,5 +1939,55 @@
    }
   },
   "posted_at": "2026-10-26T07:30:13Z"
+ },
+ {
+  "id": "as-20261026-1729",
+  "made_at": "2026-10-26T12:09:53Z",
+  "status": "scheduled",
+  "story": "Microsoft released Skill Recorder, a desktop tool that converts screen recordings into reusable AI agent skills",
+  "title": "Microsoft Skill Recorder Turns Screen Video into AI Agent Skills",
+  "description": "Microsoft Skill Recorder is a desktop app that converts screen recordings of your workflow into reusable SKILL.md files for AI agents. Learn how it analyzes clicks and terminal input to build smart automations.",
+  "tags": [
+   "Skill Recorder",
+   "Microsoft",
+   "GitHub Copilot",
+   "AI Agents",
+   "Automation",
+   "Open Source",
+   "Developer Tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIAgents",
+   "#Microsoft"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/microsoft/skill-recorder",
+  "keys": [
+   "gh:microsoft/skill-recorder"
+  ],
+  "entity": "gh:microsoft/skill-recorder",
+  "duration": 45.047,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.5-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean design, well-paced animations, visually appealing typography, and clear visual structure with no defects."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261026-1729.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261026-1729-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-26 20:00",
+  "due_at": "2026-10-26T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6adf431543e462eb4475b9bb",
+    "status": "scheduled"
+   }
+  }
  }
 ]
