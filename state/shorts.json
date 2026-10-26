@@ -1991,5 +1991,50 @@
    }
   },
   "posted_at": "2026-10-26T14:30:22Z"
+ },
+ {
+  "id": "as-20261027-0124",
+  "made_at": "2026-10-26T20:02:38Z",
+  "status": "rejected",
+  "story": "GPT-6.1 Terra",
+  "title": "GPT-6.1 Terra: OpenAI's Faster, 50% Cheaper Model",
+  "description": "OpenAI launched GPT-6.1 Terra with 50% lower API costs and faster performance for workday tasks. Here is how it compares on coding and visual agent benchmarks.",
+  "tags": [
+   "GPT-6.1 Terra",
+   "OpenAI",
+   "AI News",
+   "ChatGPT",
+   "AI Agents",
+   "Coding AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenAI",
+   "#GPT61Terra"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://openai.com/index/introducing-gpt-6-1-terra/",
+  "keys": [
+   "https://openai.com/index/introducing-gpt-6-1-terra",
+   "or:openai/gpt-6.1-terra",
+   "or:openai/gpt-6.1-terra:batch",
+   "https://techmeme.com/261026/p40"
+  ],
+  "entity": "",
+  "duration": 54.059,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 3,
+   "publish": false,
+   "defects": [
+    "Broken browser frame graphics in scenes 7 and 8 showing empty placeholder and Cloudflare 'Verify you are human' captcha block."
+   ],
+   "notes": "The video includes a Cloudflare captcha screen inside the browser graphic mockup, showing a failed screenshot capture."
+  },
+  "breaking": true,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-0124.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-0124-sheet.jpg"
  }
 ]
