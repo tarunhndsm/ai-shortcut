@@ -1886,5 +1886,56 @@
    }
   },
   "posted_at": "2026-10-26T00:30:10Z"
+ },
+ {
+  "id": "as-20261026-1021",
+  "made_at": "2026-10-26T04:59:45Z",
+  "status": "scheduled",
+  "story": "JustAResearcher released gpu-unlock-ada to unlock hidden tensor performance on RTX 4090 GPUs.",
+  "title": "Double RTX 4090 performance with gpu-unlock-ada",
+  "description": "Unlock hidden tensor performance on your RTX 4090 using a custom Linux kernel module. This tool bypasses hardware speed limits to double raw FP16 and BF16 throughput for AI workloads.",
+  "tags": [
+   "RTX 4090",
+   "GPU overclocking",
+   "AI hardware",
+   "Linux",
+   "Machine Learning",
+   "JustAResearcher",
+   "gpu-unlock-ada",
+   "tensor cores"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#RTX4090",
+   "#AIHardware"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/JustAResearcher/gpu-unlock-ada",
+  "keys": [
+   "gh:justaresearcher/gpu-unlock-ada"
+  ],
+  "entity": "gh:justaresearcher/gpu-unlock-ada",
+  "duration": 43.768,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Professional quality, clear text, accurate visual representations matching the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261026-1021.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261026-1021-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-26 13:00",
+  "due_at": "2026-10-26T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6adede446887a2efc142d74d",
+    "status": "scheduled"
+   }
+  }
  }
 ]
