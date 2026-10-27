@@ -2148,7 +2148,7 @@
  {
   "id": "as-20261027-1707",
   "made_at": "2026-10-27T11:47:50Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "digital-human-koubo brings single-photo talking-head video generation to AI coding agents.",
   "title": "digital human koubo: Turn 1 Photo Into AI Video",
   "description": "digital-human-koubo brings talking-head video generation directly into AI coding agents like Claude Code. Turn a single photo into fully packaged videos with custom presenters, lip-syncing, and creator graphics.",
@@ -2192,8 +2192,10 @@
   "posted": {
    "youtube": {
     "id": "6ae08f6a271cbd4e76b24976",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/KHBVd6wzB-A"
    }
-  }
+  },
+  "posted_at": "2026-10-27T14:30:29Z"
  }
 ]
