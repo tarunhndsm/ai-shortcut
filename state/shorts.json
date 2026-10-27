@@ -2092,7 +2092,7 @@
  {
   "id": "as-20261027-1001",
   "made_at": "2026-10-27T04:42:43Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "OpenAI drops GPT-6.1 Terra, halving API prices while boosting visual and computer-use speed",
   "title": "OpenAI GPT-6.1 Terra: Half the Price, 3x Faster Agents",
   "description": "OpenAI has officially released GPT-6.1 Terra, halving API costs to $1 per million input tokens. Built for computer use and visual reasoning, it runs UI tasks three times faster than previous frontier models.",
@@ -2139,8 +2139,10 @@
   "posted": {
    "youtube": {
     "id": "6ae02bc68f5aed9e2e381c4f",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/W_hVnbnFzrE"
    }
-  }
+  },
+  "posted_at": "2026-10-27T07:30:15Z"
  }
 ]
