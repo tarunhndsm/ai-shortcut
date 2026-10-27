@@ -2088,5 +2088,59 @@
    }
   },
   "posted_at": "2026-10-27T00:30:18Z"
+ },
+ {
+  "id": "as-20261027-1001",
+  "made_at": "2026-10-27T04:42:43Z",
+  "status": "scheduled",
+  "story": "OpenAI drops GPT-6.1 Terra, halving API prices while boosting visual and computer-use speed",
+  "title": "OpenAI GPT-6.1 Terra: Half the Price, 3x Faster Agents",
+  "description": "OpenAI has officially released GPT-6.1 Terra, halving API costs to $1 per million input tokens. Built for computer use and visual reasoning, it runs UI tasks three times faster than previous frontier models.",
+  "tags": [
+   "GPT-6.1 Terra",
+   "OpenAI",
+   "GPT-6",
+   "AI agents",
+   "computer use",
+   "API pricing",
+   "LLM benchmark",
+   "AI news"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenAI",
+   "#ArtificialIntelligence"
+  ],
+  "chip": "LAUNCH",
+  "source": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+  "keys": [
+   "https://simonwillison.net/2026/Oct/26/gpt-61-terra",
+   "https://marktechpost.com/2026/10/26/openai-gpt-6-1-terra",
+   "or:openai/gpt-6.1-terra-pro",
+   "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models"
+  ],
+  "entity": "",
+  "duration": 52.885,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Professional layout with accurate information and clear data representation."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-1001.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-1001-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-27 13:00",
+  "due_at": "2026-10-27T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae02bc68f5aed9e2e381c4f",
+    "status": "scheduled"
+   }
+  }
  }
 ]
