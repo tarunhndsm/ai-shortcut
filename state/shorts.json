@@ -2040,7 +2040,7 @@
  {
   "id": "as-20261027-0322",
   "made_at": "2026-10-26T21:59:04Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Andrej Karpathy's LLM coding guidelines packaged into a single CLAUDE.md file",
   "title": "andrej-karpathy-skills: Fix Claude Code AI Mistakes",
   "description": "Drop Andrej Karpathy's proven rules into your project using a single CLAUDE.md file. Eliminate overengineered code and unwanted edits in Claude Code.",
@@ -2083,8 +2083,10 @@
   "posted": {
    "youtube": {
     "id": "6adfcd2c9a87effac4274d66",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/dSbyOryJ0rM"
    }
-  }
+  },
+  "posted_at": "2026-10-27T00:30:18Z"
  }
 ]
