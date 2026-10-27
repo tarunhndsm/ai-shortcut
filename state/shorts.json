@@ -2197,5 +2197,56 @@
    }
   },
   "posted_at": "2026-10-27T14:30:29Z"
+ },
+ {
+  "id": "as-20261028-0327",
+  "made_at": "2026-10-27T22:02:14Z",
+  "status": "scheduled",
+  "story": "VoiceStudio open-sources a fully local ElevenLabs alternative supporting voice cloning, dubbing, and transcription in 646 languages.",
+  "title": "VoiceStudio: The Local ElevenLabs Alternative",
+  "description": "VoiceStudio is an open-source, fully offline ElevenLabs alternative that runs on your local computer. It handles voice cloning, video dubbing, and transcription across 646 languages without cloud API fees.",
+  "tags": [
+   "VoiceStudio",
+   "ElevenLabs",
+   "voice cloning",
+   "local AI",
+   "AI dubbing",
+   "text to speech",
+   "open source",
+   "audiobook AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#VoiceStudio",
+   "#OpenSourceAI"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/debpalash/VoiceStudio",
+  "keys": [
+   "gh:debpalash/voicestudio"
+  ],
+  "entity": "gh:debpalash/voicestudio",
+  "duration": 42.894,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly readable typography and well-matched visuals across all frames."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-0327.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-0327-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-28 06:00",
+  "due_at": "2026-10-28T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae11f6ac039c7bc1c89f558",
+    "status": "scheduled"
+   }
+  }
  }
 ]
