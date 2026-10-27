@@ -2144,5 +2144,56 @@
    }
   },
   "posted_at": "2026-10-27T07:30:15Z"
+ },
+ {
+  "id": "as-20261027-1707",
+  "made_at": "2026-10-27T11:47:50Z",
+  "status": "scheduled",
+  "story": "digital-human-koubo brings single-photo talking-head video generation to AI coding agents.",
+  "title": "digital human koubo: Turn 1 Photo Into AI Video",
+  "description": "digital-human-koubo brings talking-head video generation directly into AI coding agents like Claude Code. Turn a single photo into fully packaged videos with custom presenters, lip-syncing, and creator graphics.",
+  "tags": [
+   "digital human koubo",
+   "ai video",
+   "claude code",
+   "grok video",
+   "ai presenter",
+   "open source ai",
+   "mcp server",
+   "ai shortcut"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIVideo",
+   "#ClaudeCode"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/andyhuo520/digital-human-koubo",
+  "keys": [
+   "gh:andyhuo520/digital-human-koubo"
+  ],
+  "entity": "gh:andyhuo520/digital-human-koubo",
+  "duration": 39.705,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual layout with legible overlays and consistent branding throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-1707.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261027-1707-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-27 20:00",
+  "due_at": "2026-10-27T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae08f6a271cbd4e76b24976",
+    "status": "scheduled"
+   }
+  }
  }
 ]
