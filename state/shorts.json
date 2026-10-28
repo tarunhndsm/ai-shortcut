@@ -2296,5 +2296,56 @@
   "breaking": true,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-0550.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-0550-sheet.jpg"
+ },
+ {
+  "id": "as-20261028-1021",
+  "made_at": "2026-10-28T04:58:01Z",
+  "status": "scheduled",
+  "story": "NVIDIA released SkillSpector, an open-source security scanner for AI agent skills",
+  "title": "NVIDIA SkillSpector: Scan AI Agent Skills for Malware",
+  "description": "NVIDIA released SkillSpector, an open-source scanner that inspects AI agent skills for prompt injection and malware. Here is how it secures your agent workflows before you install third-party tools.",
+  "tags": [
+   "SkillSpector",
+   "NVIDIA",
+   "AI security",
+   "Claude Code",
+   "MCP",
+   "prompt injection",
+   "agent skills",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AISecurity",
+   "#NVIDIA"
+  ],
+  "chip": "FREE TOOL",
+  "source": "https://github.com/NVIDIA/SkillSpector",
+  "keys": [
+   "gh:nvidia/skillspector"
+  ],
+  "entity": "gh:nvidia/skillspector",
+  "duration": 41.747,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Extremely polished visual design with crisp motion graphics, readable captions, and clean UI mockups perfectly matched to the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-1021.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-1021-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-28 13:00",
+  "due_at": "2026-10-28T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae180dc1aac2b225f7be5d3",
+    "status": "scheduled"
+   }
+  }
  }
 ]
