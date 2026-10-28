@@ -2401,5 +2401,57 @@
    }
   },
   "posted_at": "2026-10-28T14:30:32Z"
+ },
+ {
+  "id": "as-20261029-0321",
+  "made_at": "2026-10-28T22:00:17Z",
+  "status": "scheduled",
+  "story": "Google DeepMind announced Gemini 4 Carbon, its next-generation frontier AI model.",
+  "title": "Gemini 4 Carbon on ExploitGym: Google's Frontier AI",
+  "description": "Google DeepMind announced Gemini 4 Carbon, a frontier model built for cybersecurity defense and long-horizon agentic workflows. It ranks number one on the Artificial Analysis Index while keeping input pricing at two dollars per million tokens. Access is currently phased for trusted security partners and government evaluation.",
+  "tags": [
+   "Gemini 4 Carbon",
+   "Google DeepMind",
+   "ExploitGym",
+   "Artificial Analysis",
+   "AI cybersecurity",
+   "Gemini 4 Argon",
+   "frontier AI",
+   "autonomous agents"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Gemini4Carbon",
+   "#ArtificialIntelligence"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://github.com/sunblaze-ucb/exploitgym",
+  "keys": [
+   "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon"
+  ],
+  "entity": "",
+  "duration": 47.877,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation with well-aligned graphics and readable typography throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-0321.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-0321-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-29 06:00",
+  "due_at": "2026-10-29T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae27074cc91be5434b10418",
+    "status": "scheduled"
+   }
+  }
  }
 ]
