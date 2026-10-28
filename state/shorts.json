@@ -2201,7 +2201,7 @@
  {
   "id": "as-20261028-0327",
   "made_at": "2026-10-27T22:02:14Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "VoiceStudio open-sources a fully local ElevenLabs alternative supporting voice cloning, dubbing, and transcription in 646 languages.",
   "title": "VoiceStudio: The Local ElevenLabs Alternative",
   "description": "VoiceStudio is an open-source, fully offline ElevenLabs alternative that runs on your local computer. It handles voice cloning, video dubbing, and transcription across 646 languages without cloud API fees.",
@@ -2245,9 +2245,11 @@
   "posted": {
    "youtube": {
     "id": "6ae11f6ac039c7bc1c89f558",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/rAjuZZwXvcw"
    }
-  }
+  },
+  "posted_at": "2026-10-28T00:30:29Z"
  },
  {
   "id": "as-20261028-0550",
