@@ -2349,5 +2349,55 @@
    }
   },
   "posted_at": "2026-10-28T07:30:07Z"
+ },
+ {
+  "id": "as-20261028-1721",
+  "made_at": "2026-10-28T12:02:59Z",
+  "status": "scheduled",
+  "story": "OpenBot launches a local desktop workspace for persistent multi-agent AI teams.",
+  "title": "OpenBot: Local Desktop Workspace for Multi-Agent AI Teams",
+  "description": "OpenBot is an open-source desktop app that connects Claude, Codex, and Grok into persistent local workspaces. Run AI agents with task queues, file sharing, and embedded browser control.",
+  "tags": [
+   "OpenBot",
+   "AI agents",
+   "Claude Code",
+   "Codex",
+   "local AI",
+   "open source AI",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenBot",
+   "#AIAgents"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/nightly-labs/openbot",
+  "keys": [
+   "gh:nightly-labs/openbot"
+  ],
+  "entity": "gh:nightly-labs/openbot",
+  "duration": 42.619,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly professional layout with excellent typography and precise visual-to-script timing."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-1721.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-1721-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-28 20:00",
+  "due_at": "2026-10-28T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae1e477d47ee8ef2fb655f3",
+    "status": "scheduled"
+   }
+  }
  }
 ]
