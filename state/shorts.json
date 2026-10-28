@@ -2353,7 +2353,7 @@
  {
   "id": "as-20261028-1721",
   "made_at": "2026-10-28T12:02:59Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "OpenBot launches a local desktop workspace for persistent multi-agent AI teams.",
   "title": "OpenBot: Local Desktop Workspace for Multi-Agent AI Teams",
   "description": "OpenBot is an open-source desktop app that connects Claude, Codex, and Grok into persistent local workspaces. Run AI agents with task queues, file sharing, and embedded browser control.",
@@ -2396,8 +2396,10 @@
   "posted": {
    "youtube": {
     "id": "6ae1e477d47ee8ef2fb655f3",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/_LZnPwiEcEI"
    }
-  }
+  },
+  "posted_at": "2026-10-28T14:30:32Z"
  }
 ]
