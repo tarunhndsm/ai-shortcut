@@ -2248,5 +2248,51 @@
     "status": "scheduled"
    }
   }
+ },
+ {
+  "id": "as-20261028-0550",
+  "made_at": "2026-10-28T00:28:12Z",
+  "status": "rejected",
+  "story": "Build specialized multimodal models with LFM3",
+  "title": "Liquid AI LFM3: Multimodal 2B Models Run Fast On-Device",
+  "description": "Liquid AI released LFM3, a family of 2B-class open-weight multimodal models for local agents. Fine-tune text, vision, audio, and omni models on a single GPU and deploy them on phones or laptops.",
+  "tags": [
+   "Liquid AI",
+   "LFM3",
+   "Local AI",
+   "Open Source AI",
+   "On-device AI",
+   "Multimodal AI",
+   "AI Agents"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B",
+  "keys": [
+   "https://huggingface.co/blog/LiquidAI/lfm3",
+   "https://liquid.ai/blog/lfm3",
+   "https://marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models",
+   "https://reddit.com/r/LocalLLaMA/comments/1xh0otf/realtime_video_captioning_with_lfm3vl2b_running"
+  ],
+  "entity": "",
+  "duration": 47.678,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Incorrect HuggingFace card visual showing LFM2.5-8B-A1B instead of LFM3 in frames 1-4"
+   ],
+   "notes": "The visuals feature HuggingFace cards for LFM2.5-8B-A1B while the script and graphics highlight LFM3."
+  },
+  "breaking": true,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-0550.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261028-0550-sheet.jpg"
  }
 ]
