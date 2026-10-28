@@ -2300,7 +2300,7 @@
  {
   "id": "as-20261028-1021",
   "made_at": "2026-10-28T04:58:01Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "NVIDIA released SkillSpector, an open-source security scanner for AI agent skills",
   "title": "NVIDIA SkillSpector: Scan AI Agent Skills for Malware",
   "description": "NVIDIA released SkillSpector, an open-source scanner that inspects AI agent skills for prompt injection and malware. Here is how it secures your agent workflows before you install third-party tools.",
@@ -2344,8 +2344,10 @@
   "posted": {
    "youtube": {
     "id": "6ae180dc1aac2b225f7be5d3",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/s-P6lsW7N2c"
    }
-  }
+  },
+  "posted_at": "2026-10-28T07:30:07Z"
  }
 ]
