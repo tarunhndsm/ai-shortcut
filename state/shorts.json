@@ -2508,5 +2508,50 @@
    }
   },
   "posted_at": "2026-10-29T07:30:11Z"
+ },
+ {
+  "id": "as-20261029-1704",
+  "made_at": "2026-10-29T11:47:13Z",
+  "status": "rejected",
+  "story": "Hindsight open-sources adaptive long-term memory that helps AI agents learn from past tasks.",
+  "title": "Hindsight Gives AI Agents Memory That Learns",
+  "description": "Hindsight is an open-source adaptive memory system designed to help AI agents learn from past tasks instead of stuffing context windows. It integrates across 25+ model providers and delivers top performance on long-term memory benchmarks.",
+  "tags": [
+   "Hindsight",
+   "AI agents",
+   "agent memory",
+   "open source AI",
+   "vectorize io",
+   "LLM memory",
+   "Python AI",
+   "AI shortcuts"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIAgents",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/vectorize-io/hindsight",
+  "keys": [
+   "gh:vectorize-io/hindsight"
+  ],
+  "entity": "gh:vectorize-io/hindsight",
+  "duration": 47.568,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Cut-off text in terminal window ('pip install hindsig' instead of 'hindsight') in frame 11",
+    "Benchmark graphic in frames 5 and 6 is blurry and difficult to read"
+   ],
+   "notes": "The video has clean formatting overall but suffers from cut-off terminal text and an unreadable benchmark chart."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1704.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1704-sheet.jpg"
  }
 ]
