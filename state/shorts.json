@@ -2459,7 +2459,7 @@
  {
   "id": "as-20261029-1003",
   "made_at": "2026-10-29T04:39:25Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "AI Design Skills equips terminal coding agents with complete UI/UX design frameworks",
   "title": "Give Claude and Cursor UI Taste with AI Design Skills",
   "description": "AI Design Skills equips AI coding tools like Claude Code and Cursor with professional UI and UX frameworks. It turns raw prompts into structured landing pages with consistent spacing, typography, and copy.",
@@ -2503,8 +2503,10 @@
   "posted": {
    "youtube": {
     "id": "6ae2ce0002cc66e5339815a9",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/rEBSxxyfpuw"
    }
-  }
+  },
+  "posted_at": "2026-10-29T07:30:11Z"
  }
 ]
