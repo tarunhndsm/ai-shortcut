@@ -2645,7 +2645,7 @@
  {
   "id": "as-20261029-1905",
   "made_at": "2026-10-29T13:49:53Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "obra/superpowers trends on GitHub as an agentic skills and software engineering framework",
   "title": "Superpowers by Obra Gives AI Coding Agents Real Discipline",
   "description": "The obra/superpowers repo brings a structured software engineering methodology to AI coding agents. It enforces specs, test-driven development, and autonomous subagent execution across tools like Claude Code and Cursor.",
@@ -2689,8 +2689,10 @@
   "posted": {
    "youtube": {
     "id": "6ae34f05835dd2febef016c6",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/zB2iI6qsuHo"
    }
-  }
+  },
+  "posted_at": "2026-10-29T14:30:11Z"
  }
 ]
