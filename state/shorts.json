@@ -2597,5 +2597,49 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1735.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1735-sheet.jpg"
+ },
+ {
+  "id": "as-20261029-1835",
+  "made_at": "2026-10-29T13:10:27Z",
+  "status": "rejected",
+  "story": "Claude-Code-Game-Studios orchestrates 49 AI agents to turn Claude Code into a game studio",
+  "title": "Claude-Code-Game-Studios Runs 49 AI Agents in One Terminal",
+  "description": "Claude Code Game Studios organizes 49 specialized AI agents into a hierarchy for game dev. It packs 74 slash commands and supports Godot, Unity, and Unreal.",
+  "tags": [
+   "Claude Code",
+   "game dev",
+   "AI agents",
+   "Claude Code Game Studios",
+   "Godot",
+   "Unity",
+   "Unreal Engine",
+   "indie gamedev"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#GameDev",
+   "#ClaudeCode"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+  "keys": [
+   "gh:donchitos/claude-code-game-studios"
+  ],
+  "entity": "gh:donchitos/claude-code-game-studios",
+  "duration": 40.038,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Frame 10 subtitles ('development phase') have extremely low contrast / dark grey text color, making them unreadable against the dark background."
+   ],
+   "notes": "Slick dark-mode graphics and excellent alignment with the script, but ruined by unreadable subtitle text in frame 10."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1835.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1835-sheet.jpg"
  }
 ]
