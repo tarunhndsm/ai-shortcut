@@ -2553,5 +2553,49 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1704.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1704-sheet.jpg"
+ },
+ {
+  "id": "as-20261029-1735",
+  "made_at": "2026-10-29T12:15:14Z",
+  "status": "rejected",
+  "story": "Keygraph open-sourced Shannon, an autonomous AI pentester that inspects source code and executes real exploits to verify web vulnerabilities.",
+  "title": "Shannon: The AI Pentester That Proves Exploits Live",
+  "description": "Keygraph open-sourced Shannon, an autonomous AI pentester for web apps and APIs. Instead of flooding developers with false positives, it only reports vulnerabilities it can execute with live exploits.",
+  "tags": [
+   "shannon",
+   "ai pentest",
+   "keygraph",
+   "application security",
+   "devsecops",
+   "cybersecurity",
+   "ai agents",
+   "open source ai"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#CyberSecurity",
+   "#AppSec"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/KeygraphHQ/shannon",
+  "keys": [
+   "gh:keygraphhq/shannon"
+  ],
+  "entity": "gh:keygraphhq/shannon",
+  "duration": 42.743,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Incomplete quote text cutoff on frame 11 before full sentence appears in frame 12"
+   ],
+   "notes": "Slick presentation and clean visuals, but text cuts off abruptly mid-quote on frame 11."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1735.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1735-sheet.jpg"
  }
 ]
