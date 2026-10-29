@@ -2405,7 +2405,7 @@
  {
   "id": "as-20261029-0321",
   "made_at": "2026-10-28T22:00:17Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Google DeepMind announced Gemini 4 Carbon, its next-generation frontier AI model.",
   "title": "Gemini 4 Carbon on ExploitGym: Google's Frontier AI",
   "description": "Google DeepMind announced Gemini 4 Carbon, a frontier model built for cybersecurity defense and long-horizon agentic workflows. It ranks number one on the Artificial Analysis Index while keeping input pricing at two dollars per million tokens. Access is currently phased for trusted security partners and government evaluation.",
@@ -2450,8 +2450,10 @@
   "posted": {
    "youtube": {
     "id": "6ae27074cc91be5434b10418",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/2IEUMgrlxqY"
    }
-  }
+  },
+  "posted_at": "2026-10-29T00:30:13Z"
  }
 ]
