@@ -2694,5 +2694,56 @@
    }
   },
   "posted_at": "2026-10-29T14:30:11Z"
+ },
+ {
+  "id": "as-20261030-0304",
+  "made_at": "2026-10-29T21:41:12Z",
+  "status": "scheduled",
+  "story": "claude-mem brings persistent memory and auto-context injection across agent sessions",
+  "title": "Give Claude Code Long-Term Memory with claude-mem",
+  "description": "claude-mem automatically captures agent activity, compresses it, and injects context into future terminal sessions. Stop repeating your project architecture every time you start a new coding task.",
+  "tags": [
+   "claude-mem",
+   "claude code",
+   "ai coding",
+   "developer tools",
+   "agent memory",
+   "coding agents",
+   "anthropic claude",
+   "open source"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#ClaudeCode",
+   "#AITools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/thedotmack/claude-mem",
+  "keys": [
+   "gh:thedotmack/claude-mem"
+  ],
+  "entity": "gh:thedotmack/claude-mem",
+  "duration": 43.907,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "The video design is clean, readable, professional, and properly timed with no visible graphics defects."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261030-0304.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261030-0304-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-30 06:00",
+  "due_at": "2026-10-30T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae3bd7c8d19aa0a5be608ba",
+    "status": "scheduled"
+   }
+  }
  }
 ]
