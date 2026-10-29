@@ -2455,5 +2455,56 @@
    }
   },
   "posted_at": "2026-10-29T00:30:13Z"
+ },
+ {
+  "id": "as-20261029-1003",
+  "made_at": "2026-10-29T04:39:25Z",
+  "status": "scheduled",
+  "story": "AI Design Skills equips terminal coding agents with complete UI/UX design frameworks",
+  "title": "Give Claude and Cursor UI Taste with AI Design Skills",
+  "description": "AI Design Skills equips AI coding tools like Claude Code and Cursor with professional UI and UX frameworks. It turns raw prompts into structured landing pages with consistent spacing, typography, and copy.",
+  "tags": [
+   "AI Design Skills",
+   "Claude Code",
+   "Cursor AI",
+   "Codex",
+   "web design",
+   "frontend development",
+   "AI coding",
+   "UI UX design"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#WebDev",
+   "#CodingAgents"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/elayadesign/ai-design-skills",
+  "keys": [
+   "gh:elayadesign/ai-design-skills"
+  ],
+  "entity": "gh:elayadesign/ai-design-skills",
+  "duration": 45.244,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Excellent visual quality, high readability, polished cyber-tech aesthetic, and perfect visual alignment with the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1003.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261029-1003-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-29 13:00",
+  "due_at": "2026-10-29T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae2ce0002cc66e5339815a9",
+    "status": "scheduled"
+   }
+  }
  }
 ]
