@@ -2751,7 +2751,7 @@
  {
   "id": "as-20261030-1007",
   "made_at": "2026-10-30T04:44:54Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "AgriciDaniel launched claude-seo, a universal SEO skill suite packing 26 sub-skills and 19 sub-agents into Claude Code.",
   "title": "Claude SEO Turns Your Terminal Into an Agency",
   "description": "Claude SEO is a free open-source plugin for Claude Code packing 19 specialist agents. It audits technical schema, Core Web Vitals, and AI search visibility in minutes without subscription fees.",
@@ -2795,8 +2795,10 @@
   "posted": {
    "youtube": {
     "id": "6ae420caa83a7fb63c94b67d",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/37vCoaUKVXE"
    }
-  }
+  },
+  "posted_at": "2026-10-30T07:30:24Z"
  }
 ]
