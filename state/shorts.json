@@ -2698,7 +2698,7 @@
  {
   "id": "as-20261030-0304",
   "made_at": "2026-10-29T21:41:12Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "claude-mem brings persistent memory and auto-context injection across agent sessions",
   "title": "Give Claude Code Long-Term Memory with claude-mem",
   "description": "claude-mem automatically captures agent activity, compresses it, and injects context into future terminal sessions. Stop repeating your project architecture every time you start a new coding task.",
@@ -2742,8 +2742,10 @@
   "posted": {
    "youtube": {
     "id": "6ae3bd7c8d19aa0a5be608ba",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/watch?v=f4crvxQVkqA"
    }
-  }
+  },
+  "posted_at": "2026-10-30T00:30:24Z"
  }
 ]
