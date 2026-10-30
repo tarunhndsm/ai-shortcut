@@ -2804,7 +2804,7 @@
  {
   "id": "as-20261030-1708",
   "made_at": "2026-10-30T11:42:42Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "An open-source AI agent tool cleans all system ads and bloatware from Android phones without root",
   "title": "Android Ad Cleaner: Debloat Any Phone Without Root",
   "description": "Android Ad Cleaner is an open-source tool that removes system ads and marketing bloat from Android phones without root access. It runs through an AI agent or desktop app while keeping your device safe and fully reversible.",
@@ -2848,8 +2848,10 @@
   "posted": {
    "youtube": {
     "id": "6ae482b680f61ee519151d4f",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/pT9EN1KMF1c"
    }
-  }
+  },
+  "posted_at": "2026-10-30T14:30:17Z"
  }
 ]
