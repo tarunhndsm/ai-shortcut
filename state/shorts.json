@@ -2747,5 +2747,56 @@
    }
   },
   "posted_at": "2026-10-30T00:30:24Z"
+ },
+ {
+  "id": "as-20261030-1007",
+  "made_at": "2026-10-30T04:44:54Z",
+  "status": "scheduled",
+  "story": "AgriciDaniel launched claude-seo, a universal SEO skill suite packing 26 sub-skills and 19 sub-agents into Claude Code.",
+  "title": "Claude SEO Turns Your Terminal Into an Agency",
+  "description": "Claude SEO is a free open-source plugin for Claude Code packing 19 specialist agents. It audits technical schema, Core Web Vitals, and AI search visibility in minutes without subscription fees.",
+  "tags": [
+   "claude seo",
+   "claude code",
+   "seo audit",
+   "technical seo",
+   "ai search",
+   "geo",
+   "anthropic claude",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#ClaudeCode",
+   "#SEO"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/AgriciDaniel/claude-seo",
+  "keys": [
+   "gh:agricidaniel/claude-seo"
+  ],
+  "entity": "gh:agricidaniel/claude-seo",
+  "duration": 46.446,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean layout, perfect alignment with the script, and highly professional visual quality."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261030-1007.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261030-1007-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-30 13:00",
+  "due_at": "2026-10-30T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae420caa83a7fb63c94b67d",
+    "status": "scheduled"
+   }
+  }
  }
 ]
