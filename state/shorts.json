@@ -2800,5 +2800,56 @@
    }
   },
   "posted_at": "2026-10-30T07:30:24Z"
+ },
+ {
+  "id": "as-20261030-1708",
+  "made_at": "2026-10-30T11:42:42Z",
+  "status": "scheduled",
+  "story": "An open-source AI agent tool cleans all system ads and bloatware from Android phones without root",
+  "title": "Android Ad Cleaner: Debloat Any Phone Without Root",
+  "description": "Android Ad Cleaner is an open-source tool that removes system ads and marketing bloat from Android phones without root access. It runs through an AI agent or desktop app while keeping your device safe and fully reversible.",
+  "tags": [
+   "Android Ad Cleaner",
+   "Android Debloat",
+   "Remove Android Ads",
+   "AI Agent",
+   "HyperOS",
+   "ColorOS",
+   "Open Source Android",
+   "ADB Tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Android",
+   "#TechHacks"
+  ],
+  "chip": "FREE TOOL",
+  "source": "https://github.com/rddmwmddr/android-ad-cleaner",
+  "keys": [
+   "gh:rddmwmddr/android-ad-cleaner"
+  ],
+  "entity": "gh:rddmwmddr/android-ad-cleaner",
+  "duration": 44.777,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation, excellent graphics alignment, and well-paced formatting throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261030-1708.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261030-1708-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-30 20:00",
+  "due_at": "2026-10-30T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae482b680f61ee519151d4f",
+    "status": "scheduled"
+   }
+  }
  }
 ]
