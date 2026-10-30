@@ -2853,5 +2853,57 @@
    }
   },
   "posted_at": "2026-10-30T14:30:17Z"
+ },
+ {
+  "id": "as-20261031-0304",
+  "made_at": "2026-10-30T21:42:59Z",
+  "status": "scheduled",
+  "story": "A backdoored Claude Code extension was discovered on the Cursor marketplace",
+  "title": "Claude Code Extension Backdoor Found on Cursor",
+  "description": "Security firm Phorion uncovered a persistent remote-access backdoor inside the Claude Code extension on the Cursor marketplace. Learn how the payload works and why you need to check your system.",
+  "tags": [
+   "Claude Code",
+   "Cursor editor",
+   "cybersecurity",
+   "VS Code",
+   "developer tools",
+   "malware",
+   "AI shortcut"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Cursor",
+   "#CyberSecurity"
+  ],
+  "chip": "AI NEWS",
+  "source": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+  "keys": [
+   "https://phorion.io/blog/offical-claude-code-vsx-compromise",
+   "https://cyberplace.social/@GossiTheDog/117528831681803563",
+   "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2"
+  ],
+  "entity": "",
+  "duration": 41.476,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 7,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design with good readability and accurate script alignment."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261031-0304.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261031-0304-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-31 06:00",
+  "due_at": "2026-10-31T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae50f6718914720939bfb2e",
+    "status": "scheduled"
+   }
+  }
  }
 ]
