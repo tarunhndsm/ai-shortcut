@@ -2964,7 +2964,7 @@
  {
   "id": "as-20261031-1723",
   "made_at": "2026-10-31T12:04:05Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "cc-switch launches a cross-platform desktop app to manage and switch between Claude Code, Codex, and DeepSeek Harness.",
   "title": "Manage all AI coding agents with cc-switch",
   "description": "CC Switch provides a single desktop dashboard to manage terminal-based AI agents like Claude Code and Codex. It eliminates manual configuration editing by centralizing provider switching and MCP tool management.",
@@ -3008,8 +3008,10 @@
   "posted": {
    "youtube": {
     "id": "6ae5d938a114574349a2dca1",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/Zm0GINbK3dY"
    }
-  }
+  },
+  "posted_at": "2026-10-31T14:30:13Z"
  }
 ]
