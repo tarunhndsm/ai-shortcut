@@ -2857,7 +2857,7 @@
  {
   "id": "as-20261031-0304",
   "made_at": "2026-10-30T21:42:59Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "A backdoored Claude Code extension was discovered on the Cursor marketplace",
   "title": "Claude Code Extension Backdoor Found on Cursor",
   "description": "Security firm Phorion uncovered a persistent remote-access backdoor inside the Claude Code extension on the Cursor marketplace. Learn how the payload works and why you need to check your system.",
@@ -2902,8 +2902,10 @@
   "posted": {
    "youtube": {
     "id": "6ae50f6718914720939bfb2e",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/2hO82F3LdnE"
    }
-  }
+  },
+  "posted_at": "2026-10-31T00:30:29Z"
  }
 ]
