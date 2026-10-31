@@ -2907,5 +2907,56 @@
    }
   },
   "posted_at": "2026-10-31T00:30:29Z"
+ },
+ {
+  "id": "as-20261031-1028",
+  "made_at": "2026-10-31T05:10:58Z",
+  "status": "scheduled",
+  "story": "ccch1mneyyy/dsh-Go brings DeepSeek Harness to mobile devices with local runs and computer remote control",
+  "title": "Run DeepSeek Harness on Mobile with dsh-Go",
+  "description": "dsh-Go brings DeepSeek Harness to Android devices with native local execution and remote control features. Built with Flutter, it bundles a local Linux environment without requiring root access or Termux.",
+  "tags": [
+   "dsh-Go",
+   "DeepSeek Harness",
+   "Android AI App",
+   "Local AI Agent",
+   "Flutter AI",
+   "Mobile Agent",
+   "Open Source AI",
+   "AI Shortcuts"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/ccch1mneyyy/dsh-Go",
+  "keys": [
+   "gh:ccch1mneyyy/dsh-go"
+  ],
+  "entity": "gh:ccch1mneyyy/dsh-go",
+  "duration": 43.055,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, well-structured vertical layout with readable text overlays and accurate graphics."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261031-1028.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261031-1028-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-31 13:00",
+  "due_at": "2026-10-31T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae57866b84259308bbbdec3",
+    "status": "scheduled"
+   }
+  }
  }
 ]
