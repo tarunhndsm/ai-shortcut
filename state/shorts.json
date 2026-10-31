@@ -2960,5 +2960,56 @@
    }
   },
   "posted_at": "2026-10-31T07:30:26Z"
+ },
+ {
+  "id": "as-20261031-1723",
+  "made_at": "2026-10-31T12:04:05Z",
+  "status": "scheduled",
+  "story": "cc-switch launches a cross-platform desktop app to manage and switch between Claude Code, Codex, and DeepSeek Harness.",
+  "title": "Manage all AI coding agents with cc-switch",
+  "description": "CC Switch provides a single desktop dashboard to manage terminal-based AI agents like Claude Code and Codex. It eliminates manual configuration editing by centralizing provider switching and MCP tool management.",
+  "tags": [
+   "AI agents",
+   "Claude Code",
+   "developer tools",
+   "cc-switch",
+   "coding assistants",
+   "open source",
+   "Rust programming",
+   "DevOps"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AItools",
+   "#Coding"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/farion1231/cc-switch",
+  "keys": [
+   "gh:farion1231/cc-switch"
+  ],
+  "entity": "gh:farion1231/cc-switch",
+  "duration": 46.981,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean dark UI design with sharp typography, excellent visual consistency, and clear layout alignment throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261031-1723.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261031-1723-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-10-31 20:00",
+  "due_at": "2026-10-31T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae5d938a114574349a2dca1",
+    "status": "scheduled"
+   }
+  }
  }
 ]
