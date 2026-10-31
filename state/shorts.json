@@ -3013,5 +3013,55 @@
    }
   },
   "posted_at": "2026-10-31T14:30:13Z"
+ },
+ {
+  "id": "as-20261101-0322",
+  "made_at": "2026-10-31T22:01:43Z",
+  "status": "scheduled",
+  "story": "DeepSeek released dsh-superagent-prototype, an official open framework for highly autonomous AI agents.",
+  "title": "DeepSeek dsh-superagent-prototype: Autonomous AI Agent",
+  "description": "DeepSeek open-sourced dsh-superagent-prototype, an experimental agent built to autonomously work on GitHub repositories. Here is how it operates and why its architecture matters.",
+  "tags": [
+   "deepseek",
+   "dsh-superagent",
+   "ai agents",
+   "coding agent",
+   "github",
+   "open source ai",
+   "autonomous agents"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#DeepSeek",
+   "#AIAgents"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+  "keys": [
+   "gh:deepseek-ai/dsh-superagent-prototype"
+  ],
+  "entity": "gh:deepseek-ai/dsh-superagent-prototype",
+  "duration": 44.116,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly professional visual design with crisp motion graphic cards and perfect text placement."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261101-0322.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261101-0322-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-01 06:00",
+  "due_at": "2026-11-01T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae6654a1ee172cd6dc641a7",
+    "status": "scheduled"
+   }
+  }
  }
 ]
