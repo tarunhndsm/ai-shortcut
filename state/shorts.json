@@ -2911,7 +2911,7 @@
  {
   "id": "as-20261031-1028",
   "made_at": "2026-10-31T05:10:58Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "ccch1mneyyy/dsh-Go brings DeepSeek Harness to mobile devices with local runs and computer remote control",
   "title": "Run DeepSeek Harness on Mobile with dsh-Go",
   "description": "dsh-Go brings DeepSeek Harness to Android devices with native local execution and remote control features. Built with Flutter, it bundles a local Linux environment without requiring root access or Termux.",
@@ -2955,8 +2955,10 @@
   "posted": {
    "youtube": {
     "id": "6ae57866b84259308bbbdec3",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/1XMybPvc2Ho"
    }
-  }
+  },
+  "posted_at": "2026-10-31T07:30:26Z"
  }
 ]
