@@ -3017,7 +3017,7 @@
  {
   "id": "as-20261101-0322",
   "made_at": "2026-10-31T22:01:43Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "DeepSeek released dsh-superagent-prototype, an official open framework for highly autonomous AI agents.",
   "title": "DeepSeek dsh-superagent-prototype: Autonomous AI Agent",
   "description": "DeepSeek open-sourced dsh-superagent-prototype, an experimental agent built to autonomously work on GitHub repositories. Here is how it operates and why its architecture matters.",
@@ -3060,8 +3060,10 @@
   "posted": {
    "youtube": {
     "id": "6ae6654a1ee172cd6dc641a7",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/vzVOChypP94"
    }
-  }
+  },
+  "posted_at": "2026-11-01T00:30:13Z"
  }
 ]
