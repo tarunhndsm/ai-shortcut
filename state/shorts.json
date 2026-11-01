@@ -3183,5 +3183,56 @@
   "status": "failed",
   "title": "",
   "keys": []
+ },
+ {
+  "id": "as-20261102-0415",
+  "made_at": "2026-11-01T22:48:07Z",
+  "status": "scheduled",
+  "story": "Hex brings open-source, offline voice dictation to Mac, Windows, and Linux",
+  "title": "Hex: Free Offline Voice Dictation for Any OS",
+  "description": "Hex is an open-source Rust tool that brings local speech-to-text dictation to Mac, Windows, and Linux. Hold a hotkey, talk, and paste text without cloud servers.",
+  "tags": [
+   "Hex dictation",
+   "offline speech to text",
+   "open source dictation",
+   "voice typing",
+   "Rust tools",
+   "local AI",
+   "privacy tools",
+   "Hex anomalyco"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenSource",
+   "#TechTools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/anomalyco/hex",
+  "keys": [
+   "gh:anomalyco/hex"
+  ],
+  "entity": "gh:anomalyco/hex",
+  "duration": 39.0,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Professional quality, clear visuals, perfectly matches the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-0415.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-0415-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-02 06:00",
+  "due_at": "2026-11-02T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae7c1ab01fa08ffbe6f3d15",
+    "status": "scheduled"
+   }
+  }
  }
 ]
