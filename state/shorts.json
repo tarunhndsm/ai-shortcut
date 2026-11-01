@@ -3069,7 +3069,7 @@
  {
   "id": "as-20261101-1012",
   "made_at": "2026-11-01T04:47:55Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "heydamir/unslop: A Claude skill that automatically cleans up vibecoded, AI-looking UI into a professional design",
   "title": "Unslop AI: Clean Up Vibecoded UIs in Claude",
   "description": "Heydamir's unslop is an open source skill for Claude Code that cleans up generic AI styling like purple glows and emoji labels. It audits your UI and applies structured designer passes directly to your code. Here is how it works.",
@@ -3112,8 +3112,10 @@
   "posted": {
    "youtube": {
     "id": "6ae6c47ff0984eef3349ab50",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/QYK0_TS-BNA"
    }
-  }
+  },
+  "posted_at": "2026-11-01T07:30:09Z"
  }
 ]
