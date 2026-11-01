@@ -3117,5 +3117,55 @@
    }
   },
   "posted_at": "2026-11-01T07:30:09Z"
+ },
+ {
+  "id": "as-20261101-1717",
+  "made_at": "2026-11-01T11:53:18Z",
+  "status": "scheduled",
+  "story": "Mika is a fast-growing open-source Android AI agent that autonomously operates apps and the web on-device.",
+  "title": "Mika: The Open-Source AI Agent That Controls Your Android Apps",
+  "description": "Mika is an open-source Android assistant that autonomously navigates apps and websites on a background screen. Your personal data stays on-device with zero central servers. Here is how it works and what it means for mobile automation.",
+  "tags": [
+   "Mika AI",
+   "Android AI agent",
+   "mobile automation",
+   "open source AI",
+   "autonomous agent",
+   "Android automation",
+   "AI shortcut"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AndroidAI",
+   "#AIAgents"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/wangzan101/Mika",
+  "keys": [
+   "gh:wangzan101/mika"
+  ],
+  "entity": "gh:wangzan101/mika",
+  "duration": 40.947,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, high-quality visuals with excellent layout and perfect subtitle alignment throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261101-1717.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261101-1717-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-01 20:00",
+  "due_at": "2026-11-01T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae7283221c807e9d5b7b26f",
+    "status": "scheduled"
+   }
+  }
  }
 ]
