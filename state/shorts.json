@@ -3240,7 +3240,7 @@
  {
   "id": "as-20261102-1020",
   "made_at": "2026-11-02T04:56:11Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "PixelFX releases 244 open-source pixel art effects with an integrated Claude Code skill to generate custom ones",
   "title": "PixelFX: 244 Open-Source Pixel Art FX with Claude Code Skill",
   "description": "PixelFX releases 244 open-source pixel art visual effects alongside a built-in Claude Code skill. Game developers can render instant particle animations or export sprite sheets for any engine.",
@@ -3284,8 +3284,10 @@
   "posted": {
    "youtube": {
     "id": "6ae817f07817c41d1a436023",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/GJeAHnJrsPo"
    }
-  }
+  },
+  "posted_at": "2026-11-02T07:30:12Z"
  }
 ]
