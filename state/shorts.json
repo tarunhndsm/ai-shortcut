@@ -3342,5 +3342,56 @@
   },
   "retried": true,
   "slot": "2026-11-02 20:00"
+ },
+ {
+  "id": "as-20261103-0323",
+  "made_at": "2026-11-02T22:28:11Z",
+  "status": "scheduled",
+  "story": "Handy delivers a free, open-source offline speech-to-text app for desktop",
+  "title": "Handy: Free Offline Speech-to-Text Dictation for Desktop",
+  "description": "Handy is a free, open-source desktop app that brings fast, local speech-to-text dictation to Windows, macOS, and Linux. It transcribes audio completely offline using Whisper and Parakeet models with complete privacy.",
+  "tags": [
+   "Handy",
+   "speech to text",
+   "Whisper",
+   "open source",
+   "offline dictation",
+   "desktop app",
+   "privacy",
+   "AI shortcut"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "FREE TOOL",
+  "source": "https://github.com/cjpais/Handy",
+  "keys": [
+   "gh:cjpais/handy"
+  ],
+  "entity": "gh:cjpais/handy",
+  "duration": 27.047,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.5-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, well-designed layout with great readability and correct visuals."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261103-0323.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261103-0323-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-03 06:00",
+  "due_at": "2026-11-03T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae90e7f100497f1625a7781",
+    "status": "scheduled"
+   }
+  }
  }
 ]
