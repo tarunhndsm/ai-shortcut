@@ -3236,5 +3236,56 @@
    }
   },
   "posted_at": "2026-11-02T00:30:15Z"
+ },
+ {
+  "id": "as-20261102-1020",
+  "made_at": "2026-11-02T04:56:11Z",
+  "status": "scheduled",
+  "story": "PixelFX releases 244 open-source pixel art effects with an integrated Claude Code skill to generate custom ones",
+  "title": "PixelFX: 244 Open-Source Pixel Art FX with Claude Code Skill",
+  "description": "PixelFX releases 244 open-source pixel art visual effects alongside a built-in Claude Code skill. Game developers can render instant particle animations or export sprite sheets for any engine.",
+  "tags": [
+   "pixelfx",
+   "claude code",
+   "pixel art",
+   "gamedev",
+   "open source",
+   "javascript",
+   "sprite sheet",
+   "ai shortcut"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#GameDev",
+   "#PixelArt"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/patch-gg/pixelfx",
+  "keys": [
+   "gh:patch-gg/pixelfx"
+  ],
+  "entity": "gh:patch-gg/pixelfx",
+  "duration": 40.983,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, well-formatted open-source tool showcase with accurate UI elements and no visual artifacts."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-1020.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-1020-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-02 13:00",
+  "due_at": "2026-11-02T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae817f07817c41d1a436023",
+    "status": "scheduled"
+   }
+  }
  }
 ]
