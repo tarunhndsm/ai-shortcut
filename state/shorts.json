@@ -3332,13 +3332,14 @@
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-1717.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-1717-sheet.jpg",
   "book_tries": 1,
-  "slot": "2026-11-02 20:00",
-  "due_at": "2026-11-02T14:30:00Z",
+  "due_at": "2026-11-02T14:48:54Z",
   "posted": {
    "youtube": {
-    "id": "6ae87ad76c56e41b9951c102",
-    "status": "scheduled"
+    "id": "6ae8a2d72810e4a79d30c7d6",
+    "status": "error"
    }
-  }
+  },
+  "retried": true,
+  "slot": "2026-11-02 20:00"
  }
 ]
