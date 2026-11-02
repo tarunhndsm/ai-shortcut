@@ -3293,7 +3293,7 @@
  {
   "id": "as-20261102-1717",
   "made_at": "2026-11-02T11:58:11Z",
-  "status": "scheduled",
+  "status": "post-failed",
   "story": "Vercel Labs released agent-desktop for reliable AI computer control via OS accessibility trees",
   "title": "Vercel agent-desktop: Reliable AI Computer Use",
   "description": "Vercel Labs released agent-desktop, an open-source Rust tool that gives AI agents reliable desktop automation through native OS accessibility trees. Instead of relying on slow vision loops, agents interact directly with stable element references in the background.",
@@ -3336,7 +3336,8 @@
   "posted": {
    "youtube": {
     "id": "6ae8a2d72810e4a79d30c7d6",
-    "status": "error"
+    "status": "error",
+    "error": "It looks like Buffer has lost authorization to post on your behalf. Please refresh your channel to resume scheduling."
    }
   },
   "retried": true,
