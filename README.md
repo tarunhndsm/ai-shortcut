@@ -1,7 +1,7 @@
 # AI Shortcut desk
 
 An automated newsroom for the [AI Shortcut](https://www.youtube.com/@AIShortcut-p4k) YouTube channel. It finds what is
-trending in AI right now (repos, models, papers, launches, posts) and turns the best story into a 40-45 second
+trending in AI right now (repos, models, papers, launches, posts) and turns the best story into a 22-28 second
 animated Short. Everything runs on GitHub Actions; nothing is rendered on a laptop.
 
 ## The desk
@@ -9,10 +9,10 @@ animated Short. Everything runs on GitHub Actions; nothing is rendered on a lapt
 | Stage | Agents | What they do |
 |---|---|---|
 | Scouts | 39 | GitHub trending (6 languages) and new rising repos, Hugging Face models, Spaces and daily papers, Hacker News, 11 lab blogs (OpenAI, Google, Google Research, DeepMind, Microsoft Research, Meta, Mistral, NVIDIA, Hugging Face, AWS, GitHub), Anthropic's news page, 12 tech news feeds and newsletters (including Techmeme, TLDR AI and Latent Space), Product Hunt, Lobsters, one subreddit per scan in turn, OpenRouter's new models. Each item gets a heat score from its own signal (stars today, points, likes) and freshness, plus a boost when several independent sources carry the same thing. |
-| Editor | 1 | Groups items that are the same story and picks the three best for a broad tech audience, skipping anything covered in the last 10 days, rumors, drama and NSFW. |
+| Editor | 1 | Groups items that are the same story and picks the three best for people who don't write code (results anyone can see or hear, famous products, free tools), skipping anything covered in the last 10 days, rumors, drama and NSFW. |
 | Researcher | 1 per source | Reads the primary sources: repo API, README, releases, model cards, papers, articles, the top Hacker News comments, OpenRouter pricing. |
 | Picture desk | 1 | Screenshots of the real pages (Playwright), the README's own images, the maker's avatar. |
-| Writer and fact-checker | 2 | Gemini writes a 6-8 scene script from the dossier only; a second pass checks every claim, and code checks every on-screen number against the dossier. |
+| Writer and fact-checker | 2 | Gemini writes a 5-7 scene script of 60-80 words from the dossier only, ending on the takeaway rather than a follow request; a second pass checks every claim, and code checks every on-screen number against the dossier. |
 | Narrator | 1 | Gemini TTS, aligned word by word with Whisper for karaoke captions; Kokoro as the offline fallback. |
 | Composer and sound | 2 | Builds a HyperFrames (HTML + GSAP) project from 12 scene types (hook, card, stat, bars, list, code, shot, media, versus, quote, punch, cta) with rolling counters, typing code, browser-frame pans and karaoke captions; mixes a synthesized music bed and sound effects to -14 LUFS. |
 | Renderer and judge | 2 | HyperFrames renders 1080x1920 at 30 fps; technical checks plus a vision judge that looks at frames from every scene and blocks broken or misleading Shorts. |

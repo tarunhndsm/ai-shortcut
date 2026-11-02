@@ -20,15 +20,17 @@ motion graphics and a confident, upbeat narrator. Viewers: developers, students,
 Write ONE Short about the story in the dossier. Hard rules:
 - Every claim and every number must come from the dossier. Never invent features, numbers, dates, prices,
   comparisons or quotes. If the dossier doesn't say it, don't say it. Say "claims" or "says" for a maker's own claims.
-- 110 to 130 words of narration in total (about 40-45 seconds), in 7 to 9 scenes. Each scene's "say" is ONE short
-  spoken sentence (6-20 words).
-- Scene 1 is the hook: the payoff first, the most surprising concrete true thing (a number, a result, what it lets you
-  do), in the first 2 seconds. No greetings, no "in this video". Scene 2 shows the proof on screen (shot, card, stat,
-  bars, code or versus).
+- 60 to 80 words of narration in total (about 22-28 seconds), in 5 to 7 scenes. Each scene's "say" is ONE short
+  spoken sentence (5-16 words). Viewers leave after about 20 seconds whatever the length (YouTube Studio, 28 days to
+  1 Nov 2026: our 44-second Shorts were watched 48% through), so every word must earn its place.
+- Scene 1 is the hook: the payoff first, what it does for the viewer, said so someone who doesn't code gets it on one
+  hearing (a result they can see or hear, a number, or the famous product it replaces when the dossier says so), in
+  the first 2 seconds. No greetings, no "in this video". Scene 2 shows the proof on screen (shot, card, stat, bars,
+  code or versus).
 - Name the tool, model or repo (the dossier's subject) in scene 1's "say", in its "headline" and in the "title":
   YouTube decides who a Short is shown to from what its first words and title name.
 - Add what the sources don't spell out: why it matters, who it's for, how it compares with what people use today
-  (only from the dossier), or the catch. At least two scenes are your analysis, not a summary. Never copy a sentence
+  (only from the dossier), or the catch. At least one scene is your analysis, not a summary. Never copy a sentence
   from the sources; explain it in your own words.
 - No fixed formula: pick the scene types that prove this story (code for a tool you can install, bars or versus for
   benchmarks, shot for a product, quote when someone said something telling) and vary their order.
@@ -38,8 +40,9 @@ Write ONE Short about the story in the dossier. Hard rules:
   insane, crazy, mind-blowing, game-changer, destroys, killer, you won't believe.
 - Write "say" exactly as it should be spoken: no URLs, slashes, underscores, hashtags or emoji; say names the way a
   person would ("Qwen three point eight", "V4.1" is fine, "claude-plugins-official" becomes "Claude plugins official").
-- The second-to-last scene gives the takeaway: what it means for the viewer or who should try it (an honest opinion).
-- The last scene is "cta": one short line asking to follow for daily AI shortcuts (vary the wording).
+- The last scene gives the takeaway: what it means for the viewer or who should try it (an honest opinion), in a line
+  that runs back into scene 1 when the Short replays. No request to follow, subscribe or comment: viewers swipe away
+  at a sign-off.
 
 Scene types (pick what the dossier can fill; never repeat a type except list/stat/punch):
 - {"type":"hook","say":...,"headline":"3-6 punchy words for the screen","highlight":["ONE","WORD"],"kicker":"2-5 words, e.g. #1 ON GITHUB TODAY"}
@@ -53,7 +56,6 @@ Scene types (pick what the dossier can fill; never repeat a type except list/sta
 - {"type":"versus","say":...,"left":"name","right":"name","rows":[["row label","left value","right value"]]} 2-4 rows, from the dossier
 - {"type":"quote","say":...,"quote":"a real quote from the dossier, under 22 words","who":"who said it"}
 - {"type":"punch","say":...,"headline":"2-6 words","highlight":["WORD"]}  a big statement, for the takeaway
-- {"type":"cta","say":...}
 
 Also give:
 - "title": under 70 characters, names the thing and makes people curious, no clickbait the video can't back up, no ALL CAPS words except names
@@ -130,15 +132,17 @@ def _name_missing(script: dict, subject: dict | None) -> list[str]:
 def _valid(script: dict, visuals: list[dict], subject: dict | None = None) -> list[str]:
     problems = []
     scenes = script.get("scenes")
-    if not isinstance(scenes, list) or not 6 <= len(scenes) <= 10:
-        return ["needs 7-9 scenes"]
+    if not isinstance(scenes, list) or not 4 <= len(scenes) <= 8:
+        return ["needs 5-7 scenes"]
     if scenes[0].get("type") == "hook":
         problems += _name_missing(script, subject)
     words = sum(len(str(s.get("say", "")).split()) for s in scenes)
-    if not 98 <= words <= 140:
-        problems.append(f"narration is {words} words; it must be 110-130")
-    if scenes[0].get("type") != "hook" or scenes[-1].get("type") != "cta":
-        problems.append("first scene must be hook and last must be cta")
+    if not 52 <= words <= 88:
+        problems.append(f"narration is {words} words; it must be 60-80")
+    if scenes[0].get("type") != "hook":
+        problems.append("first scene must be hook")
+    if scenes[-1].get("type") == "cta":
+        problems.append("end on the takeaway, not a cta scene: no follow request")
     for i, s in enumerate(scenes):
         kind = s.get("type")
         if kind not in TYPES:
