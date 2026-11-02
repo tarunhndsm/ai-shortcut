@@ -3187,7 +3187,7 @@
  {
   "id": "as-20261102-0415",
   "made_at": "2026-11-01T22:48:07Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Hex brings open-source, offline voice dictation to Mac, Windows, and Linux",
   "title": "Hex: Free Offline Voice Dictation for Any OS",
   "description": "Hex is an open-source Rust tool that brings local speech-to-text dictation to Mac, Windows, and Linux. Hold a hotkey, talk, and paste text without cloud servers.",
@@ -3231,8 +3231,10 @@
   "posted": {
    "youtube": {
     "id": "6ae7c1ab01fa08ffbe6f3d15",
-    "status": "scheduled"
+    "status": "sent",
+    "link": "https://www.youtube.com/shorts/aakESlVNvFQ"
    }
-  }
+  },
+  "posted_at": "2026-11-02T00:30:15Z"
  }
 ]
