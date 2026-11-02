@@ -3289,5 +3289,56 @@
    }
   },
   "posted_at": "2026-11-02T07:30:12Z"
+ },
+ {
+  "id": "as-20261102-1717",
+  "made_at": "2026-11-02T11:58:11Z",
+  "status": "scheduled",
+  "story": "Vercel Labs released agent-desktop for reliable AI computer control via OS accessibility trees",
+  "title": "Vercel agent-desktop: Reliable AI Computer Use",
+  "description": "Vercel Labs released agent-desktop, an open-source Rust tool that gives AI agents reliable desktop automation through native OS accessibility trees. Instead of relying on slow vision loops, agents interact directly with stable element references in the background.",
+  "tags": [
+   "agent desktop",
+   "vercel labs",
+   "ai agents",
+   "computer use",
+   "rust",
+   "desktop automation",
+   "open source ai",
+   "accessibility api"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIAgents",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/vercel-labs/agent-desktop",
+  "keys": [
+   "gh:vercel-labs/agent-desktop"
+  ],
+  "entity": "gh:vercel-labs/agent-desktop",
+  "duration": 45.597,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation with excellent text hierarchy, smooth graphic transitions, and sharp typography throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-1717.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261102-1717-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-02 20:00",
+  "due_at": "2026-11-02T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "6ae87ad76c56e41b9951c102",
+    "status": "scheduled"
+   }
+  }
  }
 ]
