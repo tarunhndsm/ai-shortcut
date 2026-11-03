@@ -186,3 +186,83 @@ check("a model's name as spoken passes", writer._name_missing(
 check("papers and web pages are not checked", writer._name_missing(
     script("A new paper halves training cost.", "HALF THE COST", "Training at half the cost"),
     {"platform": "paper", "name": "Some long paper title"}), [])
+
+
+class FakeResp:
+    def __init__(self, code: int, body: dict, headers: dict | None = None):
+        self.status_code, self._body, self.headers = code, body, headers or {}
+
+    def json(self) -> dict:
+        return self._body
+
+    def raise_for_status(self) -> None:
+        if self.status_code >= 400:
+            raise RuntimeError(f"HTTP {self.status_code}")
+
+
+calls, answers = [], []
+real_post, real_status, real_problems = publish.requests.post, publish.status, publish.channel_problems
+publish.requests.post = lambda *a, **k: (calls.append(1), answers.pop(0))[1]
+publish.LIMIT = tmp / "buffer.json"
+state.now = lambda: at(20, "06:10")
+answers.append(FakeResp(429, {"errors": [{"extensions": {"window": "30d"}}]}, {"Retry-After": "1190757"}))
+try:
+    publish._buffer(publish.CHANNEL)
+    got = "no error"
+except publish.Blocked as err:
+    got = err.until == at(20, "06:10") + timedelta(seconds=1190757)
+check("a 30-day refusal raises Blocked at once, with its end", (got, len(calls)), (True, 1))
+state.now = lambda: at(20, "09:00")
+try:
+    publish._buffer(publish.CHANNEL)
+except publish.Blocked:
+    pass
+check("while it lasts, Buffer isn't asked again within 6 hours", len(calls), 1)
+state.now = lambda: at(20, "12:20")
+answers.append(FakeResp(200, {"data": {"channel": {"name": "AI Shortcut"}}}))
+check("after 6 hours one request goes out, and an answer ends the refusal",
+      (publish._buffer(publish.CHANNEL), len(calls), publish.blocked(), state.load(publish.LIMIT, None)),
+      ({"channel": {"name": "AI Shortcut"}}, 2, None, {}))
+
+
+def refused(*args):
+    raise publish.Blocked("Buffer's 30d API limit is used up", at(30, "00:00"))
+
+
+def down(*args):
+    raise RuntimeError("Buffer: 502")
+
+
+publish.status = refused
+run.save_shorts([short("s10", at(20, "03:30"), status="scheduled", slot="2026-10-20 06:00",
+                       due_at=state.iso(at(20, "06:00")), posted={"youtube": {"id": "p-s10"}})])
+run.post_due(at(20, "10:00"))
+check("a post the limit keeps from being read isn't given up on", run.shorts()[0]["status"], "scheduled")
+publish.status = down
+run.post_due(at(20, "10:00"))
+check("other read errors still give up after 3 hours", run.shorts()[0]["status"], "post-failed")
+publish.status = real_status
+
+out = tmp / "github_output"
+os.environ["GITHUB_OUTPUT"] = str(out)
+scouts.scan = lambda *a, **k: []
+run.save_shorts([short("s11", at(20, "03:30"), status="posted", slot="2026-10-20 06:00")])
+run.PLAN.write_text("{}")
+state.now = lambda: at(20, "10:05")
+publish.channel_problems = refused
+out.write_text("")
+code = run.main(["plan"])
+check("Buffer refusing: no make, and the run passes", (code, out.read_text().splitlines()[0]), (0, "make=false"))
+checked = []
+publish.channel_problems = lambda: checked.append(1) or []
+out.write_text("")
+code = run.main(["plan"])
+check("Buffer taking posts: makes for the 13:00 slot", (code, out.read_text().splitlines()[0], checked),
+      (0, "make=true", [1]))
+checked.clear()
+state.now = lambda: at(20, "08:00")
+out.write_text("")
+run.main(["plan"])
+check("no make, no channel check", (out.read_text().splitlines()[0], checked), ("make=false", []))
+publish.requests.post, publish.channel_problems = real_post, real_problems
+os.environ.pop("GITHUB_OUTPUT")

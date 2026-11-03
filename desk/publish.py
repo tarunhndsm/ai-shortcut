@@ -7,14 +7,21 @@ from __future__ import annotations
 import logging
 import os
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
 
-from . import env
+from . import env, state
 
 log = logging.getLogger(__name__)
+
+IST = timezone(timedelta(hours=5, minutes=30))
+# Buffer allows this key 150 requests in 15 minutes, 600 in a day and 1,000 in a rolling 30 days (its rate-limit
+# headers, 3 Nov 2026). A refusal longer than 15 minutes is kept in LIMIT, and until it ends Buffer is asked again only
+# once every PROBE_EVERY, so a raised limit is noticed. A refused request costs no quota.
+LIMIT = env.STATE / "buffer.json"
+PROBE_EVERY = timedelta(hours=6)
 
 BUFFER = "https://api.buffer.com"
 RELEASE = "media"
@@ -51,17 +58,60 @@ def host(path: Path, name: str, kind: str = "video/mp4") -> str:
     return up.json()["browser_download_url"]
 
 
+class Blocked(RuntimeError):
+    """Buffer refuses this key's requests until `until`."""
+
+    def __init__(self, message: str, until: datetime):
+        super().__init__(message)
+        self.until = until
+
+
+def blocked() -> Blocked | None:
+    """Buffer's standing refusal, unless it has run out or is due another try."""
+    held = state.load(LIMIT, {})
+    until, probed, now = state.parse(held.get("until")), state.parse(held.get("probed")), state.now()
+    if until and probed and now < until and now - probed < PROBE_EVERY:
+        return Blocked(held.get("reason") or "Buffer's API limit is used up", until)
+    return None
+
+
+def _refusal(resp: requests.Response) -> tuple[float, str]:
+    """Seconds until Buffer takes requests again, and the window of the limit that was hit ("15m", "24h", "30d")."""
+    try:
+        wait = float(resp.headers.get("Retry-After") or 0)
+    except ValueError:
+        wait = 0.0
+    try:
+        window = resp.json()["errors"][0]["extensions"]["window"]
+    except (ValueError, KeyError, IndexError, TypeError):
+        window = "?"
+    return wait, window
+
+
 def _buffer(query: str, variables: dict | None = None) -> dict:
+    if refused := blocked():
+        raise refused
     for attempt in range(3):
         resp = requests.post(BUFFER, json={"query": query, "variables": variables or {}}, timeout=120,
                              headers={"Authorization": f"Bearer {env.need('AI_BUFFER_API_KEY')}"})
-        if resp.status_code == 429 and attempt < 2:
-            time.sleep(30 * (attempt + 1))
-            continue
+        if resp.status_code == 429:
+            wait, window = _refusal(resp)
+            if wait > 900:
+                now = state.now()
+                until = now + timedelta(seconds=wait)
+                reason = f"Buffer's {window} API limit is used up until {until.astimezone(IST):%d %b %H:%M} IST"
+                state.save(LIMIT, {"until": state.iso(until), "probed": state.iso(now), "window": window,
+                                   "reason": reason})
+                raise Blocked(reason, until)
+            if attempt < 2:
+                time.sleep(30 * (attempt + 1))
+                continue
         resp.raise_for_status()
         data = resp.json()
         if data.get("errors"):
             raise RuntimeError(f"Buffer: {data['errors'][0].get('message')}")
+        if state.load(LIMIT, {}):
+            state.save(LIMIT, {})
         return data["data"]
     raise RuntimeError("Buffer kept rate-limiting")
 
@@ -120,11 +170,14 @@ def status(post_id: str) -> dict:
 
 
 def channel_problems() -> list[str]:
-    """Connected channels Buffer can't post to (disconnected, locked or queue paused). A failed check counts as none."""
+    """Connected channels Buffer can't post to (disconnected, locked or queue paused). A failed check counts as none;
+    a used-up API limit raises Blocked."""
     problems = []
     for service, channel in channels().items():
         try:
             got = _buffer(CHANNEL, {"input": {"id": channel}})["channel"] or {}
+        except Blocked:
+            raise
         except Exception as exc:
             log.warning("buffer channel check for %s: %s", service, exc)
             continue

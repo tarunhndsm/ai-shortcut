@@ -213,12 +213,13 @@ def book(items: list[dict], now: datetime) -> None:
 
 def settle(items: list[dict], now: datetime) -> None:
     """Read back booked posts once due. Sent: posted. All failed: back to ready once, to be shared within the slot's
-    grace, else post-failed; also post-failed if Buffer still hasn't sent it SETTLE_GIVE_UP after its time."""
+    grace, else post-failed; also post-failed if Buffer still hasn't sent it SETTLE_GIVE_UP after its time, unless
+    Buffer's used-up API limit is what keeps it from being read."""
     for s in items:
         due = state.parse(s.get("due_at"))
         if s.get("status") != "scheduled" or not due or now < due + SETTLE_AFTER:
             continue
-        seen = {}
+        seen, unread = {}, False
         for service, r in (s.get("posted") or {}).items():
             if "id" not in r:
                 continue
@@ -226,6 +227,7 @@ def settle(items: list[dict], now: datetime) -> None:
                 got = publish.status(r["id"]) or {}
             except Exception as exc:
                 log.warning("buffer status of %s: %s", r["id"], exc)
+                unread = unread or isinstance(exc, publish.Blocked)
                 continue
             r["status"] = got.get("status")
             if got.get("externalLink"):
@@ -245,7 +247,7 @@ def settle(items: list[dict], now: datetime) -> None:
             else:
                 s["status"] = "post-failed"
                 log.warning("Buffer post of %s failed: %s", s["id"], s["posted"])
-        elif now > due + SETTLE_GIVE_UP:
+        elif now > due + SETTLE_GIVE_UP and not unread:
             s["status"] = "post-failed"
             log.warning("Buffer still hasn't sent %s: %s", s["id"], s["posted"])
 
@@ -327,10 +329,17 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if make(args.url, args.dry, args.breaking) else 1
     if args.cmd == "plan":
         needed, url, urgent = plan()
+        # Only before making: Buffer allows 1,000 requests in 30 days, and a check on every run (48 a day) uses them up.
+        problems = []
+        if needed and publish.configured():
+            try:
+                problems = publish.channel_problems()
+            except publish.Blocked as err:
+                log.warning("%s; not making a Short Buffer can't post", err)
+                needed = False
         if out := os.environ.get("GITHUB_OUTPUT"):
             with open(out, "a") as fh:
                 fh.write(f"make={'true' if needed else 'false'}\nurl={url}\nbreaking={'true' if urgent else 'false'}\n")
-        problems = publish.channel_problems() if publish.configured() else []
         for problem in problems:
             log.error("Buffer can't post to %s: reconnect or unpause it in Buffer", problem)
         return 1 if problems else 0
