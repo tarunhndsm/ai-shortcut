@@ -3406,7 +3406,7 @@
  {
   "id": "as-20261103-1901",
   "made_at": "2026-11-03T13:37:21Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "JustVugg/colibri: Hierarchical inference engine for frontier MoE models",
   "title": "Run DeepSeek and Mistral on your Laptop with Colibri",
   "description": "Colibri is a hierarchical inference engine that lets you run frontier MoE models on consumer hardware. It uses a tiered system to stream model experts from your NVMe SSD to save RAM.",
@@ -3451,11 +3451,12 @@
   "posted": {
    "youtube": {
     "id": "NU2cmoES-P8",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/NU2cmoES-P8",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-03T14:30:13Z"
  },
  {
   "id": "as-20261103-1909",
