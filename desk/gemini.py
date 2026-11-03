@@ -1,5 +1,6 @@
 """Google's Gemini API on the AI Studio free tier, for text and speech. Each model has its own daily quota, so every
-call walks a ladder of models and skips the ones that ran out in this run."""
+call walks a ladder of models and skips the ones that ran out in this run, or that timed out or stayed busy in the
+last BUSY_FOR seconds."""
 
 from __future__ import annotations
 
@@ -19,19 +20,26 @@ from . import env
 log = logging.getLogger(__name__)
 
 API = "https://generativelanguage.googleapis.com/v1beta/models"
-# Quick and plentiful: scouting, editing, checking.
+# Quick and plentiful: scouting, editing, checking. Gemma 4 on the same key comes last: it has its own quota and
+# answers when every Gemini model is busy (all of them answered 503 "high demand" for over an hour on 3 Nov, bar
+# 3.5 Flash-Lite).
+GEMMA = ["gemma-4-26b-a4b-it", "gemma-4-31b-it"]
 FAST = ["gemini-3.5-flash", "gemini-3.6-flash", "gemini-3.7-flash", "gemini-3.5-flash-lite", "gemini-3-flash-preview",
-        "gemini-3.1-flash-lite", "gemini-2.5-flash"]
+        "gemini-3.1-flash-lite", *GEMMA]
 # The writer: the strongest model that answers, then the quick ones.
 SMART = ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-3.8-flash", "gemini-3-flash-preview",
-         "gemini-2.5-flash"]
+         "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", *reversed(GEMMA)]
 TTS = ["gemini-3.8-flash-tts", "gemini-3.8-flash-lite-tts", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts",
        "gemini-2.5-pro-preview-tts"]
 # Gemini 3.0 and 3.1 can loop below their default temperature of 1.0, as Google warns.
 LOOP_WHEN_COLD = ("gemini-3-", "gemini-3.1-")
 SAMPLE_RATE = 24000
 MAX_QUOTA_WAIT = 70.0
+BUSY_FOR = 600.0
+# Gemma takes a system instruction but not JSON mode.
+JSON_ONLY = "\n\nAnswer with one JSON object and nothing else."
 _spent: set[str] = set()
+_busy: dict[str, float] = {}
 
 
 class NoModel(RuntimeError):
@@ -59,11 +67,16 @@ def _quota(resp: requests.Response) -> tuple[str, float | None]:
 
 def _post(model: str, body: dict, timeout: float) -> requests.Response | None:
     """One request, asked again after a dropped connection, a per-minute 429 or a busy 5xx. None when the model is
-    out of quota for today or keeps failing."""
+    out of quota for today or keeps failing. A model that runs past `timeout` or is still busy after the retries is
+    skipped for BUSY_FOR, so the next pick doesn't wait on it again."""
     for attempt in range(3):
         try:
             resp = requests.post(f"{API}/{model}:generateContent", headers={"x-goog-api-key": env.need("AI_GEMINI_API_KEY")},
                                  json=body, timeout=timeout)
+        except requests.Timeout:
+            log.info("%s: no answer in %.0f s; skipping it for %.0f min", model, timeout, BUSY_FOR / 60)
+            _busy[model] = time.monotonic() + BUSY_FOR
+            return None
         except requests.RequestException as exc:
             log.info("%s: %s", model, type(exc).__name__)
             if attempt == 2:
@@ -80,8 +93,14 @@ def _post(model: str, body: dict, timeout: float) -> requests.Response | None:
         if resp.status_code in (500, 502, 503, 504) and attempt < 2:
             time.sleep(6 * (attempt + 1))
             continue
+        if resp.status_code in (500, 502, 503, 504):
+            _busy[model] = time.monotonic() + BUSY_FOR
         return resp
     return None
+
+
+def _available(model: str) -> bool:
+    return model not in _spent and _busy.get(model, 0.0) <= time.monotonic()
 
 
 def _parse(raw: str):
@@ -99,14 +118,17 @@ def text_json(system: str, prompt: str, *, models: list[str] | None = None, temp
               images: list[tuple[str, bytes]] | None = None, timeout: float = 150) -> tuple[dict, str]:
     """A JSON answer and the model that gave it. `images` are (mime, bytes) parts placed before the prompt."""
     parts = [{"inlineData": {"mimeType": mime, "data": base64.b64encode(data).decode()}} for mime, data in images or []]
-    body = {"systemInstruction": {"parts": [{"text": system}]},
-            "contents": [{"role": "user", "parts": [*parts, {"text": prompt}]}],
-            "generationConfig": {"temperature": temperature, "responseMimeType": "application/json"}}
     errors = []
     for model in models or FAST:
-        if model in _spent:
+        if not _available(model):
+            errors.append(f"{model}: skipped (busy or out of quota)")
             continue
-        body["generationConfig"]["temperature"] = 1.0 if model.startswith(LOOP_WHEN_COLD) else temperature
+        gemma = model.startswith("gemma-")
+        config = {"temperature": 1.0 if model.startswith(LOOP_WHEN_COLD) else temperature}
+        if not gemma:
+            config["responseMimeType"] = "application/json"
+        body = {"systemInstruction": {"parts": [{"text": system + (JSON_ONLY if gemma else "")}]},
+                "contents": [{"role": "user", "parts": [*parts, {"text": prompt}]}], "generationConfig": config}
         started = time.monotonic()
         resp = _post(model, body, timeout)
         if resp is None:
@@ -150,7 +172,7 @@ def speech(text: str, voice: str, style: str, models: list[str] | None = None) -
                                                   "languageCode": "en-US"}}}
     errors = []
     for model in models or TTS:
-        if model in _spent:
+        if not _available(model):
             continue
         for _ in range(2):
             resp = _post(model, body, 300)
