@@ -1,0 +1,6 @@
+{
+ "until": "2026-11-16T20:04:46Z",
+ "probed": "2026-11-03T01:45:23Z",
+ "window": "30d",
+ "reason": "Buffer's 30d API limit is used up until 17 Nov 01:34 IST"
+}
