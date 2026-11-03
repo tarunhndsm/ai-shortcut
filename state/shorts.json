@@ -3402,5 +3402,59 @@
   "status": "failed",
   "title": "",
   "keys": []
+ },
+ {
+  "id": "as-20261103-1901",
+  "made_at": "2026-11-03T13:37:21Z",
+  "status": "scheduled",
+  "story": "JustVugg/colibri: Hierarchical inference engine for frontier MoE models",
+  "title": "Run DeepSeek and Mistral on your Laptop with Colibri",
+  "description": "Colibri is a hierarchical inference engine that lets you run frontier MoE models on consumer hardware. It uses a tiered system to stream model experts from your NVMe SSD to save RAM.",
+  "tags": [
+   "AI",
+   "LLM",
+   "DeepSeek",
+   "Mistral",
+   "Local AI",
+   "Open Source",
+   "Colibri",
+   "Machine Learning",
+   "Developer Tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/JustVugg/colibri",
+  "keys": [
+   "gh:justvugg/colibri"
+  ],
+  "entity": "gh:justvugg/colibri",
+  "duration": 31.207,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Very clean, professional, and visually accurate AI tech presentation."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261103-1901.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261103-1901-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-03 20:00",
+  "due_at": "2026-11-03T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "NU2cmoES-P8",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/NU2cmoES-P8",
+    "via": "youtube"
+   }
+  }
  }
 ]
