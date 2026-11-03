@@ -1,6 +1,6 @@
-"""Publishing: the MP4 goes to a GitHub release of this public repo (a stable public URL), and Buffer posts it to the
-channel's YouTube, and to its Instagram and Facebook Page when those are connected. Buffer's YouTube client is
-Google-audited, so its uploads are public; this repo never uploads through the YouTube API itself."""
+"""Publishing: the MP4 goes to a GitHub release of this public repo (a stable public URL). YouTube gets it straight
+from the desk's own YouTube API project (desk/youtube.py) once AI_YOUTUBE_TOKEN is set, and through Buffer if that
+isn't set or fails; Buffer also posts it to the channel's Instagram and Facebook Page when those are connected."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from pathlib import Path
 
 import requests
 
-from . import env, state
+from . import env, state, youtube
 
 log = logging.getLogger(__name__)
 
@@ -117,16 +117,16 @@ def _buffer(query: str, variables: dict | None = None) -> dict:
 
 
 def configured() -> bool:
-    return bool(os.environ.get("AI_BUFFER_API_KEY") and os.environ.get("AI_BUFFER_YOUTUBE_ID"))
+    """Some route can post to YouTube: the desk's own API project, or Buffer."""
+    return youtube.configured() or bool(os.environ.get("AI_BUFFER_API_KEY") and os.environ.get("AI_BUFFER_YOUTUBE_ID"))
 
 
 def channels() -> dict[str, str]:
-    """Connected channels by service: YouTube always; Instagram and Facebook once their ids are set."""
-    out = {"youtube": env.need("AI_BUFFER_YOUTUBE_ID")}
-    for service in ("instagram", "facebook"):
-        if os.environ.get(f"AI_BUFFER_{service.upper()}_ID"):
-            out[service] = os.environ[f"AI_BUFFER_{service.upper()}_ID"]
-    return out
+    """Buffer's channels by service, for those whose ids are set."""
+    if not os.environ.get("AI_BUFFER_API_KEY"):
+        return {}
+    return {service: os.environ[f"AI_BUFFER_{service.upper()}_ID"] for service in ("youtube", "instagram", "facebook")
+            if os.environ.get(f"AI_BUFFER_{service.upper()}_ID")}
 
 
 def _caption(meta: dict, service: str) -> str:
@@ -137,9 +137,21 @@ def _caption(meta: dict, service: str) -> str:
 
 
 def post(video_url: str, meta: dict, due: datetime | None = None) -> dict:
-    """Share now on every connected channel, or have Buffer post it at `due`: {service: {"id", "status", "error"}}."""
+    """Post now on every channel, or at `due`: {service: {"id", "status", "link", "via"} or {"error"}}. YouTube goes
+    direct when it can, else through Buffer; the other services through Buffer."""
     results = {}
+    if youtube.configured():
+        local = env.WORK / meta["id"] / f"{meta['id']}.mp4" if meta.get("id") else None
+        try:
+            results["youtube"] = youtube.upload(video_url, meta["title"], _caption(meta, "youtube"),
+                                                [*meta.get("tags", []), *meta.get("hashtags", [])], due, local)
+        except Exception as exc:
+            results["youtube"] = {"error": str(exc)[:300]}
+        log.info("youtube direct: %s", results["youtube"])
     for service, channel in channels().items():
+        if service == "youtube" and "id" in results.get("youtube", {}):
+            continue
+        direct = results.get("youtube", {}).get("error") if service == "youtube" else None
         payload = {"channelId": channel, "text": _caption(meta, service), "schedulingType": "automatic",
                    "mode": "shareNow", "assets": [{"video": {"url": video_url}}]}
         if due:
@@ -156,11 +168,13 @@ def post(video_url: str, meta: dict, due: datetime | None = None) -> dict:
         try:
             got = _buffer(CREATE, {"input": payload})["createPost"]
             if got.get("__typename") == "PostActionSuccess":
-                results[service] = {"id": got["post"]["id"], "status": got["post"]["status"]}
+                results[service] = {"id": got["post"]["id"], "status": got["post"]["status"], "via": "buffer"}
             else:
                 results[service] = {"error": got.get("message", got.get("__typename"))}
         except Exception as exc:
             results[service] = {"error": str(exc)[:300]}
+        if direct and "error" in results[service]:
+            results[service]["error"] = f"{direct}; Buffer: {results[service]['error']}"[:600]
         log.info("buffer %s: %s", service, results[service])
     return results
 
@@ -169,11 +183,27 @@ def status(post_id: str) -> dict:
     return _buffer(STATUS, {"input": {"id": post_id}})["post"]
 
 
+def read(service: str, posted: dict, title: str) -> dict:
+    """A post read back from the route it went through. A YouTube post that Buffer won't be asked about now is looked
+    up on the channel by its title."""
+    if posted.get("via") == "youtube":
+        return youtube.status(posted["id"])
+    try:
+        return status(posted["id"])
+    except Blocked:
+        if service == "youtube" and youtube.ready() and (found := youtube.find(title)):
+            return youtube.status(found)
+        raise
+
+
 def channel_problems() -> list[str]:
-    """Connected channels Buffer can't post to (disconnected, locked or queue paused). A failed check counts as none;
-    a used-up API limit raises Blocked."""
+    """Buffer channels the desk posts through that Buffer can't post to (disconnected, locked or queue paused);
+    Buffer's YouTube channel only while YouTube can't take the upload directly. A failed check counts as none; a
+    used-up API limit raises Blocked."""
     problems = []
     for service, channel in channels().items():
+        if service == "youtube" and youtube.ready():
+            continue
         try:
             got = _buffer(CHANNEL, {"input": {"id": channel}})["channel"] or {}
         except Blocked:

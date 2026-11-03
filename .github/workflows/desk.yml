@@ -29,6 +29,7 @@ jobs:
     timeout-minutes: 55
     env:
       AI_GEMINI_API_KEY: ${{ secrets.AI_GEMINI_API_KEY }}
+      AI_YOUTUBE_TOKEN: ${{ secrets.AI_YOUTUBE_TOKEN }}
       AI_BUFFER_API_KEY: ${{ secrets.AI_BUFFER_API_KEY }}
       AI_BUFFER_YOUTUBE_ID: ${{ secrets.AI_BUFFER_YOUTUBE_ID }}
       AI_BUFFER_INSTAGRAM_ID: ${{ secrets.AI_BUFFER_INSTAGRAM_ID }}
@@ -141,7 +142,7 @@ jobs:
           open=$(gh issue list -R "$REPO" --state open --search "Post alert in:title" --json number --jq '.[0].number // empty')
           if [ "$status" = "post-failed" ] && [ -z "$open" ]; then
             gh issue create -R "$REPO" -t "Post alert: $sid did not go out" \
-              -b "Buffer did not publish $sid (${detail:-no details}). Check the channel in Buffer. This issue closes itself when a Short goes out."
+              -b "$sid did not go out (${detail:-no details}). Check the YouTube sign-in (AI_YOUTUBE_TOKEN) and the channel in Buffer. This issue closes itself when a Short goes out."
           elif [ "$status" = "posted" ] && [ -n "$open" ]; then
             gh issue close "$open" -R "$REPO" -c "$sid went out: ${detail:-no link yet}"
           fi

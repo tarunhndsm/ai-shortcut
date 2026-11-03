@@ -19,7 +19,7 @@ import traceback
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from . import assets, compose, editor, env, publish, qa, render, research, scouts, sound, state, voice, writer
+from . import assets, compose, editor, env, publish, qa, render, research, scouts, sound, state, voice, writer, youtube
 
 log = logging.getLogger("desk")
 
@@ -193,8 +193,9 @@ def _next_slot(now: datetime, held: set | frozenset = frozenset()) -> datetime:
 
 
 def book(items: list[dict], now: datetime) -> None:
-    """Hand each fresh Short to Buffer's own scheduler for the next open slot, so it goes out on time whether or not
-    a run happens then. One that can't be booked stays ready and is shared in its slot."""
+    """Book each fresh Short for the next open slot, uploaded to YouTube private until then (or handed to Buffer's
+    scheduler), so it goes out on time whether or not a run happens then. One that can't be booked stays ready and is
+    shared in its slot."""
     for s in items:
         if (s.get("status") != "ready" or not s.get("video") or s.get("breaking") or s.get("retried")
                 or s.get("book_tries", 0) >= BOOK_TRIES):
@@ -213,8 +214,8 @@ def book(items: list[dict], now: datetime) -> None:
 
 def settle(items: list[dict], now: datetime) -> None:
     """Read back booked posts once due. Sent: posted. All failed: back to ready once, to be shared within the slot's
-    grace, else post-failed; also post-failed if Buffer still hasn't sent it SETTLE_GIVE_UP after its time, unless
-    Buffer's used-up API limit is what keeps it from being read."""
+    grace, else post-failed; also post-failed if it still hasn't gone out SETTLE_GIVE_UP after its time, unless a
+    used-up API limit (Buffer's or YouTube's) is what keeps it from being read."""
     for s in items:
         due = state.parse(s.get("due_at"))
         if s.get("status") != "scheduled" or not due or now < due + SETTLE_AFTER:
@@ -224,10 +225,10 @@ def settle(items: list[dict], now: datetime) -> None:
             if "id" not in r:
                 continue
             try:
-                got = publish.status(r["id"]) or {}
+                got = publish.read(service, r, s.get("title", "")) or {}
             except Exception as exc:
-                log.warning("buffer status of %s: %s", r["id"], exc)
-                unread = unread or isinstance(exc, publish.Blocked)
+                log.warning("status of %s post %s: %s", service, r["id"], exc)
+                unread = unread or isinstance(exc, (publish.Blocked, youtube.Paused))
                 continue
             r["status"] = got.get("status")
             if got.get("externalLink"):
@@ -246,10 +247,10 @@ def settle(items: list[dict], now: datetime) -> None:
                 log.warning("Buffer post of %s failed (%s); sharing it now", s["id"], s["posted"])
             else:
                 s["status"] = "post-failed"
-                log.warning("Buffer post of %s failed: %s", s["id"], s["posted"])
+                log.warning("post of %s failed: %s", s["id"], s["posted"])
         elif now > due + SETTLE_GIVE_UP and not unread:
             s["status"] = "post-failed"
-            log.warning("Buffer still hasn't sent %s: %s", s["id"], s["posted"])
+            log.warning("%s still hasn't gone out: %s", s["id"], s["posted"])
 
 
 def post_due(now: datetime) -> dict | None:
@@ -335,7 +336,13 @@ def main(argv: list[str] | None = None) -> int:
             try:
                 problems = publish.channel_problems()
             except publish.Blocked as err:
-                log.warning("%s; not making a Short Buffer can't post", err)
+                if youtube.ready():
+                    log.info("%s; YouTube takes the Short directly", err)
+                else:
+                    log.warning("%s; not making a Short nothing can post", err)
+                    needed = False
+            if needed and not youtube.ready() and "youtube" not in publish.channels():
+                log.warning("%s; not making a Short nothing can post", youtube.blocked())
                 needed = False
         if out := os.environ.get("GITHUB_OUTPUT"):
             with open(out, "a") as fh:

@@ -7,12 +7,14 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from desk import publish, run, scouts, state  # noqa: E402
+from desk import publish, run, scouts, state, youtube  # noqa: E402
 
 tmp = Path(tempfile.mkdtemp())
 run.SHORTS, run.PLAN = tmp / "shorts.json", tmp / "plan.json"
+youtube.PAUSE = tmp / "youtube.json"
 posted, booked, buffer_status = [], [], {}
 IST = run.IST
+real_publish_post = publish.post
 
 
 def fake_post(url: str, meta: dict, due=None) -> dict:
@@ -47,6 +49,7 @@ def check(name: str, got, want) -> None:
 
 
 os.environ.pop("AI_BUFFER_API_KEY", None)
+os.environ.pop("AI_YOUTUBE_TOKEN", None)
 state.now = lambda: at(18, "02:30")
 check("3.5 h before the slot: not yet", run.plan(), (False, "", False))
 state.now = lambda: at(18, "03:30")
@@ -265,4 +268,155 @@ out.write_text("")
 run.main(["plan"])
 check("no make, no channel check", (out.read_text().splitlines()[0], checked), ("make=false", []))
 publish.requests.post, publish.channel_problems = real_post, real_problems
+
+# Direct YouTube uploads through the desk's own API project, with Buffer as the fallback.
+real_upload, real_yt_status, real_find, real_send, real_api = (youtube.upload, youtube.status, youtube.find,
+                                                               youtube._send, youtube._api)
+real_buffer = publish._buffer
+os.environ["AI_YOUTUBE_TOKEN"] = "{}"
+publish.post = real_publish_post
+uploaded, refuse_upload, yt_status, yt_titles, buffer_calls = [], [], {}, {}, []
+
+
+def fake_upload(video_url, title, description, keywords, due=None, local=None):
+    if refuse_upload:
+        raise youtube.YouTubeError(refuse_upload[0])
+    uploaded.append((title, due.astimezone(IST).strftime("%d %H:%M") if due else "now"))
+    return {"id": "yt-" + title, "status": "scheduled" if due else "sent", "link": "https://yt/" + title,
+            "via": "youtube"}
+
+
+def buffer_refusing(*args):
+    buffer_calls.append(1)
+    raise publish.Blocked("Buffer's 30d API limit is used up", at(30, "00:00"))
+
+
+def dshort(sid: str, made: datetime, **kw) -> dict:
+    return short(sid, made, description=f"About {sid}", source="https://example.com", **kw)
+
+
+youtube.upload, youtube.find = fake_upload, lambda title: yt_titles.get(title)
+youtube.status = lambda vid: yt_status.get(vid, {"status": "scheduled"})
+publish._buffer = buffer_refusing
+
+run.save_shorts([dshort("d1", at(21, "03:30"))])
+run.post_due(at(21, "03:45"))
+got = run.shorts()[0]
+check("direct: a ready Short is uploaded for its slot, Buffer not asked",
+      (uploaded, got["status"], got["slot"], got["posted"]["youtube"].get("via"), buffer_calls),
+      ([("d1", "21 06:00")], "scheduled", "2026-10-21 06:00", "youtube", []))
+yt_status["yt-d1"] = {"status": "sent", "sentAt": state.iso(at(21, "06:00")), "externalLink": "https://yt/d1"}
+run.post_due(at(21, "06:10"))
+got = run.shorts()[0]
+check("direct: read back from YouTube as posted", (got["status"], got["posted_at"], got["posted"]["youtube"]["link"]),
+      ("posted", state.iso(at(21, "06:00")), "https://yt/d1"))
+
+refuse_upload.append("YouTube 400 invalidTitle: bad title")
+run.save_shorts([dshort("d2", at(21, "10:20"))])
+run.post_due(at(21, "10:25"))
+got = run.shorts()[0]
+check("direct upload refused: Buffer is tried, and refusing too, the Short stays ready",
+      (got["status"], got.get("book_tries"), len(buffer_calls)), ("ready", 1, 1))
+refuse_upload.clear()
+buffer_calls.clear()
+
+run.save_shorts([dshort("h1", at(21, "03:20"), status="scheduled", slot="2026-10-21 06:00",
+                        due_at=state.iso(at(21, "06:00")), posted={"youtube": {"id": "buf-h1", "status": "scheduled"}})])
+yt_titles["h1"] = "yt-h1"
+yt_status["yt-h1"] = {"status": "sent", "sentAt": state.iso(at(21, "06:00")), "externalLink": "https://yt/h1"}
+publish.status = refused
+run.post_due(at(21, "07:00"))
+got = run.shorts()[0]
+check("a Buffer post Buffer won't be asked about is found on YouTube by its title",
+      (got["status"], got["posted"]["youtube"].get("link")), ("posted", "https://yt/h1"))
+publish.status = real_status
+
+os.environ["GITHUB_OUTPUT"] = str(out)
+run.save_shorts([dshort("d0", at(21, "03:30"), status="posted", slot="2026-10-21 06:00")])
+run.PLAN.write_text("{}")
+state.now = lambda: at(21, "10:05")
+out.write_text("")
+code = run.main(["plan"])
+check("Buffer refusing, YouTube direct: makes for the 13:00 slot, Buffer not asked",
+      (code, out.read_text().splitlines()[0], buffer_calls), (0, "make=true", []))
+state.save(youtube.PAUSE, {"until": state.iso(at(22, "12:35")), "reason": "YouTube's daily API quota is used up"})
+out.write_text("")
+code = run.main(["plan"])
+check("YouTube's quota used up and Buffer refusing: no make", (code, out.read_text().splitlines()[0]),
+      (0, "make=false"))
+os.environ.pop("AI_BUFFER_API_KEY")
+out.write_text("")
+code = run.main(["plan"])
+check("YouTube's quota used up and no Buffer: no make", (code, out.read_text().splitlines()[0]), (0, "make=false"))
+os.environ["AI_BUFFER_API_KEY"] = "fake"
 os.environ.pop("GITHUB_OUTPUT")
+state.save(youtube.PAUSE, {})
+publish._buffer = real_buffer
+
+state.now = lambda: at(21, "12:00")
+try:
+    youtube._check(FakeResp(403, {"error": {"errors": [{"reason": "quotaExceeded"}], "message": "quota"}}))
+    got = "no error"
+except youtube.Paused as err:
+    got = err.until
+check("quotaExceeded pauses YouTube until 00:05 Pacific", (got, youtube.ready()), (at(21, "12:35"), False))
+state.now = lambda: at(21, "12:40")
+check("and the pause ends then", youtube.ready(), True)
+try:
+    youtube._check(FakeResp(400, {"error": {"errors": [{"reason": "invalidTitle"}], "message": "bad"}}))
+except youtube.Paused:
+    got = "paused"
+except youtube.YouTubeError:
+    got = "error"
+check("other refusals don't pause", (got, youtube.ready()), ("error", True))
+
+
+def video(status: dict, snippet: dict | None = None):
+    youtube._api = lambda path, params: {"items": [{"status": status, "snippet": snippet or {}}]}
+    return real_yt_status("v1")["status"]
+
+
+state.now = lambda: at(21, "13:20")
+check("private, 20 minutes after its publishAt: still scheduled",
+      video({"uploadStatus": "processed", "privacyStatus": "private", "publishAt": state.iso(at(21, "13:00"))}),
+      "scheduled")
+state.now = lambda: at(21, "13:40")
+check("private, 40 minutes after its publishAt: an error",
+      video({"uploadStatus": "processed", "privacyStatus": "private", "publishAt": state.iso(at(21, "13:00"))}),
+      "error")
+check("a rejected upload is an error", video({"uploadStatus": "rejected", "rejectionReason": "duplicate"}), "error")
+check("public: sent", video({"uploadStatus": "processed", "privacyStatus": "public"}), "sent")
+youtube._api = lambda path, params: {"items": []}
+check("a video YouTube no longer has is an error", real_yt_status("v1")["status"], "error")
+
+state.save(youtube.PAUSE, {})
+bodies = []
+youtube._send = lambda body, data: (bodies.append(body), {"id": "new1"})[1]
+youtube.find = lambda title: None
+clip = tmp / "v.mp4"
+clip.write_bytes(b"mp4")
+state.now = lambda: at(21, "10:30")
+got = real_upload("https://x/v.mp4", "Rocket <9> ships", "About <b>it</b>", ["AI", "#Shorts", "#AI", "open source"],
+                  at(21, "13:00"), clip)
+body = bodies[0]
+check("a slot upload goes private with publishAt at the slot",
+      (body["status"]["privacyStatus"], body["status"].get("publishAt"), got["status"], got["id"]),
+      ("private", "2026-10-21T07:30:00Z", "scheduled", "new1"))
+check("title, description and tags are cleaned",
+      (body["snippet"]["title"], body["snippet"]["description"], body["snippet"]["tags"], body["snippet"]["categoryId"]),
+      ("Rocket 9 ships", "About bit/b", ["AI", "Shorts", "open source"], "28"))
+bodies.clear()
+got = real_upload("https://x/v.mp4", "Rocket ships", "About", [], at(21, "10:40"), clip)
+check("due within 15 minutes: public at once", (bodies[0]["status"]["privacyStatus"], "publishAt" in bodies[0]["status"],
+                                                 got["status"]), ("public", False, "sent"))
+bodies.clear()
+youtube.find = lambda title: "old1"
+youtube.status = lambda vid: {"status": "scheduled", "externalLink": "https://yt/old1"}
+got = real_upload("https://x/v.mp4", "Rocket ships", "About", [], at(21, "13:00"), clip)
+check("already on the channel: not uploaded again", (bodies, got["id"], got["link"]), ([], "old1", "https://yt/old1"))
+youtube.status = lambda vid: {"status": "error", "error": {"message": "rejected"}}
+got = real_upload("https://x/v.mp4", "Rocket ships", "About", [], at(21, "13:00"), clip)
+check("a broken earlier upload is uploaded anew", (len(bodies), got["id"]), (1, "new1"))
+youtube.upload, youtube.status, youtube.find, youtube._send, youtube._api = (real_upload, real_yt_status, real_find,
+                                                                             real_send, real_api)
+os.environ.pop("AI_YOUTUBE_TOKEN")
