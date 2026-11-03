@@ -3456,5 +3456,59 @@
     "via": "youtube"
    }
   }
+ },
+ {
+  "id": "as-20261103-1909",
+  "made_at": "2026-11-03T13:44:36Z",
+  "status": "scheduled",
+  "story": "AnyModelBot brings GPT, Claude, Gemini, and 70+ AI models to your own private bots via one key.",
+  "title": "AnyModelBot: Run 70+ AI models through one local key",
+  "description": "Stop juggling multiple AI subscriptions and run over seventy frontier models through a single open-source interface. AnyModelBot is a local-first agent that can control your desktop, execute commands, and keep your data private.",
+  "tags": [
+   "AnyModelBot",
+   "Open Source AI",
+   "AI Agents",
+   "GPT-4",
+   "Claude 3",
+   "Gemini Pro",
+   "DeepSeek",
+   "Local AI",
+   "Developer Tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AnyModelBot",
+   "#AIAgents"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/modelflare-ai/AnyModelBot",
+  "keys": [
+   "gh:modelflare-ai/anymodelbot"
+  ],
+  "entity": "gh:modelflare-ai/anymodelbot",
+  "duration": 29.614,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean presentation, professional visuals, and well-aligned with the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261103-1909.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261103-1909-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-04 06:00",
+  "due_at": "2026-11-04T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "dbQwXd_S1Ho",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/dbQwXd_S1Ho",
+    "via": "youtube"
+   }
+  }
  }
 ]
