@@ -3664,5 +3664,52 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0320.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0320-sheet.jpg"
+ },
+ {
+  "id": "as-20261105-0350",
+  "made_at": "2026-11-04T22:27:09Z",
+  "status": "rejected",
+  "story": "Moonshot AI released open model weights for Kimi K3.1 Pro",
+  "title": "Kimi K3.1 Pro Open Model Weights Released",
+  "description": "Moonshot AI has released Kimi K3.1 Pro open model weights. Get frontier-class multimodal AI capabilities in an open model with a 1 million token context window.",
+  "tags": [
+   "Kimi K3.1 Pro",
+   "Moonshot AI",
+   "open weights",
+   "LocalLLaMA",
+   "multimodal AI",
+   "Hugging Face",
+   "AI models"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+  "keys": [
+   "hf:moonshotai/kimi-k3.1-pro",
+   "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+   "https://reddit.com/r/LocalLLaMA/comments/1xnrhvb/kimik31pro_is_now_openweights"
+  ],
+  "entity": "hf:moonshotai/kimi-k3.1-pro",
+  "duration": 37.562,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.5-flash-lite",
+  "problems": [],
+  "judge": {
+   "score": 4,
+   "publish": false,
+   "defects": [
+    "HTML entity codes (&nbsp;) visible in frames 3 and 4 UI text",
+    "Caption text overlaps or cuts off awkwardly in multiple frames",
+    "Inconsistent stats displayed compared to script narration (e.g. 1.1 instead of DeepSWE version 1.1)"
+   ],
+   "notes": "HTML artifacts and captioning glitches make it look unpolished."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0350.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0350-sheet.jpg"
  }
 ]
