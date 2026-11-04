@@ -3516,7 +3516,7 @@
  {
   "id": "as-20261104-1030",
   "made_at": "2026-11-04T05:04:04Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Postman silently auto-installs AI plugins and attempts to share all API data",
   "title": "Postman Caught Silently Installing AI Plugins",
   "description": "Postman is facing backlash after reports of auto-installing AI plugins for Claude and Codex. The app allegedly modifies local configuration files and installs a CLI tool to route developer tasks through its own services without consent.",
@@ -3561,10 +3561,11 @@
   "posted": {
    "youtube": {
     "id": "9ECkttgoPUA",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/9ECkttgoPUA",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-04T07:30:04Z"
  }
 ]
