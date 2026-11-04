@@ -3512,5 +3512,59 @@
    }
   },
   "posted_at": "2026-11-04T00:30:10Z"
+ },
+ {
+  "id": "as-20261104-1030",
+  "made_at": "2026-11-04T05:04:04Z",
+  "status": "scheduled",
+  "story": "Postman silently auto-installs AI plugins and attempts to share all API data",
+  "title": "Postman Caught Silently Installing AI Plugins",
+  "description": "Postman is facing backlash after reports of auto-installing AI plugins for Claude and Codex. The app allegedly modifies local configuration files and installs a CLI tool to route developer tasks through its own services without consent.",
+  "tags": [
+   "Postman",
+   "API",
+   "AI Plugins",
+   "Claude",
+   "Codex",
+   "Bruno",
+   "Web Development",
+   "Cybersecurity",
+   "Developer Tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Postman",
+   "#DevTools"
+  ],
+  "chip": "AI NEWS",
+  "source": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+  "keys": [
+   "https://github.com/postmanlabs/postman-app-support/issues/14370"
+  ],
+  "entity": "",
+  "duration": 29.739,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Professional layout, clear visuals matching the script, and highly readable text."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261104-1030.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261104-1030-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-04 13:00",
+  "due_at": "2026-11-04T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "9ECkttgoPUA",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/9ECkttgoPUA",
+    "via": "youtube"
+   }
+  }
  }
 ]
