@@ -3711,5 +3711,59 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0350.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0350-sheet.jpg"
+ },
+ {
+  "id": "as-20261105-0420",
+  "made_at": "2026-11-04T22:57:20Z",
+  "status": "scheduled",
+  "story": "Kimi K3 in C runs a massive 2.78-trillion-parameter model on a single CPU with just 8.24 GB of RAM",
+  "title": "Run 2.78T Kimi K3 in C on your Laptop",
+  "description": "Run the massive 2.78-trillion-parameter Kimi K3 model on an ordinary laptop with just 8GB of RAM. This zero-dependency C engine streams weights directly from disk to bypass GPU requirements, making trillion-parameter models accessible to everyone.",
+  "tags": [
+   "AI",
+   "LLM",
+   "Kimi K3",
+   "C Programming",
+   "Machine Learning",
+   "Open Source",
+   "GitHub",
+   "Local AI",
+   "Inference Engine"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#KimiK3",
+   "#LocalAI"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+  "keys": [
+   "gh:fareedkhan-dev/kimi-k3-in-c"
+  ],
+  "entity": "gh:fareedkhan-dev/kimi-k3-in-c",
+  "duration": 28.236,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Professional quality, clear text, and good visual alignment with the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0420.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0420-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-05 06:00",
+  "due_at": "2026-11-05T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "cxgv02mRN34",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/cxgv02mRN34",
+    "via": "youtube"
+   }
+  }
  }
 ]
