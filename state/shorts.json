@@ -3571,7 +3571,7 @@
  {
   "id": "as-20261104-1702",
   "made_at": "2026-11-04T11:39:09Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Teardown turns any physical machine description into an interactive 3D disassembly simulator in your browser.",
   "title": "Visualize Any Machine in 3D with Teardown",
   "description": "Turn complex mechanical descriptions into interactive 3D disassembly simulations. This Claude Code skill generates offline HTML models with live telemetry and automated tours.",
@@ -3615,10 +3615,11 @@
   "posted": {
    "youtube": {
     "id": "ZMi8pc4BYqg",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/ZMi8pc4BYqg",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-04T14:30:11Z"
  }
 ]
