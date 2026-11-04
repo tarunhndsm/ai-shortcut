@@ -3621,5 +3621,48 @@
    }
   },
   "posted_at": "2026-11-04T14:30:11Z"
+ },
+ {
+  "id": "as-20261105-0320",
+  "made_at": "2026-11-04T21:55:42Z",
+  "status": "rejected",
+  "story": "Nvidia RTX Spark encrypted firmware throttles Linux AI inference speed to 35% of baseline performance",
+  "title": "Why Nvidia RTX Spark Laptops Slow Down on Linux",
+  "description": "Running native Linux on Nvidia RTX Spark laptops throttles AI inference performance due to encrypted power firmware. Tests show WSL on Windows maintains full GPU clock speeds.",
+  "tags": [
+   "Nvidia",
+   "RTX Spark",
+   "Linux",
+   "AI Inference",
+   "WSL",
+   "GPU Throttling",
+   "Deep Learning"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Nvidia",
+   "#Linux"
+  ],
+  "chip": "AI NEWS",
+  "source": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+  "keys": [
+   "https://mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop"
+  ],
+  "entity": "",
+  "duration": 27.555,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "unreadable caption text in frame 4 ('twenty B' has extremely low contrast dark grey text on dark background)"
+   ],
+   "notes": "Caption text in frame 4 is nearly invisible due to incorrect font coloring/contrast."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0320.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-0320-sheet.jpg"
  }
 ]
