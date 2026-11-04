@@ -3461,7 +3461,7 @@
  {
   "id": "as-20261103-1909",
   "made_at": "2026-11-03T13:44:36Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "AnyModelBot brings GPT, Claude, Gemini, and 70+ AI models to your own private bots via one key.",
   "title": "AnyModelBot: Run 70+ AI models through one local key",
   "description": "Stop juggling multiple AI subscriptions and run over seventy frontier models through a single open-source interface. AnyModelBot is a local-first agent that can control your desktop, execute commands, and keep your data private.",
@@ -3506,10 +3506,11 @@
   "posted": {
    "youtube": {
     "id": "dbQwXd_S1Ho",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/dbQwXd_S1Ho",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-04T00:30:10Z"
  }
 ]
