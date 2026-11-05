@@ -3766,5 +3766,58 @@
    }
   },
   "posted_at": "2026-11-05T00:30:07Z"
+ },
+ {
+  "id": "as-20261105-1015",
+  "made_at": "2026-11-05T04:48:44Z",
+  "status": "scheduled",
+  "story": "Cicada is a free, open-source live subtitle, interpretation, and meeting notes app that runs across Mac, Windows, Linux, and Android",
+  "title": "Cicada: Free Live Subtitles and AI Meeting Notes",
+  "description": "Cicada is an open-source tool that provides real-time translation and meeting summaries for any stream or call. It works across Mac, Windows, Linux, and Android without needing to invite bots.",
+  "tags": [
+   "AI",
+   "open source",
+   "productivity",
+   "meeting notes",
+   "transcription",
+   "Cicada",
+   "translation",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/wquguru/cicada",
+  "keys": [
+   "gh:wquguru/cicada"
+  ],
+  "entity": "gh:wquguru/cicada",
+  "duration": 28.312,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean layout, perfectly matches script and looks highly professional."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1015.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1015-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-05 13:00",
+  "due_at": "2026-11-05T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "lNk1HWA1qS8",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/lNk1HWA1qS8",
+    "via": "youtube"
+   }
+  }
  }
 ]
