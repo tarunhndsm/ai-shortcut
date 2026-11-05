@@ -3918,5 +3918,58 @@
    }
   },
   "posted_at": "2026-11-05T14:30:21Z"
+ },
+ {
+  "id": "as-20261106-0327",
+  "made_at": "2026-11-05T22:05:50Z",
+  "status": "scheduled",
+  "story": "MoneyPrinterTurbo automates full HD short video creation from a single topic prompt",
+  "title": "MoneyPrinterTurbo: One Prompt to HD Video",
+  "description": "Generate complete HD short videos from a single topic or keyword. This Python tool automates everything from script writing and voiceovers to footage matching and subtitles.",
+  "tags": [
+   "MoneyPrinterTurbo",
+   "AI Video Generator",
+   "Content Automation",
+   "Python Tool",
+   "TikTok Automation",
+   "YouTube Shorts",
+   "Open Source AI",
+   "Workflow Automation"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIVideo",
+   "#Automation"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/harry0703/MoneyPrinterTurbo",
+  "keys": [
+   "gh:harry0703/moneyprinterturbo"
+  ],
+  "entity": "gh:harry0703/moneyprinterturbo",
+  "duration": 27.543,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean layout, perfect text alignment, strong visual representations for every line."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261106-0327.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261106-0327-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-06 06:00",
+  "due_at": "2026-11-06T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "-5GcGJhw8ns",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/-5GcGJhw8ns",
+    "via": "youtube"
+   }
+  }
  }
 ]
