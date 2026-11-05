@@ -3867,7 +3867,7 @@
  {
   "id": "as-20261105-1756",
   "made_at": "2026-11-05T12:33:46Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Pika released open-source weights for Pika H3 Flex, allowing local AI video and synced audio generation",
   "title": "Pika H3 Flex Brings Local AI Video and Audio Renders",
   "description": "Pika H3 Flex offers open-weight video and audio generation you can run locally. Renders 24 fps video with synchronized stereo audio in just 6 sampling steps.",
@@ -3912,10 +3912,11 @@
   "posted": {
    "youtube": {
     "id": "ym9yp39c0fA",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/ym9yp39c0fA",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-05T14:30:21Z"
  }
 ]
