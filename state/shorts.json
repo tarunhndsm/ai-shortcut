@@ -3770,7 +3770,7 @@
  {
   "id": "as-20261105-1015",
   "made_at": "2026-11-05T04:48:44Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Cicada is a free, open-source live subtitle, interpretation, and meeting notes app that runs across Mac, Windows, Linux, and Android",
   "title": "Cicada: Free Live Subtitles and AI Meeting Notes",
   "description": "Cicada is an open-source tool that provides real-time translation and meeting summaries for any stream or call. It works across Mac, Windows, Linux, and Android without needing to invite bots.",
@@ -3814,10 +3814,11 @@
   "posted": {
    "youtube": {
     "id": "lNk1HWA1qS8",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/lNk1HWA1qS8",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-05T07:30:22Z"
  }
 ]
