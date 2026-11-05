@@ -3715,7 +3715,7 @@
  {
   "id": "as-20261105-0420",
   "made_at": "2026-11-04T22:57:20Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Kimi K3 in C runs a massive 2.78-trillion-parameter model on a single CPU with just 8.24 GB of RAM",
   "title": "Run 2.78T Kimi K3 in C on your Laptop",
   "description": "Run the massive 2.78-trillion-parameter Kimi K3 model on an ordinary laptop with just 8GB of RAM. This zero-dependency C engine streams weights directly from disk to bypass GPU requirements, making trillion-parameter models accessible to everyone.",
@@ -3760,10 +3760,11 @@
   "posted": {
    "youtube": {
     "id": "cxgv02mRN34",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/cxgv02mRN34",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-05T00:30:07Z"
  }
 ]
