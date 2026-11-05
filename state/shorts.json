@@ -3863,5 +3863,59 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1727.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1727-sheet.jpg"
+ },
+ {
+  "id": "as-20261105-1756",
+  "made_at": "2026-11-05T12:33:46Z",
+  "status": "scheduled",
+  "story": "Pika released open-source weights for Pika H3 Flex, allowing local AI video and synced audio generation",
+  "title": "Pika H3 Flex Brings Local AI Video and Audio Renders",
+  "description": "Pika H3 Flex offers open-weight video and audio generation you can run locally. Renders 24 fps video with synchronized stereo audio in just 6 sampling steps.",
+  "tags": [
+   "Pika H3 Flex",
+   "Pika AI",
+   "AI video generator",
+   "open source AI",
+   "MiniMax H3",
+   "local AI model",
+   "video generation",
+   "Hugging Face"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://huggingface.co/Pika-Labs/Pika-H3-Flex",
+  "keys": [
+   "hf:pika-labs/pika-h3-flex",
+   "gh:pika-labs/pika-h3-flex"
+  ],
+  "entity": "hf:pika-labs/pika-h3-flex",
+  "duration": 29.903,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Extremely clean visual presentation, crisp typography, and perfect alignment with the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1756.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1756-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-05 20:00",
+  "due_at": "2026-11-05T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "ym9yp39c0fA",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/ym9yp39c0fA",
+    "via": "youtube"
+   }
+  }
  }
 ]
