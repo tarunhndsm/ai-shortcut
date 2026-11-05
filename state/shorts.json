@@ -3820,5 +3820,48 @@
    }
   },
   "posted_at": "2026-11-05T07:30:22Z"
+ },
+ {
+  "id": "as-20261105-1727",
+  "made_at": "2026-11-05T12:05:21Z",
+  "status": "rejected",
+  "story": "claude-animated-shorts generates complete 2D and 3D animated video shorts directly from Claude using Three.js and Remotion",
+  "title": "Claude Animated Shorts: Render 3D Cartoons with Three.js",
+  "description": "Claude animated shorts is an open-source skill that builds vertical 2D and 3D animated videos inside Claude using Three.js and Remotion. It renders everything locally on your machine with no external AI video generators. Learn how it structures script, visual style, camera motion, and audio.",
+  "tags": [
+   "claude animated shorts",
+   "claude code",
+   "threejs",
+   "remotion",
+   "animation tool",
+   "open source ai",
+   "developer tools"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Claude",
+   "#Coding"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/mromidev/claude-animated-shorts",
+  "keys": [
+   "gh:mromidev/claude-animated-shorts"
+  ],
+  "entity": "gh:mromidev/claude-animated-shorts",
+  "duration": 26.73,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "Subtitles are cut off or missing words in multiple frames (e.g., 'S and Remotion', 'D characters in')"
+   ],
+   "notes": "Truncated caption text across several frames reduces overall visual quality and readability."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1727.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261105-1727-sheet.jpg"
  }
 ]
