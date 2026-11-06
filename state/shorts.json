@@ -3922,7 +3922,7 @@
  {
   "id": "as-20261106-0327",
   "made_at": "2026-11-05T22:05:50Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "MoneyPrinterTurbo automates full HD short video creation from a single topic prompt",
   "title": "MoneyPrinterTurbo: One Prompt to HD Video",
   "description": "Generate complete HD short videos from a single topic or keyword. This Python tool automates everything from script writing and voiceovers to footage matching and subtitles.",
@@ -3966,10 +3966,11 @@
   "posted": {
    "youtube": {
     "id": "-5GcGJhw8ns",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/-5GcGJhw8ns",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-06T00:30:20Z"
  }
 ]
