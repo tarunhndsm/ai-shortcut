@@ -4030,7 +4030,7 @@
  {
   "id": "as-20261106-1726",
   "made_at": "2026-11-06T12:01:10Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Microsoft open-sources VibeVoice, a frontier voice AI model for speech synthesis.",
   "title": "Microsoft VibeVoice: Open-Source Voice AI",
   "description": "Microsoft has open-sourced VibeVoice, a frontier voice AI model family for long-form speech recognition and audio synthesis. It supports multi-speaker audio across more than 50 languages with efficient compression for edge devices.",
@@ -4074,10 +4074,11 @@
   "posted": {
    "youtube": {
     "id": "qpvyCayWhlI",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/qpvyCayWhlI",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-06T14:30:35Z"
  }
 ]
