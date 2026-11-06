@@ -3972,5 +3972,58 @@
    }
   },
   "posted_at": "2026-11-06T00:30:20Z"
+ },
+ {
+  "id": "as-20261106-1013",
+  "made_at": "2026-11-06T04:47:36Z",
+  "status": "scheduled",
+  "story": "JuneYaooo/rea-video: Reverse-engineer any video, shot by shot",
+  "title": "How to Reverse-Engineer Any Video with rea-video",
+  "description": "Discover how rea-video breaks down viral content shot by shot. It identifies AI usage, camera setups, and prompts to give you a complete remake plan for any video.",
+  "tags": [
+   "rea-video",
+   "AI video analysis",
+   "video production",
+   "reverse engineering",
+   "content creation",
+   "AI tools",
+   "coding",
+   "video editing"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#VideoEditing"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/JuneYaooo/rea-video",
+  "keys": [
+   "gh:juneyaooo/rea-video"
+  ],
+  "entity": "gh:juneyaooo/rea-video",
+  "duration": 27.634,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean formatting, professional visuals, and accurate script matching."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261106-1013.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261106-1013-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-06 13:00",
+  "due_at": "2026-11-06T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "-lqTsSdtwL4",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/-lqTsSdtwL4",
+    "via": "youtube"
+   }
+  }
  }
 ]
