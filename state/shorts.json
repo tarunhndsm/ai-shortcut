@@ -4026,5 +4026,58 @@
    }
   },
   "posted_at": "2026-11-06T07:30:01Z"
+ },
+ {
+  "id": "as-20261106-1726",
+  "made_at": "2026-11-06T12:01:10Z",
+  "status": "scheduled",
+  "story": "Microsoft open-sources VibeVoice, a frontier voice AI model for speech synthesis.",
+  "title": "Microsoft VibeVoice: Open-Source Voice AI",
+  "description": "Microsoft has open-sourced VibeVoice, a frontier voice AI model family for long-form speech recognition and audio synthesis. It supports multi-speaker audio across more than 50 languages with efficient compression for edge devices.",
+  "tags": [
+   "VibeVoice",
+   "Microsoft AI",
+   "Voice AI",
+   "Open Source AI",
+   "Speech Recognition",
+   "TTS",
+   "ASR",
+   "AI Models"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#VoiceAI",
+   "#OpenSource"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/microsoft/VibeVoice",
+  "keys": [
+   "gh:microsoft/vibevoice"
+  ],
+  "entity": "gh:microsoft/vibevoice",
+  "duration": 28.424,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.5-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Excellent visual polish, consistent branding, readable typography, and perfectly formatted graphics."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261106-1726.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261106-1726-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-06 20:00",
+  "due_at": "2026-11-06T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "qpvyCayWhlI",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/qpvyCayWhlI",
+    "via": "youtube"
+   }
+  }
  }
 ]
