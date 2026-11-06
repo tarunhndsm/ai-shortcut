@@ -4080,5 +4080,58 @@
    }
   },
   "posted_at": "2026-11-06T14:30:35Z"
+ },
+ {
+  "id": "as-20261107-0320",
+  "made_at": "2026-11-06T21:57:05Z",
+  "status": "scheduled",
+  "story": "stack-diagram turns a plain sentence into a clean architecture diagram complete with official tech logos",
+  "title": "caru-ini/stack-diagram Turns Sentences into Architecture Diagrams",
+  "description": "stack-diagram is an AI agent skill that generates styled tech architecture diagrams with official vendor logos directly from a single text description.",
+  "tags": [
+   "stack diagram",
+   "caru-ini",
+   "architecture diagram",
+   "claude code",
+   "cursor skill",
+   "developer tools",
+   "tech stack",
+   "open source"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#TechStack",
+   "#DeveloperTools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/caru-ini/stack-diagram",
+  "keys": [
+   "gh:caru-ini/stack-diagram"
+  ],
+  "entity": "gh:caru-ini/stack-diagram",
+  "duration": 28.333,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design with sharp UI cards and clear typography throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-0320.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-0320-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-07 06:00",
+  "due_at": "2026-11-07T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "QaQPUuAPf-U",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/QaQPUuAPf-U",
+    "via": "youtube"
+   }
+  }
  }
 ]
