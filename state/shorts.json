@@ -4134,5 +4134,49 @@
    }
   },
   "posted_at": "2026-11-07T00:30:39Z"
+ },
+ {
+  "id": "as-20261107-1015",
+  "made_at": "2026-11-07T04:52:48Z",
+  "status": "rejected",
+  "story": "Idol: Open-source image-to-3D model trending on Hugging Face",
+  "title": "Speridlabs Idol: Turn Any Image Into a 3D Gaussian Splat",
+  "description": "Speridlabs Idol is an open-source image-to-3D model trending on Hugging Face. It generates up to one million 3D Gaussians from a single 2D image in under two seconds on consumer GPUs.",
+  "tags": [
+   "Speridlabs Idol",
+   "image to 3d",
+   "gaussian splatting",
+   "3D modeling",
+   "hugging face",
+   "open source ai",
+   "ai 3d model",
+   "python ai"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#3D"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://huggingface.co/speridlabs/idol",
+  "keys": [
+   "hf:speridlabs/idol"
+  ],
+  "entity": "hf:speridlabs/idol",
+  "duration": 23.755,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Subtitle text cut off in frame 9 ('D assets from')"
+   ],
+   "notes": "Clean visual design and structure, but minor subtitle clipping prevents publishing."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1015.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1015-sheet.jpg"
  }
 ]
