@@ -4178,5 +4178,60 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1015.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1015-sheet.jpg"
+ },
+ {
+  "id": "as-20261107-1046",
+  "made_at": "2026-11-07T05:26:00Z",
+  "status": "scheduled",
+  "story": "Liquid AI released LFM3-1.7B, a compact 1.7B reasoning model with a 256K context window.",
+  "title": "LFM3-1.7B: A reasoning model with 256K context for your phone",
+  "description": "Liquid AI's LFM3-1.7B brings reasoning capabilities to edge devices with a massive 256K context window. This compact model fits in just 1GB of memory and is built for fast, local AI agents.",
+  "tags": [
+   "LiquidAI",
+   "LFM3",
+   "Reasoning AI",
+   "Local AI",
+   "LLM",
+   "AI Agents",
+   "OpenRouter",
+   "Edge Computing"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+  "keys": [
+   "or:liquid/lfm-3-1.7b",
+   "or:liquid/lfm-3-1.7b:free",
+   "hf:liquidai/lfm3-1.7b"
+  ],
+  "entity": "or:liquid/lfm-3-1.7b",
+  "duration": 22.565,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3-flash-preview",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Professional layout and accurate visual representation of the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1046.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1046-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-07 13:00",
+  "due_at": "2026-11-07T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "TFkhLOBtUf0",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/TFkhLOBtUf0",
+    "via": "youtube"
+   }
+  }
  }
 ]
