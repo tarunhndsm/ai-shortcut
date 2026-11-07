@@ -4234,5 +4234,57 @@
    }
   },
   "posted_at": "2026-11-07T07:30:29Z"
+ },
+ {
+  "id": "as-20261107-1707",
+  "made_at": "2026-11-07T11:45:59Z",
+  "status": "scheduled",
+  "story": "Voicebox releases an open-source desktop AI voice studio for local voice cloning and creation",
+  "title": "Voicebox: Free Open-Source Local Voice Cloning Desktop App",
+  "description": "Voicebox is an open-source desktop app for local voice cloning, speech generation, and dictation. It features 8 TTS engines, MCP agent integration, and complete privacy.",
+  "tags": [
+   "Voicebox",
+   "AI Voice Clone",
+   "Open Source AI",
+   "TTS",
+   "Dictation",
+   "Local AI",
+   "MCP Server"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Voicebox",
+   "#OpenSource"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/jamiepine/voicebox",
+  "keys": [
+   "gh:jamiepine/voicebox"
+  ],
+  "entity": "gh:jamiepine/voicebox",
+  "duration": 24.931,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly professional layout with excellent typography, relevant visual elements, and perfect alignment throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1707.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261107-1707-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-07 20:00",
+  "due_at": "2026-11-07T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "kFOHHFV3EBg",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/kFOHHFV3EBg",
+    "via": "youtube"
+   }
+  }
  }
 ]
