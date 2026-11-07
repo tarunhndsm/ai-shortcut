@@ -4182,7 +4182,7 @@
  {
   "id": "as-20261107-1046",
   "made_at": "2026-11-07T05:26:00Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Liquid AI released LFM3-1.7B, a compact 1.7B reasoning model with a 256K context window.",
   "title": "LFM3-1.7B: A reasoning model with 256K context for your phone",
   "description": "Liquid AI's LFM3-1.7B brings reasoning capabilities to edge devices with a massive 256K context window. This compact model fits in just 1GB of memory and is built for fast, local AI agents.",
@@ -4228,10 +4228,11 @@
   "posted": {
    "youtube": {
     "id": "TFkhLOBtUf0",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/TFkhLOBtUf0",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-07T07:30:29Z"
  }
 ]
