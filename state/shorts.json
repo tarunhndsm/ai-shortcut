@@ -4238,7 +4238,7 @@
  {
   "id": "as-20261107-1707",
   "made_at": "2026-11-07T11:45:59Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Voicebox releases an open-source desktop AI voice studio for local voice cloning and creation",
   "title": "Voicebox: Free Open-Source Local Voice Cloning Desktop App",
   "description": "Voicebox is an open-source desktop app for local voice cloning, speech generation, and dictation. It features 8 TTS engines, MCP agent integration, and complete privacy.",
@@ -4281,10 +4281,11 @@
   "posted": {
    "youtube": {
     "id": "kFOHHFV3EBg",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/kFOHHFV3EBg",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-07T14:30:11Z"
  }
 ]
