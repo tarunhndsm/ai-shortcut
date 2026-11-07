@@ -58,9 +58,6 @@
  "scanned:latent-space": "2026-10-17T19:25:10Z",
  "scanned:techmeme": "2026-10-17T19:25:10Z",
  "scanned:microsoft-research": "2026-10-17T19:25:10Z",
- "https://reddit.com/r/LocalLLaMA/comments/1x865rk/otaku_an_llm_frontend_for_creative_writing": "2026-10-17T22:22:16Z",
- "https://reddit.com/r/LocalLLaMA/comments/1x89ptz/qwen_27b_iq4_xs_q8q4_kv_at_full_262k_context_on_a": "2026-10-17T22:22:16Z",
- "https://producthunt.com/products/rushilo": "2026-10-17T22:22:16Z",
  "https://github.com/openai/codex/issues/25921": "2026-10-17T23:22:31Z",
  "https://reddit.com/r/ClaudeAI/comments/1x86kos/the_situation_around_p": "2026-10-17T23:22:31Z",
  "https://reddit.com/r/ClaudeAI/comments/1x8dg94/i_made_a_browser_fps_with_claude_code_every_3d": "2026-10-17T23:22:31Z",
@@ -8858,5 +8855,16 @@
  "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObVcxdjhuQzRhTkZkUDBleGhUNVZQajJmSWE4bmZSdVdFWGpSMk94dEFpR003eEh6YlBCa094akN2QXJ3SnRGNFJ0aUFBT2RiVXk3V3hnY1lMeVozUElvWUVhZmlfTndvM0s5TUVzNXh3bzEzWU9acW9QY1BUalpKUzN1NWN0bEJrSm9vSHNvNUwwOG5ZdDJHYXpmc2NYOER4Y0lSOG0zQ1VRVXM": "2026-11-07T21:58:31Z",
  "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB1SGFyRDRXdlBjUjQ2UEljX2txM1JGTXNsLXJRbkVRemw2akNNekk5LUFlaV9FUTMwMG1DLTNzQ2ZaSWFqQmViemhIUzRYUXhNVGhvS3BBaE9jRG1Y": "2026-11-07T21:58:31Z",
  "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaDRDX3ZjZFNreUNZN205ZFJLWlVWWVpha1JQRV9JZDJKSTRDcjRsZV91MjBqM3pIel9kRTV4aXE4YWVfM2JUdThOdFBJekZYakdKNkd3WFJHenFDME8zVVhJRDFSM2NtTDliNEdva1lDUWdlcG8zNmp4dlUwcDBMcEhOSTE1RFpUdHNuNElmYlBfYXZS": "2026-11-07T21:58:31Z",
- "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSlFueDFCZFVaVGtSOUlrbU5yOWEzQVZCWDZEMlJEaGsxWWtqb1VwSk9lVVhQVXhoYTNGaTNMTmhhempHM0duYWNWRVNnUXR2blJyeDFWdlBoc2tKYl9ibWR1SVVxcjAyTWFITTM0Zm9xbFVYZkJfY3p0NFdKdW9ta0pRcGJQX0xLdWo3N0V0dTJ4blNNaUE": "2026-11-07T21:58:31Z"
+ "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSlFueDFCZFVaVGtSOUlrbU5yOWEzQVZCWDZEMlJEaGsxWWtqb1VwSk9lVVhQVXhoYTNGaTNMTmhhempHM0duYWNWRVNnUXR2blJyeDFWdlBoc2tKYl9ibWR1SVVxcjAyTWFITTM0Zm9xbFVYZkJfY3p0NFdKdW9ta0pRcGJQX0xLdWo3N0V0dTJ4blNNaUE": "2026-11-07T21:58:31Z",
+ "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again": "2026-11-07T22:58:47Z",
+ "https://reddit.com/r/LocalLLaMA/comments/1xqafp1/testing_qoduck_maybe_qwen4_on_qoder": "2026-11-07T22:58:47Z",
+ "https://reddit.com/r/LocalLLaMA/comments/1xqbjbf/also_experienced_the_qwen38flashnext_url_issue": "2026-11-07T22:58:47Z",
+ "https://reddit.com/r/LocalLLaMA/comments/1xq7qi4/valet_use_local_llms_to_manage_your_homelab_open": "2026-11-07T22:58:47Z",
+ "https://reddit.com/r/LocalLLaMA/comments/1xq4pb6/does_anyone_use_none_reasoning_level_for_anything": "2026-11-07T22:58:47Z",
+ "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers": "2026-11-07T22:58:47Z",
+ "https://github.com/sarpstar/cinecode": "2026-11-07T22:58:47Z",
+ "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQeEJEOUlHcXZnTmRyamtMeHJnZEJCaVJvMXZKMkJXeUhUblVCdGMwNWZHRnVjeTluSnZlbHcyTWNGZjh3VnNSbWxRX0JyejRyX0ZNckI2NE5KSWJxbjI2QzlRNWpPOFFlWjZqR2h2bXhUQ2tYRVRKMmVaclNHaENic0hxR3IzVDBvWkJoM0ZJeTY0b3Y3cEFoUjN0dVZQX3FxYkRCdDk0ajZaWXQzRE1rZ29aZmpETExXaW1vbEUzRGlyUXlvSFMyYTZXbTR5ZnVNVGVwdy1KNEZPSjVOSXpEX0pwYi1vYTVMUEJTZU9MaWFwcWw3c2VnZGFOaFlrNWlLdzd5YVpMck5USWVYSFZvZG9NQVltYkNIYUZQMzRtZ1BGb1ByMW9jQkhQWGFwYlBYSFAxcHRrUW0": "2026-11-07T22:58:47Z",
+ "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5WSEdCY3BDR2hQUzN2TmhEYTVaNzBKQ3FnVFZqQWVnd1RlQkp4TEFyT2RLbWd4d3pQQzB5XzlLUkphUE1lOVZ2NWMzb3k1UTk3djFMWEh6SjE5UW1mLVg0V0ZDU2pLUQ": "2026-11-07T22:58:47Z",
+ "https://news.google.com/rss/articles/CBMijAFBVV95cUxNN3NEUjkxX25lTGgzYXJtdG9nazU3VzRHMENEWG9RVjg3RndNajVWS1VPWHdBOXV6R3JoWE51RlJ1NGdSM3JXWFpQN1hKZmxEU2ZxYjU0S3BTNDhoYTFHd0Q3bHFrQTdlSFRlaTBOTEMydmRvcEpaeGU1dktFekp2VTZ4QjhvZUYyT1ZQRg": "2026-11-07T22:58:47Z",
+ "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPaEt0WG9fNDFKYlV0bGdWYm14WUxJaU1jVDdxMVZGc21ZUWY3YmJ5XzZVQzBZR0sweVI3ekZOT0w2WWNsbGFORTNEZVk0M3FFU1BmT0JCY0EwTXZwajVHSVR6cTJQUkFTTlRzZ0xsQl9wVTVSRURYcV9ybHpwVjRpME5VRnNMZUMwRmdjSExwRnNEbkNWWlltbzVnbkxJQ1FnbjlmX3IwZUtGUQ": "2026-11-07T22:58:47Z"
 }
