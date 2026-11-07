@@ -4084,7 +4084,7 @@
  {
   "id": "as-20261107-0320",
   "made_at": "2026-11-06T21:57:05Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "stack-diagram turns a plain sentence into a clean architecture diagram complete with official tech logos",
   "title": "caru-ini/stack-diagram Turns Sentences into Architecture Diagrams",
   "description": "stack-diagram is an AI agent skill that generates styled tech architecture diagrams with official vendor logos directly from a single text description.",
@@ -4128,10 +4128,11 @@
   "posted": {
    "youtube": {
     "id": "QaQPUuAPf-U",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/QaQPUuAPf-U",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-07T00:30:39Z"
  }
 ]
