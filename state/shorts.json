@@ -4287,5 +4287,58 @@
    }
   },
   "posted_at": "2026-11-07T14:30:11Z"
+ },
+ {
+  "id": "as-20261108-0329",
+  "made_at": "2026-11-07T22:02:57Z",
+  "status": "scheduled",
+  "story": "OmniRoute launched a free open-source AI gateway giving access to 150+ free model providers and 1,400+ LLMs through a single endpoint",
+  "title": "OmniRoute: Connect 1,400+ AI Models Free in One Endpoint",
+  "description": "OmniRoute is an open-source AI gateway that aggregates over 150 free provider tiers into a single endpoint. It works with Cursor, Claude Code, and other developer tools with automatic failover and prompt compression.",
+  "tags": [
+   "OmniRoute",
+   "AI gateway",
+   "open source",
+   "Cursor",
+   "Claude Code",
+   "free LLM",
+   "developer tools",
+   "LLM router"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OmniRoute",
+   "#CodingTools"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/cheaper-inference/OmniRoute",
+  "keys": [
+   "gh:cheaper-inference/omniroute"
+  ],
+  "entity": "gh:cheaper-inference/omniroute",
+  "duration": 24.098,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean design, excellent readability, perfect visual alignment with script narration."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-0329.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-0329-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-08 06:00",
+  "due_at": "2026-11-08T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "kLDFlPC5IyE",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/kLDFlPC5IyE",
+    "via": "youtube"
+   }
+  }
  }
 ]
