@@ -4441,5 +4441,49 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1729.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1729-sheet.jpg"
+ },
+ {
+  "id": "as-20261108-1759",
+  "made_at": "2026-11-08T12:35:44Z",
+  "status": "rejected",
+  "story": "Concat is a free, local-first video editor scriptable by AI agents via MCP",
+  "title": "Concat: The Open-Source Video Editor Built for AI Agents",
+  "description": "Concat is a free, local-first video editor powered by a Rust engine. It includes a built-in MCP server so AI agents like Claude can script video edits completely offline without watermarks.",
+  "tags": [
+   "Concat",
+   "AI video editor",
+   "MCP server",
+   "open source video editor",
+   "Rust",
+   "Claude AI",
+   "video automation",
+   "local AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#OpenSource",
+   "#AI"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/jub0t/Concat",
+  "keys": [
+   "gh:jub0t/concat"
+  ],
+  "entity": "gh:jub0t/concat",
+  "duration": 27.974,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 5,
+   "publish": false,
+   "defects": [
+    "unreadable subtitle text due to extremely low contrast (e.g., 'free local video', 'server lets Claude')"
+   ],
+   "notes": "Subtitles in frames 1 and 5 are dark grey on a dark background, making them unreadable."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1759.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1759-sheet.jpg"
  }
 ]
