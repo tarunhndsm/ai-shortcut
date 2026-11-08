@@ -4341,5 +4341,58 @@
    }
   },
   "posted_at": "2026-11-08T00:30:18Z"
+ },
+ {
+  "id": "as-20261108-1013",
+  "made_at": "2026-11-08T04:45:59Z",
+  "status": "scheduled",
+  "story": "Cinecode lets AI agents write, design, render, and output full MP4 short films and ads from code",
+  "title": "Cinecode: Render Full MP4 Films from Code",
+  "description": "Cinecode connects to Claude Code and Cursor to write scripts, build 3D frames in headless Chrome, and output full MP4 videos. Here is how code-driven video production works.",
+  "tags": [
+   "cinecode",
+   "ai video",
+   "claude code",
+   "cursor ai",
+   "threejs",
+   "ai agents",
+   "open source ai",
+   "headless chrome"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIVideo",
+   "#Coding"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/sarpstar/cinecode",
+  "keys": [
+   "gh:sarpstar/cinecode"
+  ],
+  "entity": "gh:sarpstar/cinecode",
+  "duration": 28.055,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual presentation, clear UI mockups, accurate subtitle captions, and strong typography throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1013.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1013-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-08 13:00",
+  "due_at": "2026-11-08T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "ICg6SOCmVeo",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/ICg6SOCmVeo",
+    "via": "youtube"
+   }
+  }
  }
 ]
