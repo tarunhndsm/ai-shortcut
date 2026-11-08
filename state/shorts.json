@@ -4395,5 +4395,51 @@
    }
   },
   "posted_at": "2026-11-08T07:30:30Z"
+ },
+ {
+  "id": "as-20261108-1729",
+  "made_at": "2026-11-08T12:10:01Z",
+  "status": "rejected",
+  "story": "Nous Research released Arete-27B, an open model that strips state propaganda from Alibaba's Qwen3.8-27B.",
+  "title": "Arete-27B Strips Censorship from Qwen3.8",
+  "description": "Nous Research released Arete-27B, a fine-tuned version of Alibaba's Qwen3.8-27B designed to remove state political propaganda framing. Evaluation shows propaganda responses fell from 22% down to 0.9% without degrading benchmark capabilities.",
+  "tags": [
+   "Arete 27B",
+   "Nous Research",
+   "Qwen3.8",
+   "Open Source AI",
+   "AI Models",
+   "LLM",
+   "Machine Learning",
+   "AI Benchmarks"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AI",
+   "#OpenSource"
+  ],
+  "chip": "NEW MODEL",
+  "source": "https://huggingface.co/NousResearch/Arete-27B",
+  "keys": [
+   "https://techmeme.com/261108/p3",
+   "hf:nousresearch/arete-27b",
+   "https://marktechpost.com/2026/11/07/nous-research-arete-27b-qwen3-8-27b-propaganda-fine-tune"
+  ],
+  "entity": "",
+  "duration": 26.967,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 6,
+   "publish": false,
+   "defects": [
+    "Subtitle text truncation on frame 3 ('two percent down' instead of 'twenty-two percent')"
+   ],
+   "notes": "Slick visual presentation and consistent theme, but minor subtitle transcription errors need fixing."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1729.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1729-sheet.jpg"
  }
 ]
