@@ -4485,5 +4485,58 @@
   "breaking": false,
   "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1759.mp4",
   "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1759-sheet.jpg"
+ },
+ {
+  "id": "as-20261108-1846",
+  "made_at": "2026-11-08T13:25:10Z",
+  "status": "scheduled",
+  "story": "Researchers discovered an undocumented local AI vision classifier built into macOS that categorizes family members",
+  "title": "iLEAPP Exposes macOS Built-In Family Member Classifier",
+  "description": "Forensics tool iLEAPP can now inspect Apple's undocumented local knowledge graph. Discover how macOS and iOS silently cross-reference your messages, photos, and contacts on device.",
+  "tags": [
+   "iLEAPP",
+   "macOS",
+   "Apple Intelligence",
+   "Privacy",
+   "AI Classifier",
+   "Digital Forensics",
+   "Open Source",
+   "Tech News"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#Apple",
+   "#Privacy"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/abrignoni/iLEAPP",
+  "keys": [
+   "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph"
+  ],
+  "entity": "",
+  "duration": 33.415,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly professional vertical layouts with accurate visual assets matching the script."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1846.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261108-1846-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-08 20:00",
+  "due_at": "2026-11-08T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "SqeTb7EIpFo",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/SqeTb7EIpFo",
+    "via": "youtube"
+   }
+  }
  }
 ]
