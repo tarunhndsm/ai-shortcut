@@ -46,13 +46,6 @@
  "scanned:microsoft-research": "2026-10-17T19:25:10Z",
  "https://anthropic.com/news/public-benefit-fund": "2026-10-18T18:35:57Z",
  "https://huggingface.co/spaces/AST-1320/Qwen-2511-Plus-Flux.2-klein": "2026-10-18T19:57:19Z",
- "https://arxiv.org/abs/2610.18861": "2026-10-18T22:19:38Z",
- "https://reddit.com/r/LocalLLaMA/comments/1x8q6t6/deepseek_v41_flash_1017_on_2x_dgx_spark_57_toks": "2026-10-18T22:19:38Z",
- "https://reddit.com/r/LocalLLaMA/comments/1x8qvaj/muse_spark_on_m3u_256_gb": "2026-10-18T22:19:38Z",
- "https://reddit.com/r/LocalLLaMA/comments/1x8piwz/basalt_nvfp4_faster_prefill_for_qwen38_flashnext": "2026-10-18T22:19:38Z",
- "https://reddit.com/r/LocalLLaMA/comments/1x8vl4i/made_sum_crap_that_beats_jev": "2026-10-18T22:19:38Z",
- "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSmNpSDhTS3Rma2dWalFWVGYyeXB1N2tsSlVxWi1zdDFBeUdIRmo1WmhEQWZzazN5a21ULUg3Zzd4QXc5MnBKb3NYSjhvMUU5aGgxVjRpWWdZRERHZWxsYWIwYnRwSVRTNzVuY0VwcjBXTUdxbzlQYzQ1TlZLMm04SGFuVFZ1VC0xUE9SZU5nM3FFRTZpa3c": "2026-10-18T22:19:38Z",
- "https://news.google.com/rss/articles/CBMiakFVX3lxTE5uMFc5VkRqMm5wTnYzUGVReENQQm92NnIzeHFhblRZSjdhNTdYZm8wemhiakNDdlFIanVJX0FGdko0OEthNEZFWkdYXzRkOGNNTmdQSHozNk0zb1BoQVVNaGpldnQ0SHZkQmc": "2026-10-18T22:19:38Z",
  "https://blog.picheta.me/post/killswitch-lang": "2026-10-18T22:50:34Z",
  "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTVpONkFFTks2bFROQXBrcHBJb1BGczJIbUtaU3hhdTl0Q2M0U1JUWllzUlRzdEJZM3o4UE9UbWFTUlpoQjRIQjY3clhteDRaOFU3emRReDZHVE9NVlBpNlBoMWFzZjIzOXBxazA2TFJhRVRPQ1RHZW9KbDV1MEhwTm1vTW5IVGc1MkdOd1NPaERJbWJRb1JIbDBnLWYwRjAyR251T0hTRkg3d0tCRmF3": "2026-10-18T22:50:34Z",
  "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9HcmJMRTdlSUE4TjJ2R2NpV2YxZnZUNjg0YlFYVTZNM290YWR6ZUd5bzR0alV1eUVIV2txSHBHMml2SXBWNXZsYnVyNlN6UXpUUDk5UEtvdllyVDRtQmtEcXdSSW4": "2026-10-18T22:50:34Z",
@@ -8874,5 +8867,12 @@
  "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTDhYTll0OEl4OFFMeGdOOTlhSEF6bkExeTQ5ZXdodDVRUFF1OElCTy1jYmF6Qk9uSVZkQl80eFZfRFdlX0dRbVBOMGE0MXhyVmJHc2VBZFhTanhOZUZkQXFuZElvQXpET1JhZ05yMWV2YUVPVENOOE9KMHR5TzdEa2xmM1V5X2szV2ZMWmk0aHdjWEhyYXlNZk5GSEpMYWV6Vmc3QTh6b1pQYXF3ZkYxeFRyMWRkTGItWF9lTjdMT2h6Wnl4akRfeVFWZw": "2026-11-08T21:59:35Z",
  "https://news.google.com/rss/articles/CBMikwFBVV95cUxONmUwSEFUNXdFOUN4N29iTVI2ejN0ZmVWamQ0STFwcFV6c0pZclBhdmMxd1Nna2RNTHpwc2U1REpXcnhHMXJlUmxHY0VLb0Yxalg2OFJzejBUOUdoZ29hYkpLSGZFWmRxSC1BdXlZbjZUUEdpLWJwblIyS3RoY25yRWR3d2VrZVlKSXNEelZNdi1sd2M": "2026-11-08T21:59:35Z",
  "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTFNPSHdxOEhIeWlrWG9zcXBXcERrTVVwUG90Vi1QSW9aUnpDNHBteFhZYWd1ZkNnb1ZaQkFPT3VULXdyM2V5LUhSeE50bl9oVUk2Y2QtQlRqODgtTXdTN3dBcFlkR3FBZWxLaG56UHQ3TEE2THlFYlp0UXBOSmdVUVl6R1N2U1NhT3kxU05GRElydEttdWRiUllOZHJEZklmZWZibzVlZXo1QXJYTjRj": "2026-11-08T21:59:35Z",
- "https://latent.space/p/cs146s": "2026-11-08T21:59:35Z"
+ "https://latent.space/p/cs146s": "2026-11-08T21:59:35Z",
+ "https://huggingface.co/autotrust/AutoTrust-JEV-27B-v1.1": "2026-11-08T22:26:58Z",
+ "https://reddit.com/r/LocalLLaMA/comments/1xr78s5/intel_arc_pro_b70_32gb_1299_vs_nvidia_rtx_5090": "2026-11-08T22:26:58Z",
+ "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNSzJjSEdDX1J2WUJJWDdzWTJBaGNiLUlzUjI0blBWMDI5NmRhUTBJQ25sajJuSTZzTXhERy1OUHUtSERyNkdXN1F4SDJQMmJLNFcxVnZvd1N5M0VOMjVWOEk0all6QjNTUFdUNTRiX1ZUOVk1ZklkU3hZN2o3ejdKcURSc1JaOERNZ3k4eE1PcC14eGw1YVhTOFgzWXBsMFVFcU5RT3FFYjNfUlcySlVyV3M1aGhDMXdLNzVTWTNyT3I3WnN4SlJObWgwN21EdFNNaUIwR0xQRWhDU2k1Ny1sYVlrNG55QQ": "2026-11-08T22:26:58Z",
+ "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaGpHOTFvMDJQS1RzVFpaRndlaUVLZjVuR3lmbkp0T25HeTZoZ3YycDJJYVBJN0N3cXR6WmY0Tm9oYm5pSDFEbnk0Q3BHSkJGNWd6WHZMR0l1ZUhKNUdOWUNnUll1Qm9DVDVLanUydGsxbGJ1WXVubTNDWnYxRFVnSm42VFdLQmJ3RTN1ZHplUGtXYjFWa09OX0NpMzZlN0YyR203Rjgza2VJd2c": "2026-11-08T22:26:58Z",
+ "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWnE3YmIwRnhNcnppcGZRUFhnSG5mZmQ1ajB5a1dyTkRFTkZ3UTlmNXNhOVhyRWlHWmpmTjR4eGFGQkp6VlRRT1h6bHdibjlWLXVZSlJhMDdRMDVSRHgtWkc1NDFsbXU3T28zSFFSc1phWk85TzF3eWg0NnRYd0YyQWdKMlg4SzVDV2o4czQxS05xbi15ZjRQRE5uN1FmZWs": "2026-11-08T22:26:58Z",
+ "https://news.google.com/rss/articles/CBMirgFBVV95cUxPR1dWVlB5MmZ6dk56WlNfVkF3QWZoRExMYjNwS3pwc0tfOHMtMGVnclZMTG9va2tUMVctNU1XLXFEaURYdl8wd2RRcXhPN2cxY2d2a09sdnZoNHJxUE5FbG5ESTBkUEhRZlZSYjdheHJqMnVSdV95cmZaa3lnczV1aURFalRFbnpCOVM2SExXUVVoUWZ1OU1FWDJ5dGVBSWR6R1RvSTNaaktOV2E4bGc": "2026-11-08T22:26:58Z",
+ "https://news.google.com/rss/articles/CBMigAFBVV95cUxPblZwWktITWc3b0pzNXRoYldxa29HaHBzaTQtWXpUdEx2S3JaeWtkOEQ0NEVYQWhmSXo1MnhKSmpKRmYzT1VoblZ4MHQzcVhnWk80M1lIT19QSkVKYUlkY3pickVkMVl0V0xUcTREclF1NFQtblB6S0JSSTFyeHR0eA": "2026-11-08T22:26:58Z"
 }
