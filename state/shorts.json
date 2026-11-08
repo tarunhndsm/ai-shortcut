@@ -4345,7 +4345,7 @@
  {
   "id": "as-20261108-1013",
   "made_at": "2026-11-08T04:45:59Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Cinecode lets AI agents write, design, render, and output full MP4 short films and ads from code",
   "title": "Cinecode: Render Full MP4 Films from Code",
   "description": "Cinecode connects to Claude Code and Cursor to write scripts, build 3D frames in headless Chrome, and output full MP4 videos. Here is how code-driven video production works.",
@@ -4389,10 +4389,11 @@
   "posted": {
    "youtube": {
     "id": "ICg6SOCmVeo",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/ICg6SOCmVeo",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-08T07:30:30Z"
  }
 ]
