@@ -4489,7 +4489,7 @@
  {
   "id": "as-20261108-1846",
   "made_at": "2026-11-08T13:25:10Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Researchers discovered an undocumented local AI vision classifier built into macOS that categorizes family members",
   "title": "iLEAPP Exposes macOS Built-In Family Member Classifier",
   "description": "Forensics tool iLEAPP can now inspect Apple's undocumented local knowledge graph. Discover how macOS and iOS silently cross-reference your messages, photos, and contacts on device.",
@@ -4533,10 +4533,11 @@
   "posted": {
    "youtube": {
     "id": "SqeTb7EIpFo",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/SqeTb7EIpFo",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-08T14:30:09Z"
  }
 ]
