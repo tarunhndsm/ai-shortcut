@@ -4539,5 +4539,57 @@
    }
   },
   "posted_at": "2026-11-08T14:30:09Z"
+ },
+ {
+  "id": "as-20261109-0329",
+  "made_at": "2026-11-08T22:06:01Z",
+  "status": "scheduled",
+  "story": "Run giant 284B DeepSeek model locally on 64GB RAM with zero GPU",
+  "title": "Llama Modchip Runs 284B DeepSeek Models on 64GB RAM With No GPU",
+  "description": "Llama modchip uses custom CPU patches and quantization to run massive 284B DeepSeek models on standard desktop RAM with zero GPUs required.",
+  "tags": [
+   "llama modchip",
+   "DeepSeek",
+   "local AI",
+   "LLM local",
+   "open source AI",
+   "CPU inference",
+   "llama cpp"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#LocalAI",
+   "#DeepSeek"
+  ],
+  "chip": "TRENDING REPO",
+  "source": "https://github.com/synchopate/llama-modchip",
+  "keys": [
+   "https://github.com/synchopate/llama-modchip"
+  ],
+  "entity": "",
+  "duration": 28.372,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 10,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design, dynamic stats layout, and flawless typography alignment throughout."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261109-0329.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261109-0329-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-09 06:00",
+  "due_at": "2026-11-09T00:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "vdDLp9BSeio",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/vdDLp9BSeio",
+    "via": "youtube"
+   }
+  }
  }
 ]
