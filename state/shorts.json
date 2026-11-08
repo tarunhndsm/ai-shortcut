@@ -4291,7 +4291,7 @@
  {
   "id": "as-20261108-0329",
   "made_at": "2026-11-07T22:02:57Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "OmniRoute launched a free open-source AI gateway giving access to 150+ free model providers and 1,400+ LLMs through a single endpoint",
   "title": "OmniRoute: Connect 1,400+ AI Models Free in One Endpoint",
   "description": "OmniRoute is an open-source AI gateway that aggregates over 150 free provider tiers into a single endpoint. It works with Cursor, Claude Code, and other developer tools with automatic failover and prompt compression.",
@@ -4335,10 +4335,11 @@
   "posted": {
    "youtube": {
     "id": "kLDFlPC5IyE",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/kLDFlPC5IyE",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-08T00:30:18Z"
  }
 ]
