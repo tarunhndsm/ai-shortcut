@@ -4543,7 +4543,7 @@
  {
   "id": "as-20261109-0329",
   "made_at": "2026-11-08T22:06:01Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Run giant 284B DeepSeek model locally on 64GB RAM with zero GPU",
   "title": "Llama Modchip Runs 284B DeepSeek Models on 64GB RAM With No GPU",
   "description": "Llama modchip uses custom CPU patches and quantization to run massive 284B DeepSeek models on standard desktop RAM with zero GPUs required.",
@@ -4586,10 +4586,11 @@
   "posted": {
    "youtube": {
     "id": "vdDLp9BSeio",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/vdDLp9BSeio",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-09T00:30:27Z"
  }
 ]
