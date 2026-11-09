@@ -4596,7 +4596,7 @@
  {
   "id": "as-20261109-1014",
   "made_at": "2026-11-09T04:50:21Z",
-  "status": "scheduled",
+  "status": "posted",
   "story": "Intel Arc Pro B70 32GB runs 27B models at half RTX 5090 speed for a fifth of the price",
   "title": "Intel Arc Pro B70: 32GB Local AI at 1/5 the Cost",
   "description": "The Intel Arc Pro B70 packs 32GB of VRAM for $1,299, hitting half the generation speed of an RTX 5090 on 27B models. Here is how the budget workstation card stacks up for local AI.",
@@ -4639,10 +4639,11 @@
   "posted": {
    "youtube": {
     "id": "W2rsT2f50K8",
-    "status": "scheduled",
+    "status": "sent",
     "link": "https://www.youtube.com/shorts/W2rsT2f50K8",
     "via": "youtube"
    }
-  }
+  },
+  "posted_at": "2026-11-09T07:30:02Z"
  }
 ]
