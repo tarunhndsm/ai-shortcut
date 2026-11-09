@@ -4645,5 +4645,58 @@
    }
   },
   "posted_at": "2026-11-09T07:30:02Z"
+ },
+ {
+  "id": "as-20261109-1715",
+  "made_at": "2026-11-09T11:52:35Z",
+  "status": "scheduled",
+  "story": "VoiceStudio brings fully local ElevenLabs-style voice cloning, video dubbing, and audiobook creation across 646 languages to your PC for free.",
+  "title": "VoiceStudio: Free Local Voice Cloning and Video Dubbing",
+  "description": "VoiceStudio brings local voice cloning, video dubbing, and audiobook creation in 646 languages directly to your desktop. It runs completely offline with no paid API subscriptions.",
+  "tags": [
+   "VoiceStudio",
+   "AI voice cloning",
+   "video dubbing",
+   "local AI",
+   "open source AI",
+   "ElevenLabs alternative",
+   "text to speech",
+   "voice design"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#VoiceStudio",
+   "#OpenSourceAI"
+  ],
+  "chip": "OPEN SOURCE",
+  "source": "https://github.com/debpalash/VoiceStudio",
+  "keys": [
+   "gh:debpalash/voicestudio"
+  ],
+  "entity": "gh:debpalash/voicestudio",
+  "duration": 28.76,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.6-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean, highly professional visuals with clear formatting and excellent script alignment."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261109-1715.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261109-1715-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-09 20:00",
+  "due_at": "2026-11-09T14:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "qEEOIH7VCqs",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/qEEOIH7VCqs",
+    "via": "youtube"
+   }
+  }
  }
 ]
