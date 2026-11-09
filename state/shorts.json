@@ -4592,5 +4592,57 @@
    }
   },
   "posted_at": "2026-11-09T00:30:27Z"
+ },
+ {
+  "id": "as-20261109-1014",
+  "made_at": "2026-11-09T04:50:21Z",
+  "status": "scheduled",
+  "story": "Intel Arc Pro B70 32GB runs 27B models at half RTX 5090 speed for a fifth of the price",
+  "title": "Intel Arc Pro B70: 32GB Local AI at 1/5 the Cost",
+  "description": "The Intel Arc Pro B70 packs 32GB of VRAM for $1,299, hitting half the generation speed of an RTX 5090 on 27B models. Here is how the budget workstation card stacks up for local AI.",
+  "tags": [
+   "Intel Arc Pro B70",
+   "RTX 5090",
+   "Local LLM",
+   "Qwen",
+   "AI Hardware",
+   "GPU Benchmark",
+   "Local AI"
+  ],
+  "hashtags": [
+   "#Shorts",
+   "#AIHardware",
+   "#LocalLLM"
+  ],
+  "chip": "AI NEWS",
+  "source": "https://www.reddit.com/r/LocalLLaMA/comments/1xr78s5/intel_arc_pro_b70_32gb_1299_vs_nvidia_rtx_5090/",
+  "keys": [
+   "https://reddit.com/r/LocalLLaMA/comments/1xr78s5/intel_arc_pro_b70_32gb_1299_vs_nvidia_rtx_5090"
+  ],
+  "entity": "",
+  "duration": 26.879,
+  "voice": "gemini-3.8-flash-tts",
+  "writer": "gemini-3.7-flash",
+  "problems": [],
+  "judge": {
+   "score": 9,
+   "publish": true,
+   "defects": [],
+   "notes": "Clean visual design with readable data tables and consistent branding."
+  },
+  "breaking": false,
+  "video": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261109-1014.mp4",
+  "sheet": "https://github.com/tarunhndsm/ai-shortcut/releases/download/media/as-20261109-1014-sheet.jpg",
+  "book_tries": 1,
+  "slot": "2026-11-09 13:00",
+  "due_at": "2026-11-09T07:30:00Z",
+  "posted": {
+   "youtube": {
+    "id": "W2rsT2f50K8",
+    "status": "scheduled",
+    "link": "https://www.youtube.com/shorts/W2rsT2f50K8",
+    "via": "youtube"
+   }
+  }
  }
 ]
